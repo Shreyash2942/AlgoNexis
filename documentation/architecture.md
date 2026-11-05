@@ -78,3 +78,13 @@ both input seed and pivot seed, recreate the pivot generator for repeatable
 trials when desired, and record the measured rank. Reusing a generator advances
 its state rather than repeating a pivot sequence. Timing and allocation trials
 will be separate Day 3 measurements.
+
+## Day 2 structure contracts
+
+`CustomSet` stores hashable members in an insertion-ordered dict. Required algebra
+uses explicit membership loops, never built-in set operators. `add`/`discard`
+return whether membership changed; `remove` raises `KeyError` if missing.
+Derived operations accept another `CustomSet`, return a fresh set, and preserve
+both operands. Equality ignores insertion order; display preserves it. Python
+hash/equality rules apply (including `1 == True`). Unhashable members raise
+`TypeError`. `display()` returns a shallow, detached list; `len` reports size.
