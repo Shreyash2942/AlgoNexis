@@ -1,0 +1,30 @@
+{
+  "corpus_tokens": 14656,
+  "corpus_words": 10992,
+  "nodes": 89,
+  "edges": 185,
+  "avg_query_tokens": 4426,
+  "reduction_ratio": 3.3,
+  "per_question": [
+    {
+      "question": "What tests verify Bubble Sort and Quickselect?",
+      "query_tokens": 4618,
+      "reduction": 3.2
+    },
+    {
+      "question": "How does DataStructureManager connect data structures?",
+      "query_tokens": 4300,
+      "reduction": 3.4
+    },
+    {
+      "question": "How does benchmark evidence support the report?",
+      "query_tokens": 3863,
+      "reduction": 3.8
+    },
+    {
+      "question": "What is the four-day implementation plan?",
+      "query_tokens": 4924,
+      "reduction": 3.0
+    }
+  ]
+}
