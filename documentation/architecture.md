@@ -88,3 +88,10 @@ Derived operations accept another `CustomSet`, return a fresh set, and preserve
 both operands. Equality ignores insertion order; display preserves it. Python
 hash/equality rules apply (including `1 == True`). Unhashable members raise
 `TypeError`. `display()` returns a shallow, detached list; `len` reports size.
+
+`Stack` uses a list; `Queue` uses `collections.deque`. Their end operations follow
+LIFO/FIFO respectively; empty pop/peek/dequeue/front raise `IndexError`. Both
+accept arbitrary payloads and copy constructor iterables into their own storage.
+`display()` returns a shallow list, bottom-to-top for Stack and front-to-rear for
+Queue. These adapt the reviewed Module 4 LinearDS-Suite patterns to snake_case,
+with deque replacing the previous queue's O(n) front deletion.
