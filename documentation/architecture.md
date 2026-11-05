@@ -42,3 +42,19 @@ up to O(n**3) trace time/storage and O(n**2) even on sorted inputs. Later
 benchmarks must explicitly use `track_steps=False`; UI limits must be applied
 before sorting rather than dropping recorded events. Equal values are never
 swapped. This preserves the stable adjacent-sort behavior.
+
+## Visualization data contract (D1.3)
+
+`SortingVisualizer(result)` accepts a traced `BubbleSortResult`. `total_steps`
+includes both boundary states; `get_step(index)` uses zero-based nonnegative
+indices and raises `IndexError` outside the trace (`TypeError` for noninteger
+indices, including bool). Passing an untraced result raises `ValueError`.
+Iteration yields every frame, with no internal playback cursor.
+
+Frozen `SortingFrame` fields are `step_index`, `total_steps`, `event`, `values`,
+`highlighted_indices`, `swapped`, `comparisons`, `swaps`, and `description`.
+Highlights are the compared/exchanged pair, or an empty tuple for boundaries.
+Snapshots are reused by reference, not copied. No UI package is imported.
+Day 3 can keep a frame index in session state, retrieve previous/next frames,
+and reset the index when the input/result changes. Bounded visualization must
+be a caller input policy; the engine never truncates a complete trace.
