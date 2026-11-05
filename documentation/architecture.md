@@ -58,3 +58,23 @@ Snapshots are reused by reference, not copied. No UI package is imported.
 Day 3 can keep a frame index in session state, retrieve previous/next frames,
 and reset the index when the input/result changes. Bounded visualization must
 be a caller input policy; the engine never truncates a complete trace.
+
+## Quickselect contract (D1.4)
+
+`quickselect(values: list[int], k: int, *, rng: random.Random | None = None)
+-> int` copies integer input (booleans excluded). Ranks are one-based and count
+duplicates. Empty input and out-of-range ranks raise `ValueError`; bad list,
+element, rank, or generator types raise `TypeError`. Caller data is unchanged.
+
+An iterative three-way partition groups values less than, equal to, and greater
+than a uniformly selected pivot. It only continues in the partition containing
+the target index; a rank within the equal block returns immediately. No sorting
+function or recursion is used. Expected time is O(n), worst O(n**2), with O(n)
+space for the input copy and O(1) partition workspace.
+
+A supplied `Random(seed)` controls pivot choices; otherwise a fresh local
+generator avoids modifying global random state. Later benchmarks should record
+both input seed and pivot seed, recreate the pivot generator for repeatable
+trials when desired, and record the measured rank. Reusing a generator advances
+its state rather than repeating a pivot sequence. Timing and allocation trials
+will be separate Day 3 measurements.
