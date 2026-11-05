@@ -1,145 +1,169 @@
-# Graph Report - README and Implementation Plan  (2026-11-04)
+# Graph Report - AlgoNexis Day 1  (2026-11-04)
 
 ## Corpus Check
-- 2 files · ~10,992 words
-- Verdict: corpus is large enough that graph structure adds value.
+- Corpus is ~14,814 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 89 nodes · 185 edges · 6 communities detected
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.86)
+- 138 nodes · 260 edges · 12 communities detected
+- Extraction: 81% EXTRACTED · 16% INFERRED · 3% AMBIGUOUS · INFERRED: 42 edges (avg confidence: 0.6)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- Algorithm Delivery and Validation
-- Core Application and Performance
-- Submission Traceability and Gates
-- Data Structures and Traversal
-- Architecture Setup and Documentation
-- Structure Implementation and Scope
+- Quickselect Implementation and Tests
+- Sorting Frames and Playback
+- Portfolio Delivery and Measurement
+- Verified Day One Contracts
+- Bubble Sort and Trace Tests
+- Future Structures and Coursework
+- Shared Integer Validation
+- Algorithm Package Boundary
+- Structure Package Boundary
+- Performance Package Boundary
+- Test Package Boundary
+- Visualization Package Boundary
 
 ## God Nodes (most connected - your core abstractions)
-1. `Automated Correctness and Integration Tests` - 15 edges
-2. `DataStructureManager` - 13 edges
-3. `Eight Assignment Deliverables` - 11 edges
-4. `Four-Day Implementation Plan` - 11 edges
-5. `Performance Measurement Layer` - 10 edges
-6. `Day 4 Submission Preparation` - 10 edges
-7. `AlgoNexis Portfolio` - 9 edges
-8. `Streamlit Interface` - 9 edges
-9. `D2.5 Stateful Restricted Manager` - 9 edges
-10. `Day 3 UI and Measurements` - 9 edges
+1. `bubble_sort()` - 19 edges
+2. `quickselect()` - 18 edges
+3. `AlgoNexis Portfolio` - 16 edges
+4. `SortingVisualizer` - 14 edges
+5. `71 Passing Day 1 Tests` - 13 edges
+6. `BubbleSortResult` - 12 edges
+7. `Implemented SortingVisualizer` - 12 edges
+8. `Verified Day 1 Foundation and Algorithms` - 11 edges
+9. `Planned Day 2 Structures and Manager` - 11 edges
+10. `Implemented Bubble Sort` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `D1.2 Bubble Sort Implementation` --implements--> `Bubble Sort`  [EXTRACTED]
-  AlgoNexis_4_Day_Implementation_Plan.md → README.md
-- `D1.4 Quickselect Implementation` --implements--> `Quickselect`  [EXTRACTED]
-  AlgoNexis_4_Day_Implementation_Plan.md → README.md
-- `D1.3 Ordered Snapshot Data Layer` --implements--> `Ordered Sorting Step Records`  [EXTRACTED]
-  AlgoNexis_4_Day_Implementation_Plan.md → README.md
-- `D2.5 Stateful Restricted Manager` --implements--> `DataStructureManager`  [EXTRACTED]
-  AlgoNexis_4_Day_Implementation_Plan.md → README.md
-- `D2.1 Custom Set Algebra` --implements--> `Custom Set`  [EXTRACTED]
-  AlgoNexis_4_Day_Implementation_Plan.md → README.md
+- `Frozen SortingStep` --references--> `SortingStep`  [EXTRACTED]
+  documentation/architecture.md → algorithms\bubble_sort.py
+- `Prepare immutable Bubble Sort frames without a Streamlit dependency.  Example:` --uses--> `BubbleSortResult`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py → algorithms\bubble_sort.py
+- `UI-ready metadata; values reuse the algorithm's immutable snapshot.` --uses--> `BubbleSortResult`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py → algorithms\bubble_sort.py
+- `Read-only, index-based view of a traced BubbleSortResult.      Indices are zero-` --uses--> `BubbleSortResult`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py → algorithms\bubble_sort.py
+- `Number of available frames, including initial and final states.` --uses--> `BubbleSortResult`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py → algorithms\bubble_sort.py
 
 ## Hyperedges (group relationships)
-- **Measured Evidence Supports Academic Submission** — readme_performance, readme_csv, readme_report, readme_presentation [EXTRACTED 1.00]
-- **Verified Work Package Completion** — readme_tests, readme_commits, readme_docs, readme_plan [EXTRACTED 1.00]
-- **Measured Evidence to Academic Artifacts** — plan_protocol, plan_evidence, plan_csv, plan_report, plan_presentation [EXTRACTED 1.00]
-- **Daily Gates Control Delivery Progression** — plan_g1, plan_g2, plan_g3, plan_g4 [EXTRACTED 1.00]
+- **Verified Sorting Record and Frame Flow** — readme_bubble, arch_result, arch_step, readme_visualizer, arch_frame [EXTRACTED 1.00]
+- **Sequential Daily Quality Gates** — readme_g1, readme_g2, readme_g3, readme_g4 [EXTRACTED 1.00]
+- **Day 1 Verified Algorithm and Playback Evidence** — readme_bubble, readme_quickselect, readme_visualizer, readme_tests, arch_imports [EXTRACTED 1.00]
 
 ## Communities
 
-### Community 0 - "Algorithm Delivery and Validation"
+### Community 0 - "Quickselect Implementation and Tests"
+Cohesion: 0.17
+Nodes (20): quickselect(), Iterative randomized Quickselect with one-based ranks and duplicate support.  Un, Return the kth-smallest integer without sorting or changing caller data.      Ra, Random, test_seeded_random_traces_match_oracle_and_inversion_count(), One-based selection correctness and reproducible partition policy checks., Observe the public RNG contract without duplicating selection logic., RecordingRandom (+12 more)
+
+### Community 1 - "Sorting Frames and Playback"
+Cohesion: 0.14
+Nodes (17): BubbleSortResult, Sorted values, exact operation totals, and an optional event sequence., Prepare immutable Bubble Sort frames without a Streamlit dependency.  Example:, UI-ready metadata; values reuse the algorithm's immutable snapshot., Read-only, index-based view of a traced BubbleSortResult.      Indices are zero-, Number of available frames, including initial and final states., Return the requested frame without altering playback or result state., Yield every frame in execution order, without keeping a cursor. (+9 more)
+
+### Community 2 - "Portfolio Delivery and Measurement"
 Cohesion: 0.15
-Nodes (22): D3.2 Algorithm Input and Results, D3.5 Benchmark Framework, D1.2 Bubble Sort Implementation, Raw CSV and Consistent Charts, Day 1 Foundation and Algorithms, Day 3 UI and Measurements, D3.6 Performance Dashboard, G1 Algorithm Verification Gate (+14 more)
+Nodes (23): Verified Evidence and No Placeholder Results, Iterative Randomized Three-Way Partition, Repeatable Pivots Without Global RNG Mutation, Independent Core and Future UI, Planned Day 3 UI and Measurements, Planned Day 4 Submission Preparation, Controlled Quickselect Pivot Randomness, Reproducible Measurement Protocol (+15 more)
 
-### Community 1 - "Core Application and Performance"
-Cohesion: 0.18
-Nodes (19): Algorithm Modules, Bubble Sort, Labeled Charts and Tables, Raw Benchmark CSV, Reproducible Datasets and Trials, G1 Algorithm Quality Gate, G3 UI and Benchmark Gate, Peak Python-Tracked Allocations (+11 more)
+### Community 3 - "Verified Day One Contracts"
+Cohesion: 0.16
+Nodes (22): Caller Input Preservation, Frozen SortingFrame, Standard-Library-Only Core Imports, Avoid Snapshot Costs in Large Execution Trials, Frozen BubbleSortResult, Frozen SortingStep, Full Snapshot Time and Storage Costs, Explicit Trace-Disabled Benchmark Mode (+14 more)
 
-### Community 2 - "Submission Traceability and Gates"
+### Community 4 - "Bubble Sort and Trace Tests"
+Cohesion: 0.17
+Nodes (16): bubble_sort(), Adjacent-element Bubble Sort with an optional complete, immutable trace.  The ca, One observed event; counters are cumulative as of this snapshot.      A compare, Return a nonmutating sort result; duplicates keep their relative order.      ``t, SortingStep, assert_replay(), Correctness, event replay, operation counts, and immutable snapshot checks., Independently replay the emitted actions rather than another sort loop. (+8 more)
+
+### Community 5 - "Future Structures and Coursework"
 Cohesion: 0.23
-Nodes (14): D4.6 Clean Install and Release, 22 Meaningful Verified Commits, Four-Day Implementation Plan, G4 Eight-Deliverable Release Gate, Eleven Required Capabilities, Eight-Deliverable Traceability, Meaningful Verified Commits, Eight Assignment Deliverables (+6 more)
+Nodes (13): Planned Day 2 Structures and Manager, Next D2.1 Custom Set Implementation, Planned Unbalanced Binary Search Tree, Planned Undirected Adjacency-List Graph, Planned Separate-Chaining Hash Table, Planned Queue, Planned Custom Set, Planned Stack (+5 more)
 
-### Community 3 - "Data Structures and Traversal"
-Cohesion: 0.24
-Nodes (13): Breadth-First Search, Unbalanced Binary Search Tree, Depth-First Search, G2 Structure Quality Gate, Undirected Adjacency-List Graph, Separate-Chaining Hash Table, DataStructureManager, Python sorted Test Oracle (+5 more)
+### Community 6 - "Shared Integer Validation"
+Cohesion: 0.5
+Nodes (3): copy_integer_list(), Shared input contract for integer-list algorithms., Validate a Python list of integers (excluding bool) and return a copy.
 
-### Community 4 - "Architecture Setup and Documentation"
-Cohesion: 0.2
-Nodes (12): Independent Core and UI Architecture, API and Representation Decisions, Day 4 Submission Preparation, D4.5 Technical Documentation, D4.2 Verified Benchmark Evidence, D1.1 Repository and Environment, D4.4 Slides or Video, PPTX-Specific Presentation Acceptance (+4 more)
+### Community 7 - "Algorithm Package Boundary"
+Cohesion: 1.0
+Nodes (1): UI-independent algorithms for AlgoNexis.
 
-### Community 5 - "Structure Implementation and Scope"
-Cohesion: 0.33
-Nodes (9): Day 2 Structures and Manager, Estimate Ranges and Work-Package Totals, D2.4 Separate-Chaining Hash Table, D2.2 Stack and Queue, D2.5 Stateful Restricted Manager, Contingencies and Scope Priorities, Validated Inputs and Bounded Workloads, D2.1 Custom Set Algebra (+1 more)
+### Community 8 - "Structure Package Boundary"
+Cohesion: 1.0
+Nodes (1): Package reserved for the verified Day 2 data structures.
+
+### Community 9 - "Performance Package Boundary"
+Cohesion: 1.0
+Nodes (1): Package reserved for the Day 3 performance measurement tools.
+
+### Community 10 - "Test Package Boundary"
+Cohesion: 1.0
+Nodes (1): Automated AlgoNexis correctness and integration checks.
+
+### Community 11 - "Visualization Package Boundary"
+Cohesion: 1.0
+Nodes (1): UI-independent visualization data for AlgoNexis.
+
+## Ambiguous Edges - Review These
+- `BubbleSortResult` → `Prepare immutable Bubble Sort frames without a Streamlit dependency.  Example:`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `BubbleSortResult` → `UI-ready metadata; values reuse the algorithm's immutable snapshot.`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `BubbleSortResult` → `Read-only, index-based view of a traced BubbleSortResult.      Indices are zero-`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `BubbleSortResult` → `Number of available frames, including initial and final states.`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `BubbleSortResult` → `Return the requested frame without altering playback or result state.`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `BubbleSortResult` → `Yield every frame in execution order, without keeping a cursor.`  [AMBIGUOUS]
+  visualization\sorting_visualizer.py · relation: uses
+- `Day 3's data-only playback contract and core import isolation.` → `SortingVisualizer`  [AMBIGUOUS]
+  tests\test_sorting_visualizer.py · relation: uses
 
 ## Knowledge Gaps
-- **10 isolated node(s):** `Course Mastery and Interactive Learning`, `Planned Implementation Status`, `Breadth-First Search`, `Depth-First Search`, `perf_counter Timing` (+5 more)
+- **23 isolated node(s):** `Adjacent-element Bubble Sort with an optional complete, immutable trace.  The ca`, `One observed event; counters are cumulative as of this snapshot.      A compare`, `Sorted values, exact operation totals, and an optional event sequence.`, `Return a nonmutating sort result; duplicates keep their relative order.      ``t`, `Iterative randomized Quickselect with one-based ranks and duplicate support.  Un` (+18 more)
   These have ≤1 connection - possible missing edges or undocumented components.
+- **Thin community `Algorithm Package Boundary`** (2 nodes): `__init__.py`, `UI-independent algorithms for AlgoNexis.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Structure Package Boundary`** (2 nodes): `__init__.py`, `Package reserved for the verified Day 2 data structures.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Performance Package Boundary`** (2 nodes): `__init__.py`, `Package reserved for the Day 3 performance measurement tools.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Test Package Boundary`** (2 nodes): `__init__.py`, `Automated AlgoNexis correctness and integration checks.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **Thin community `Visualization Package Boundary`** (2 nodes): `__init__.py`, `UI-independent visualization data for AlgoNexis.`
+  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Four-Day Implementation Plan` connect `Submission Traceability and Gates` to `Algorithm Delivery and Validation`, `Architecture Setup and Documentation`, `Structure Implementation and Scope`?**
-  _High betweenness centrality (0.184) - this node is a cross-community bridge._
-- **Why does `Automated Correctness and Integration Tests` connect `Data Structures and Traversal` to `Core Application and Performance`, `Submission Traceability and Gates`, `Architecture Setup and Documentation`?**
-  _High betweenness centrality (0.161) - this node is a cross-community bridge._
-- **Why does `DataStructureManager` connect `Data Structures and Traversal` to `Core Application and Performance`, `Submission Traceability and Gates`, `Structure Implementation and Scope`?**
-  _High betweenness centrality (0.148) - this node is a cross-community bridge._
-- **What connects `Course Mastery and Interactive Learning`, `Planned Implementation Status`, `Breadth-First Search` to the rest of the system?**
-  _10 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What is the exact relationship between `BubbleSortResult` and `Prepare immutable Bubble Sort frames without a Streamlit dependency.  Example:`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `BubbleSortResult` and `UI-ready metadata; values reuse the algorithm's immutable snapshot.`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `BubbleSortResult` and `Read-only, index-based view of a traced BubbleSortResult.      Indices are zero-`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `BubbleSortResult` and `Number of available frames, including initial and final states.`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `BubbleSortResult` and `Return the requested frame without altering playback or result state.`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `BubbleSortResult` and `Yield every frame in execution order, without keeping a cursor.`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
+- **What is the exact relationship between `Day 3's data-only playback contract and core import isolation.` and `SortingVisualizer`?**
+  _Edge tagged AMBIGUOUS (relation: uses) - confidence is low._
 
-## Update Scope
+## Verified Day 1 Outcome
 
-Both root documents are represented. The unchanged README extraction was reused; the implementation plan added 47 nodes and 102 relationships. No application implementation was performed.
+D1.1-D1.6 implemented: environment and dependency lock, adjacent Bubble Sort with immutable complete event records and explicit trace opt-out, randomized three-way Quickselect with controlled RNG, non-UI sorting frames, and documented APIs. The full suite passed 71 tests; doctests, compilation, Python 3.11 grammar parsing, pip dependency checks, and standard-library-only core imports also passed.
 
-Detailed plan review: [IMPLEMENTATION_PLAN_ANALYSIS.md](IMPLEMENTATION_PLAN_ANALYSIS.md).
+See [Day 1 evidence](../documentation/day1_verification.md). Days 2-4 are planned/unverified; previous coursework is inventory only. No application benchmark measurements or submission artifacts are claimed.
 
-## README Analysis
+## Graph Extraction Audit
 
-AlgoNexis is a planned local Streamlit portfolio demonstrating algorithm correctness, custom data structures, interactive exploration, and reproducible performance analysis for academic submission.
-
-### Architecture
-
-Streamlit UI -> independent algorithm modules or DataStructureManager -> structures; Bubble Sort step records -> visualizer; isolated performance measurements -> raw CSV and charts -> report/presentation.
-
-Stack: Python 3.11+, Streamlit, pytest, standard library; charting dependencies only as needed.
-
-### Required Behavior
-
-- Bubble Sort must record true ordered comparisons/swaps with initial/final states, early exit, counts, and integer edge-case handling. (README.md:150)
-- Quickselect must partition rather than sort, accept one-based k counting duplicates, reject invalid input, and preferably use a randomized pivot and preserve caller input. (README.md:151)
-- CustomSet must implement uniqueness and four derived set operations itself; derived operations preserve operands. (README.md:152)
-- Stack, Queue, ordinary BST, undirected graph with BFS/DFS, and separately chained custom hash table require explicit edge-case policies. (README.md:153, README.md:154, README.md:155, README.md:156)
-- Manager uses known-operation dispatch, persistent instances, and no eval; UI maintains session state, invalidates stale results, and supports reset. (README.md:157, README.md:158)
-- Eight deliverables include source/visualization, integrated app, five substantive report pages, slides or video, and complete documentation. (README.md:293)
-
-### Decisions Before Implementation
-
-- Exact sorting-step schema, complete snapshot versus delta representation, visualization limits, and whether benchmarks include tracing need agreement. (README.md:150, README.md:278, README.md:280)
-- Final API return types and error taxonomy, CustomSet storage/equality ordering, supported hash key types, table capacity/resizing, and deterministic graph traversal policy need documentation before implementation. (README.md:146, README.md:152, README.md:153, README.md:155, README.md:156, README.md:166)
-- BST duplicate behavior is recommended rather than fixed (ignore duplicates); ordinary unbalanced structure is fixed. (README.md:154)
-- Slides versus video remains a submission choice; APA 7 is conditional on course requirements. (README.md:142, README.md:306)
-- PSEPF L2 is explicitly provisional because official L1-L5 definitions were not provided. (README.md:329)
-- No major internal contradiction found in the README. Detailed plan consistency and full rubric coverage cannot be verified without reading those sources. (README.md:7, README.md:324, README.md:325, README.md:329)
-
-### Algorithm and Measurement Considerations
-
-- [EXTRACTED] README explicitly gives Quickselect expected O(n), worst O(n^2). (README.md:151)
-- [EXTRACTED] README explicitly warns unbalanced BST searches may degrade to linear time and hash performance depends on collisions/load factor. (README.md:165)
-- [INFERRED] Reasoning: if each comparison stores a complete list snapshot, Bubble Sort trace storage can grow as O(n^3); benchmark limits and trace-disabled measurement may be necessary. Record format and traced/untraced measurement policy remain unspecified. (README.md:150, README.md:278, README.md:280)
-- [INFERRED] Reasoning: randomized Quickselect pivots require controlled randomness as well as seeded datasets for reproducible trials. (README.md:151, README.md:277)
-- [EXTRACTED] Bubble Sort sorts all values while Quickselect selects one rank, so timings illustrate scaling and tradeoffs rather than equivalent-task competition. (README.md:163)
-
-Record environment, time, seed, pattern, trials; use increasing sizes and at least five repetitions where feasible; check correctness before retaining observations; measure outside rendering; label tracemalloc as peak Python-tracked allocations, not total RAM.
-
-Original review scope: README only; implementation plan and code not read. No application files changed. Exact model token usage unavailable.
+AST plus six refreshed documents were rebuilt together, replacing stale planning-only status. Six explicit API references in architecture notes resolve to the code declarations. Package-docstring IDs were namespaced by source file to avoid identical __init__.py names merging distinct nodes. AST file-import co-occurrence edges remain heuristic: code candidates have INFERRED confidence 0.6; rationale-to-import candidates have AMBIGUOUS confidence 0.2. These are not verified function calls. Explicit source relationships have confidence 1.0.
 
 
 ## Estimated Retrieval Benchmark
 
-Heuristic context sizes only; not measured model tokens, monetary savings, or an answer-quality comparison.
+Heuristic context-size estimates, not measured tokens, monetary savings, or an answer-quality comparison.
 
-- Full corpus estimate: 14656 tokens
-- Mean graph query estimate: 4426 tokens
-- Estimated context reduction: 3.3x
+- Full corpus estimate: 19752 tokens
+- Average graph query estimate: 3297 tokens
+- Estimated reduction: 6.0x

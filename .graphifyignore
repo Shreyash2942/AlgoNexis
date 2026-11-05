@@ -1,0 +1,4 @@
+# Analyze source and documentation, not generated graphs or environment locks.
+graphify-out/
+.venv/
+requirements.lock.txt

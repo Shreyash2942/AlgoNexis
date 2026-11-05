@@ -2,7 +2,7 @@
 
 **An Interactive Algorithms & Data Structures Portfolio**
 
-> **Project stage:** Day 1 implementation in progress. The repository/environment foundation is being established; the target application, data structures, benchmark evidence, report, and presentation belong to later work packages. See the progress tracker for verified completion.
+> **Project stage:** Day 1 complete; G1 passed. Bubble Sort, Quickselect, immutable sorting records, the non-UI visualizer, and 71 automated tests are implemented. Data structures, Streamlit UI, benchmark evidence, report, and presentation remain planned for Days 2–4. See [`documentation/day1_verification.md`](documentation/day1_verification.md) for actual evidence.
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
 
@@ -182,7 +182,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 | Day | Status (verify in repository) | Gate evidence | Commits actually created |
 |---|---|---|---|
-| Day 1 | ☐ Unverified | Test output + reviewed APIs/step records | _check `git log`_ |
+| Day 1 | G1 passed | 71 passing tests, doctests, standard-library-only imports; [verification](documentation/day1_verification.md) | Five Day 1 commits; inspect `git log --oneline -5` |
 | Day 2 | ☐ Unverified | Data structure/manager tests | _check `git log`_ |
 | Day 3 | ☐ Unverified | App walkthrough + benchmark evidence | _check `git log`_ |
 | Day 4 | ☐ Unverified | Full QA + final artifacts | _check `git log`_ |
@@ -218,7 +218,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 ## 7. Local development and verification
 
-> The environment setup is available. Algorithm tests and APIs are delivered during Day 1; `app.py` and interactive launch remain planned for Day 3.
+> Day 1 environment setup, algorithm APIs, and tests are available. `app.py` and interactive launch remain planned for Day 3.
 
 ### Environment setup
 
@@ -258,9 +258,50 @@ python -m pytest tests/ -v
 # Launch the interactive app after Day 3 integration
 streamlit run app.py
 
-# Final syntax check (after implementation)
-python -m compileall -q algorithms data_structures visualization performance app.py
+# Day 1 syntax check (app.py does not exist yet)
+python -m compileall -q algorithms data_structures visualization performance tests
 ```
+
+### Implemented Day 1 APIs
+
+```python
+from random import Random
+from algorithms.bubble_sort import bubble_sort
+from algorithms.quickselect import quickselect
+from visualization.sorting_visualizer import SortingVisualizer
+
+values = [3, 1, 2]
+result = bubble_sort(values)
+assert result.sorted_values == (1, 2, 3)
+assert values == [3, 1, 2]  # Caller input is preserved.
+assert (result.comparisons, result.swaps) == (3, 2)
+
+view = SortingVisualizer(result)
+for frame in view:
+    print(frame.step_index, frame.event, frame.values, frame.description)
+assert view.get_step(view.total_steps - 1).values == result.sorted_values
+
+assert quickselect([7, -1, 7, 3], 3, rng=Random(42)) == 7
+```
+
+Both algorithms accept Python integer lists, excluding booleans, and copy input.
+Bubble Sort returns a frozen result with tuple output, tuple snapshots, and
+cumulative comparison/swap counts. Its trace contains `initial`, every `compare`
+(before any exchange), every actual `swap` (after exchange), and `final` events.
+`track_steps=False` disables trace allocation explicitly while preserving results
+and counts. The visualizer uses zero-based indices, immutable frames, and no UI
+dependency; an untraced result is rejected rather than silently losing steps.
+
+Quickselect returns an integer at the one-based rank, counting duplicate values.
+It partitions with randomized pivots instead of sorting; pass a fresh
+`Random(seed)` to repeat pivot choices. Empty input or invalid rank bounds raise
+`ValueError`; invalid list/element/rank types raise `TypeError`.
+
+Without tracing, Bubble Sort uses O(n) best and O(n²) average/worst time, with
+O(n) space for its copy. Full snapshots can raise time and storage to O(n³).
+Quickselect has expected O(n), worst O(n²) time and O(n) copy space; its iterative
+partition workspace is O(1). See [architecture decisions](documentation/architecture.md)
+for complete record fields, validation, mutability, and benchmark policies.
 
 ### Git workflow for each **completed** work package
 

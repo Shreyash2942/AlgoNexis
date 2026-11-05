@@ -246,69 +246,69 @@ The project fits in **one four-day development week**. The week's goal is to pro
 
 ### Work package D1.1 — Repository and environment (~45 min)
 
-- [ ] Create GitHub repository **AlgoNexis**, initialize Git locally, and choose the default branch.
-- [ ] Create directories and `__init__.py` files shown in the project tree.
-- [ ] Create `.venv`, record Python version, add `.gitignore` for venv, caches, secrets, and IDE files.
-- [ ] Add `requirements.txt` with required direct dependencies (`streamlit`, `pytest`; plotting/testing extras as used).
-- [ ] Add initial `README.md` with goal, scope, planned features, and launch/test placeholders clearly marked as not yet implemented.
-- [ ] Inventory any existing stack, queue, tree, graph, and hash-table implementations for reuse on Day 2.
+- [x] Create GitHub repository **AlgoNexis**, initialize Git locally, and choose the default branch.
+- [x] Create directories and `__init__.py` files shown in the project tree.
+- [x] Create `.venv`, record Python version, add `.gitignore` for venv, caches, secrets, and IDE files.
+- [x] Add `requirements.txt` with required direct dependencies (`streamlit`, `pytest`; plotting/testing extras as used).
+- [x] Add initial `README.md` with goal, scope, planned features, and launch/test placeholders clearly marked as not yet implemented.
+- [x] Inventory any existing stack, queue, tree, graph, and hash-table implementations for reuse on Day 2.
 
 **Acceptance:** Repository has clean layout; Python environment activates; dependencies install; `git status` shows only intended tracked files.  
 **Commit 01:** `chore: initialize AlgoNexis project structure`
 
 ### Work package D1.2 — Bubble Sort algorithm (~75 min)
 
-- [ ] Implement adjacent-element compare/swap logic for integer lists.
-- [ ] Add early-exit optimization when a pass completes without swaps.
-- [ ] Capture a consistent, immutable snapshot for each comparison and/or swap event.
-- [ ] Count comparisons and swaps accurately and return final sorted output.
-- [ ] Specify whether the input is copied (recommended) or sorted in place; test that contract.
-- [ ] Document best `O(n)` with early exit, average/worst `O(n²)`, and auxiliary-space implications.
+- [x] Implement adjacent-element compare/swap logic for integer lists.
+- [x] Add early-exit optimization when a pass completes without swaps.
+- [x] Capture a consistent, immutable snapshot for each comparison and/or swap event.
+- [x] Count comparisons and swaps accurately and return final sorted output.
+- [x] Specify whether the input is copied (recommended) or sorted in place; test that contract.
+- [x] Document best `O(n)` with early exit, average/worst `O(n²)`, and auxiliary-space implications.
 
 **Acceptance:** Correct for ordinary, sorted, reversed, duplicate, negative, empty, and one-element lists; step count/values align with actual execution.  
 **Commit 02:** `feat: implement bubble sort with step tracking`
 
 ### Work package D1.3 — Visualization engine (data layer) (~45 min)
 
-- [ ] Create `visualization/sorting_visualizer.py` for preparing step descriptions.
-- [ ] Provide stable metadata for highlighted indices and swap events.
-- [ ] Expose total step count and an index-based step retrieval function.
-- [ ] Represent initial state and final sorted state clearly.
-- [ ] Check that advancing through recorded steps ends at the actual sorted list.
+- [x] Create `visualization/sorting_visualizer.py` for preparing step descriptions.
+- [x] Provide stable metadata for highlighted indices and swap events.
+- [x] Expose total step count and an index-based step retrieval function.
+- [x] Represent initial state and final sorted state clearly.
+- [x] Check that advancing through recorded steps ends at the actual sorted list.
 
 **Acceptance:** A non-UI test or example can iterate the steps in order; no Streamlit dependency is required yet.  
 **Commit 03:** `feat: add sorting visualization engine`
 
 ### Work package D1.4 — Quickselect algorithm (~75 min)
 
-- [ ] Implement partition-based selection for a **1-based** `k` parameter.
-- [ ] Choose/document pivot policy; use randomized pivoting for expected linear performance if feasible.
-- [ ] Reject empty input and `k < 1` or `k > n` with a clear exception.
-- [ ] Handle repeated values, negatives, sorted lists, and reversed lists.
-- [ ] Avoid unexpected caller-list mutation by copying internally or document/test a different policy.
-- [ ] Document expected `O(n)` and worst `O(n²)` time for randomized Quickselect and relevant space costs.
+- [x] Implement partition-based selection for a **1-based** `k` parameter.
+- [x] Choose/document pivot policy; use randomized pivoting for expected linear performance if feasible.
+- [x] Reject empty input and `k < 1` or `k > n` with a clear exception.
+- [x] Handle repeated values, negatives, sorted lists, and reversed lists.
+- [x] Avoid unexpected caller-list mutation by copying internally or document/test a different policy.
+- [x] Document expected `O(n)` and worst `O(n²)` time for randomized Quickselect and relevant space costs.
 
 **Acceptance:** `quickselect(values, k) == sorted(values)[k - 1]` across all valid test scenarios.  
 **Commit 04:** `feat: implement quickselect with input validation`
 
 ### Work package D1.5 — Automated tests (~60 min)
 
-- [ ] Create `tests/test_bubble_sort.py` and `tests/test_quickselect.py`.
-- [ ] Test Bubble Sort on sorted/reverse/empty/single/negative/duplicate lists.
-- [ ] Assert that recorded comparisons and swaps reconstruct the expected step sequence.
-- [ ] Test Quickselect for first, median/middle, last, duplicates, and invalid `k`.
-- [ ] Compare outputs with Python's `sorted()` as a reference oracle.
-- [ ] Run `python -m pytest tests/ -v` and fix any failures.
+- [x] Create `tests/test_bubble_sort.py` and `tests/test_quickselect.py`.
+- [x] Test Bubble Sort on sorted/reverse/empty/single/negative/duplicate lists.
+- [x] Assert that recorded comparisons and swaps reconstruct the expected step sequence.
+- [x] Test Quickselect for first, median/middle, last, duplicates, and invalid `k`.
+- [x] Compare outputs with Python's `sorted()` as a reference oracle.
+- [x] Run `python -m pytest tests/ -v` and fix any failures.
 
 **Acceptance:** All Day 1 tests pass, with no known critical algorithm defects.
 
 ### Work package D1.6 — Documentation and gate review (~45 min)
 
-- [ ] Add usage examples for both algorithms to README or module docstrings.
-- [ ] Explain inputs, outputs, errors, mutability, and complexity.
-- [ ] Record the chosen API and pivot-policy decisions in `documentation/architecture.md`.
-- [ ] Verify the visualization contract needed by Day 3 is consistent.
-- [ ] Review Git diff, remove temporary debugging code, and commit tested files.
+- [x] Add usage examples for both algorithms to README or module docstrings.
+- [x] Explain inputs, outputs, errors, mutability, and complexity.
+- [x] Record the chosen API and pivot-policy decisions in `documentation/architecture.md`.
+- [x] Verify the visualization contract needed by Day 3 is consistent.
+- [x] Review Git diff, remove temporary debugging code, and commit tested files.
 
 **Acceptance:** G1 passes and the algorithms can be imported without launching the UI.  
 **Commit 05 (D1.5 + D1.6):** `test: add core algorithm tests and documentation`
@@ -326,11 +326,13 @@ git status
 
 #### Day 1 deliverables and gate G1
 
-- [ ] `algorithms/bubble_sort.py` passes correctness and step-tracking tests.
-- [ ] `algorithms/quickselect.py` passes selection and validation tests.
-- [ ] `visualization/sorting_visualizer.py` exposes ordered, accurate step data.
-- [ ] README and architecture notes describe the interfaces.
-- [ ] **5 meaningful commits** represent completed work.
+- [x] `algorithms/bubble_sort.py` passes correctness and step-tracking tests.
+- [x] `algorithms/quickselect.py` passes selection and validation tests.
+- [x] `visualization/sorting_visualizer.py` exposes ordered, accurate step data.
+- [x] README and architecture notes describe the interfaces.
+- [x] **5 meaningful commits** represent completed work.
+
+**Verified status (2026-11-04):** G1 passed with 71 pytest cases. See `documentation/day1_verification.md` for evidence and `git log --oneline -5` for the five Day 1 commits. Existing Git/GitHub repositories and comprehensive README were preserved; activation was verified with the Windows batch script.
 
 **Go/no-go decision:** Proceed to Day 2 only if core algorithm tests pass; otherwise correct defects before adding new functionality.
 
