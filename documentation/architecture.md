@@ -118,3 +118,20 @@ key semantics. Positive integer capacity is fixed (no implicit resizing), so
 expected operation cost is O(1 + n/capacity), worst O(n), not unconditional O(1).
 Display and bucket inspection copy containers. This adapts Module 5's integer-key
 bucket design to general hashable keys and explicit missing-key exceptions.
+
+## Unified manager (D2.5)
+
+`DataStructureManager(hash_capacity=8)` owns six persistent instances under
+`set`, `stack`, `queue`, `tree`, `graph`, and `hash_table`. Its fixed bound-method
+registry is the only dispatch authority; there is no eval or arbitrary attribute
+lookup. `execute(structure, operation, **kwargs)` binds keyword arguments before
+execution and returns plain values/lists/dicts. Derived-set results become lists
+without replacing the stored set. `available_operations()` returns detached
+metadata for UI controls. All structures expose manager routes for `display`,
+`size`, and `is_empty`, alongside their required domain operations.
+
+Unknown names raise `ValueError`; nonstring names or invalid keyword arguments
+raise `TypeError`. Domain exceptions retain their type for readable UI handling.
+Separate managers own separate instances. Inspection snapshots copy containers,
+not arbitrary payload objects. Day 3 should keep one manager in session state;
+constructing a new manager provides a full reset without leaking prior state.
