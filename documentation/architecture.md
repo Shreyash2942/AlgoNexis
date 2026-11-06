@@ -95,3 +95,17 @@ accept arbitrary payloads and copy constructor iterables into their own storage.
 `display()` returns a shallow list, bottom-to-top for Stack and front-to-rear for
 Queue. These adapt the reviewed Module 4 LinearDS-Suite patterns to snake_case,
 with deque replacing the previous queue's O(n) front deletion.
+
+`BinarySearchTree` accepts integers excluding bool, ignores duplicate insertions,
+and returns bool from insert/search. Traversals and display return detached value
+lists, not nodes. All algorithms are iterative. Insert/search cost O(h), worst
+O(n); traversals use O(n) time, O(h) workspace plus output. Module 6 treemap's
+iterative algorithms are adapted from key/value nodes to integer-only values.
+
+`Graph` is undirected and unweighted. Hashable vertices and neighbors retain
+insertion order, so mixed types require no sorting. `add_edge` validates both
+endpoints before adding missing vertices; duplicates are idempotent and self-loops
+are allowed once. BFS/DFS return reachable vertices only and raise `KeyError`
+for an unknown start. Iterator-stack DFS matches recursive neighbor order without
+recursion. The design adapts Module 7 VertexTrace, removing weights and trace/UI
+dependencies. Display copies both adjacency and neighbor containers.
