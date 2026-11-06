@@ -109,3 +109,12 @@ are allowed once. BFS/DFS return reachable vertices only and raise `KeyError`
 for an unknown start. Iterator-stack DFS matches recursive neighbor order without
 recursion. The design adapts Module 7 VertexTrace, removing weights and trace/UI
 dependencies. Display copies both adjacency and neighbor containers.
+
+`HashTable(capacity=8)` uses custom bucket lists and separate chaining. Keys may be
+any hashable value with stable hash/equality; values may include `None`. Insert
+returns True for a new key and False for an update. Find/delete raise `KeyError`
+if absent; delete returns the removed value. Identity/equality matches dictionary
+key semantics. Positive integer capacity is fixed (no implicit resizing), so
+expected operation cost is O(1 + n/capacity), worst O(n), not unconditional O(1).
+Display and bucket inspection copy containers. This adapts Module 5's integer-key
+bucket design to general hashable keys and explicit missing-key exceptions.
