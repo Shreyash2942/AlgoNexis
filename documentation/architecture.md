@@ -3,8 +3,8 @@
 ## Foundation
 
 The root README and four-day implementation plan define the target system.
-Day 1 establishes importable Python packages and core algorithms. Data structures,
-Streamlit views, measurements, and academic deliverables belong to later days.
+Days 1 and 2 establish importable core algorithms, data structures, and manager.
+Streamlit views, measurements, and academic deliverables belong to Days 3 and 4.
 
 - Existing Git repository and `origin` are preserved; the default branch is `main`.
 - GitHub repository: https://github.com/Shreyash2942/AlgoNexis (verified existing).
@@ -12,13 +12,14 @@ Streamlit views, measurements, and academic deliverables belong to later days.
 - `.venv` isolates dependencies. `requirements.txt` lists direct dependencies;
   `requirements.lock.txt` records the tested environment after installation.
 - Core modules must import without importing Streamlit or starting a UI.
-- Prior-course reuse candidates are recorded in `data_structures.md` and require
-  a separate correctness/interface review during Day 2.
+- Reviewed prior-course adaptations and current structure contracts are recorded
+  in `data_structures.md`. No external project is imported at runtime.
 
 ## Package boundaries
 
 `algorithms` owns sorting and selection. `visualization` consumes immutable
-sorting records. `data_structures` is reserved for Day 2; `performance` for Day 3.
+sorting records. `data_structures` owns the six structures and their persistent
+manager; `performance` remains planned for Day 3.
 `results` will hold actual benchmark output once measurements are implemented.
 No placeholder benchmark CSV, UI, report PDF, or presentation is created on Day 1.
 
@@ -135,3 +136,9 @@ raise `TypeError`. Domain exceptions retain their type for readable UI handling.
 Separate managers own separate instances. Inspection snapshots copy containers,
 not arbitrary payload objects. Day 3 should keep one manager in session state;
 constructing a new manager provides a full reset without leaking prior state.
+
+Day 2 gate evidence is in `day2_verification.md`. Tests exercise all registered
+routes and preserve Day 1 behavior; no Streamlit app or benchmark output is
+claimed at G2. UI code should translate documented domain errors to user messages,
+keep manager lifetime in session state, and apply workload limits before calling
+the structures. No UI dependency is introduced into core packages.

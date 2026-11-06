@@ -2,7 +2,7 @@
 
 **An Interactive Algorithms & Data Structures Portfolio**
 
-> **Project stage:** Day 1 complete; G1 passed. Bubble Sort, Quickselect, immutable sorting records, the non-UI visualizer, and 71 automated tests are implemented. Data structures, Streamlit UI, benchmark evidence, report, and presentation remain planned for Days 2–4. See [`documentation/day1_verification.md`](documentation/day1_verification.md) for actual evidence.
+> **Project stage:** Days 1 and 2 complete; G1 and G2 passed. Core algorithms, sorting records, six data structures, and the stateful manager are implemented with 143 passing tests. Streamlit UI, benchmark evidence, report, and presentation remain planned for Days 3–4. See [`documentation/day2_verification.md`](documentation/day2_verification.md) for current evidence and the [Day 1 record](documentation/day1_verification.md) for earlier results.
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
 
@@ -182,8 +182,8 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 | Day | Status (verify in repository) | Gate evidence | Commits actually created |
 |---|---|---|---|
-| Day 1 | G1 passed | 71 passing tests, doctests, standard-library-only imports; [verification](documentation/day1_verification.md) | Five Day 1 commits; inspect `git log --oneline -5` |
-| Day 2 | ☐ Unverified | Data structure/manager tests | _check `git log`_ |
+| Day 1 | G1 passed | 71 original tests retained in the full regression; [verification](documentation/day1_verification.md) | Five Day 1 commits; `git log --oneline f2409c4` |
+| Day 2 | G2 passed | 143 total tests, all 49 manager routes, standard-library-only integration; [verification](documentation/day2_verification.md) | Six Day 2 commits; `git log --oneline f2409c4..HEAD` |
 | Day 3 | ☐ Unverified | App walkthrough + benchmark evidence | _check `git log`_ |
 | Day 4 | ☐ Unverified | Full QA + final artifacts | _check `git log`_ |
 
@@ -218,7 +218,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 ## 7. Local development and verification
 
-> Day 1 environment setup, algorithm APIs, and tests are available. `app.py` and interactive launch remain planned for Day 3.
+> Day 1–2 environment setup, algorithms, data structures, manager, and tests are available. `app.py` and interactive launch remain planned for Day 3.
 
 ### Environment setup
 
@@ -246,7 +246,7 @@ directly; activation is not required:
 `requirements.lock.txt` records the tested development environment. Install it
 instead of `requirements.txt` to reproduce those exact dependency versions on a
 compatible Python/platform. The initial environment uses CPython 3.14.4 on Windows.
-Prior-course reuse candidates for Day 2 are listed in
+Reviewed prior-course adaptations and structure APIs are listed in
 [`documentation/data_structures.md`](documentation/data_structures.md).
 
 ### Run and test
@@ -302,6 +302,33 @@ O(n) space for its copy. Full snapshots can raise time and storage to O(n³).
 Quickselect has expected O(n), worst O(n²) time and O(n) copy space; its iterative
 partition workspace is O(1). See [architecture decisions](documentation/architecture.md)
 for complete record fields, validation, mutability, and benchmark policies.
+
+### Implemented Day 2 manager
+
+```python
+from data_structures.manager import DataStructureManager
+
+manager = DataStructureManager(hash_capacity=1)
+manager.execute("set", "add", value=1)
+assert manager.execute("set", "union", values=[2, 3]) == [1, 2, 3]
+assert manager.execute("set", "display") == [1]  # Derived result preserves state.
+manager.execute("queue", "enqueue", value=10)
+assert manager.execute("queue", "dequeue") == 10
+manager.execute("tree", "insert", value=4)
+assert manager.execute("tree", "inorder") == [4]
+manager.execute("graph", "add_edge", source="a", target="b")
+assert manager.execute("graph", "bfs", start="a") == ["a", "b"]
+manager.execute("hash_table", "insert", key="a", value=None)
+assert manager.execute("hash_table", "find", key="a") is None
+```
+
+Canonical manager names are `set`, `stack`, `queue`, `tree`, `graph`, and
+`hash_table`. The registry exposes only known operations and retains separate
+instances; `available_operations()` returns UI-ready operation names. Empty
+stack/queue operations raise `IndexError`; absent set members, graph starts,
+and table keys raise `KeyError` where documented. See the
+[operations guide](documentation/data_structures.md) for all arguments, return
+values, display order, theoretical costs, and prior-course attribution.
 
 ### Git workflow for each **completed** work package
 

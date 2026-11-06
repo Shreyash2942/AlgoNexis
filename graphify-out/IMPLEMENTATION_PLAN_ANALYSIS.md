@@ -1,7 +1,7 @@
 # Implementation Plan Analysis
 
-Historical preimplementation review. Day 1 has since been implemented and verified;
-see `../documentation/day1_verification.md` for current status. The observations
+Historical preimplementation review. Days 1 and 2 have since been implemented and verified;
+see `../documentation/day2_verification.md` for current status. The observations
 below describe the planning documents before implementation.
 
 Scope: `AlgoNexis_4_Day_Implementation_Plan.md`, compared with the root `README.md`. This is document analysis; no application code, source-document edits, commits, application performance benchmarks, or completed gates are claimed.

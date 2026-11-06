@@ -1,12 +1,6 @@
 # AlgoNexis — Complete Four-Day Implementation Plan
 
-**Project:** AlgoNexis — Interactive Algorithms & Data Structures Portfolio  
-**Plan version:** 1.0  
-**Duration:** Four development days (approximately 26–31 hours total)  
-**Approach:** Lightweight Hybrid Agile with daily PSEPF quality gates  
-**Technology baseline:** Python, Streamlit, pytest, standard-library benchmarking utilities  
-**Planned Git history:** **22 meaningful commits** — Day 1: **5**, Day 2: **6**, Day 3: **7**, Day 4: **4**  
-**Progress:** ☐ Not started · ☐ In progress · ☐ Complete
+**Project:** AlgoNexis — Interactive Algorithms & Data Structures Portfolio**Plan version:** 1.0**Duration:** Four development days (approximately 26–31 hours total)**Approach:** Lightweight Hybrid Agile with daily PSEPF quality gates**Technology baseline:** Python, Streamlit, pytest, standard-library benchmarking utilities**Planned Git history:** **22 meaningful commits** — Day 1: **5**, Day 2: **6**, Day 3: **7**, Day 4: **4****Progress:** ☐ Not started · ☐ In progress · ☐ Complete
 
 > **How to use this plan:** Complete each day's work packages in order, run the listed verification steps, and create the corresponding Git commit **only after the work exists and passes the relevant checks**. Dates are intentionally not assigned because no start date was supplied. Planned commit counts are targets, not a reason to make empty or artificial commits.
 
@@ -39,34 +33,34 @@ Build a **single interactive portfolio** that demonstrates understanding of sort
 
 ### 1.2 Users, constraints, and assumptions
 
-| Item | Planning decision |
-|---|---|
-| Primary users | Course evaluator, student developer, and anyone exploring basic algorithms |
-| Team size | Assumed one developer; revise if collaborating |
-| Schedule | Four development days; estimates are planning aids rather than deadlines |
-| Language | Python 3.11+ recommended |
-| Application | Streamlit web interface running locally |
-| Tests | `pytest` plus standard-library reference results where appropriate |
-| Charts | Streamlit charts or an existing supported plotting dependency |
-| Reuse policy | Reuse prior-module implementations after reviewing correctness, interfaces, and attribution |
-| Submission | Source code, interactive application, **5+ page** analysis report, slides **or** video, and documentation |
-| Unknowns | Course-specific rubric, exact PSEPF level definitions, start date, and prior code availability were not provided |
+| Item          | Planning decision                                                                                                     |
+| ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Primary users | Course evaluator, student developer, and anyone exploring basic algorithms                                            |
+| Team size     | Assumed one developer; revise if collaborating                                                                        |
+| Schedule      | Four development days; estimates are planning aids rather than deadlines                                              |
+| Language      | Python 3.11+ recommended                                                                                              |
+| Application   | Streamlit web interface running locally                                                                               |
+| Tests         | `pytest` plus standard-library reference results where appropriate                                                  |
+| Charts        | Streamlit charts or an existing supported plotting dependency                                                         |
+| Reuse policy  | Reuse prior-module implementations after reviewing correctness, interfaces, and attribution                           |
+| Submission    | Source code, interactive application, **5+ page** analysis report, slides **or** video, and documentation |
+| Unknowns      | Course-specific rubric, exact PSEPF level definitions, start date, and prior code availability were not provided      |
 
 ### 1.3 Required functional scope
 
-| ID | Capability | Required behavior |
-|---|---|---|
-| F-01 | Bubble Sort | Sort integers; capture comparisons, swaps, and ordered visualization states |
-| F-02 | Quickselect | Return the **1-based** kth smallest value; validate inputs and duplicates |
-| F-03 | Custom Set | Unique values, add/remove, union, intersection, difference, symmetric difference |
-| F-04 | Stack | Push, pop, peek, inspect current contents |
-| F-05 | Queue | Enqueue, dequeue, front, inspect current contents |
-| F-06 | Tree | BST insertion/search and inorder, preorder, postorder traversals |
-| F-07 | Graph | Add vertices/edges; BFS and DFS |
-| F-08 | Hash Table | Insert, lookup, delete; handle collisions |
-| F-09 | Unified integration | Consistent access through a manager and one application |
-| F-10 | Interactive UI | Accept inputs, show outputs/errors, preserve state, navigate features |
-| F-11 | Performance analysis | Time, memory, operation counts where applicable; export real results |
+| ID   | Capability           | Required behavior                                                                |
+| ---- | -------------------- | -------------------------------------------------------------------------------- |
+| F-01 | Bubble Sort          | Sort integers; capture comparisons, swaps, and ordered visualization states      |
+| F-02 | Quickselect          | Return the **1-based** kth smallest value; validate inputs and duplicates  |
+| F-03 | Custom Set           | Unique values, add/remove, union, intersection, difference, symmetric difference |
+| F-04 | Stack                | Push, pop, peek, inspect current contents                                        |
+| F-05 | Queue                | Enqueue, dequeue, front, inspect current contents                                |
+| F-06 | Tree                 | BST insertion/search and inorder, preorder, postorder traversals                 |
+| F-07 | Graph                | Add vertices/edges; BFS and DFS                                                  |
+| F-08 | Hash Table           | Insert, lookup, delete; handle collisions                                        |
+| F-09 | Unified integration  | Consistent access through a manager and one application                          |
+| F-10 | Interactive UI       | Accept inputs, show outputs/errors, preserve state, navigate features            |
+| F-11 | Performance analysis | Time, memory, operation counts where applicable; export real results             |
 
 ### 1.4 Nonfunctional requirements
 
@@ -93,25 +87,25 @@ A feature is done when it is implemented, independently tested, usable through i
 
 ### 2.2 Process comparison
 
-| Process | Fit | Assessment |
-|---|---|---|
-| Waterfall | Moderate | Stable assignment requirements, but UI integration issues may require rapid changes |
-| Agile/Scrum | Moderate | Short iterations help, but Scrum ceremonies are excessive for four days / one developer |
-| Prototype-driven | Good for UI | Quickly tests visual interaction; less suitable by itself for assuring algorithm correctness |
+| Process                | Fit            | Assessment                                                                                      |
+| ---------------------- | -------------- | ----------------------------------------------------------------------------------------------- |
+| Waterfall              | Moderate       | Stable assignment requirements, but UI integration issues may require rapid changes             |
+| Agile/Scrum            | Moderate       | Short iterations help, but Scrum ceremonies are excessive for four days / one developer         |
+| Prototype-driven       | Good for UI    | Quickly tests visual interaction; less suitable by itself for assuring algorithm correctness    |
 | **Hybrid Agile** | **Best** | Fixed deliverables and daily quality gates, with iterative coding/testing and an early UI spike |
 
 **Selected process:** Lightweight **Hybrid Agile** with one mini-iteration per day. Start each day by checking dependencies, implement vertical slices, run tests, and pass a gate before proceeding.
 
 ### 2.3 PSEPF modifiers (appropriately scaled)
 
-| Modifier | Apply? | Lightweight action |
-|---|---|---|
-| Prototype | Yes | Day 3 initial Streamlit navigation prototype before connecting every module |
-| Architecture Gate | Yes | Day 1 choose APIs, folders, error rules, and data structure interfaces |
-| Technical Spike | Yes | Verify Streamlit session state and timing/memory collection on a small sample |
-| Change Control | Light | Record meaningful scope or interface changes in a brief decision log |
-| Security Engineering | Basic safeguards only | Validate inputs, bound workload, exclude secrets; no full security program needed |
-| Operations Readiness | Yes, minimal | Clean-environment startup test, dependency instructions, and release package verification |
+| Modifier             | Apply?                | Lightweight action                                                                        |
+| -------------------- | --------------------- | ----------------------------------------------------------------------------------------- |
+| Prototype            | Yes                   | Day 3 initial Streamlit navigation prototype before connecting every module               |
+| Architecture Gate    | Yes                   | Day 1 choose APIs, folders, error rules, and data structure interfaces                    |
+| Technical Spike      | Yes                   | Verify Streamlit session state and timing/memory collection on a small sample             |
+| Change Control       | Light                 | Record meaningful scope or interface changes in a brief decision log                      |
+| Security Engineering | Basic safeguards only | Validate inputs, bound workload, exclude secrets; no full security program needed         |
+| Operations Readiness | Yes, minimal          | Clean-environment startup test, dependency instructions, and release package verification |
 
 ### 2.4 Required planning artifacts
 
@@ -219,13 +213,13 @@ AlgoNexis/
 
 The project fits in **one four-day development week**. The week's goal is to progress from independently correct algorithms to a testable unified application, measurable performance evidence, and a complete submission package.
 
-| Day | Primary daily objective | Hours (estimate) | Major milestone | Planned commits |
-|---|---|---:|---|---:|
-| **1** | Establish architecture and build the two core algorithms | 5–7 | **M1:** Algorithms and visualization records verified | **5** |
-| **2** | Build six data structures and integrate through manager | 6–8 | **M2:** Data structure operations integrated and tested | **6** |
-| **3** | Deliver interactive app and reproducible benchmark tools | 6–8 | **M3:** End-to-end interactive portfolio operational | **7** |
-| **4** | Verify, analyze, present, document, and package | 7–9 | **M4:** Submission-ready release | **4** |
-| **Total** | | **24–33** | | **22** |
+| Day             | Primary daily objective                                  | Hours (estimate) | Major milestone                                               | Planned commits |
+| --------------- | -------------------------------------------------------- | ---------------: | ------------------------------------------------------------- | --------------: |
+| **1**     | Establish architecture and build the two core algorithms |             5–7 | **M1:** Algorithms and visualization records verified   |     **5** |
+| **2**     | Build six data structures and integrate through manager  |             6–8 | **M2:** Data structure operations integrated and tested |     **6** |
+| **3**     | Deliver interactive app and reproducible benchmark tools |             6–8 | **M3:** End-to-end interactive portfolio operational    |     **7** |
+| **4**     | Verify, analyze, present, document, and package          |             7–9 | **M4:** Submission-ready release                        |     **4** |
+| **Total** |                                                          | **24–33** |                                                               |    **22** |
 
 *Estimates are ranges; the schedule assumes the previous-module code can be reviewed or adapted rather than entirely rewritten.*
 
@@ -240,77 +234,76 @@ The project fits in **one four-day development week**. The week's goal is to pro
 
 ## 5. Day 1 — Foundation and core algorithms
 
-**One major objective:** Create a maintainable project foundation and deliver tested Bubble Sort, Quickselect, and sorting-step data.  
-**Estimate:** ~5 h 45 min, plus contingency.  
+**One major objective:** Create a maintainable project foundation and deliver tested Bubble Sort, Quickselect, and sorting-step data.
 **Start condition:** Requirements and relevant prior-module work are available for review.
 
-### Work package D1.1 — Repository and environment (~45 min)
+### Work package D1.1 — Repository and environment 
 
-- [x] Create GitHub repository **AlgoNexis**, initialize Git locally, and choose the default branch.
-- [x] Create directories and `__init__.py` files shown in the project tree.
-- [x] Create `.venv`, record Python version, add `.gitignore` for venv, caches, secrets, and IDE files.
-- [x] Add `requirements.txt` with required direct dependencies (`streamlit`, `pytest`; plotting/testing extras as used).
-- [x] Add initial `README.md` with goal, scope, planned features, and launch/test placeholders clearly marked as not yet implemented.
-- [x] Inventory any existing stack, queue, tree, graph, and hash-table implementations for reuse on Day 2.
+- [ ] Create GitHub repository **AlgoNexis**, initialize Git locally, and choose the default branch.
+- [ ] Create directories and `__init__.py` files shown in the project tree.
+- [ ] Create `.venv`, record Python version, add `.gitignore` for venv, caches, secrets, and IDE files.
+- [ ] Add `requirements.txt` with required direct dependencies (`streamlit`, `pytest`; plotting/testing extras as used).
+- [ ] Add initial `README.md` with goal, scope, planned features, and launch/test placeholders clearly marked as not yet implemented.
+- [ ] Inventory any existing stack, queue, tree, graph, and hash-table implementations for reuse on Day 2.
 
-**Acceptance:** Repository has clean layout; Python environment activates; dependencies install; `git status` shows only intended tracked files.  
+**Acceptance:** Repository has clean layout; Python environment activates; dependencies install; `git status` shows only intended tracked files.
 **Commit 01:** `chore: initialize AlgoNexis project structure`
 
-### Work package D1.2 — Bubble Sort algorithm (~75 min)
+### Work package D1.2 — Bubble Sort algorithm 
 
-- [x] Implement adjacent-element compare/swap logic for integer lists.
-- [x] Add early-exit optimization when a pass completes without swaps.
-- [x] Capture a consistent, immutable snapshot for each comparison and/or swap event.
-- [x] Count comparisons and swaps accurately and return final sorted output.
-- [x] Specify whether the input is copied (recommended) or sorted in place; test that contract.
-- [x] Document best `O(n)` with early exit, average/worst `O(n²)`, and auxiliary-space implications.
+- [ ] Implement adjacent-element compare/swap logic for integer lists.
+- [ ] Add early-exit optimization when a pass completes without swaps.
+- [ ] Capture a consistent, immutable snapshot for each comparison and/or swap event.
+- [ ] Count comparisons and swaps accurately and return final sorted output.
+- [ ] Specify whether the input is copied (recommended) or sorted in place; test that contract.
+- [ ] Document best `O(n)` with early exit, average/worst `O(n²)`, and auxiliary-space implications.
 
-**Acceptance:** Correct for ordinary, sorted, reversed, duplicate, negative, empty, and one-element lists; step count/values align with actual execution.  
+**Acceptance:** Correct for ordinary, sorted, reversed, duplicate, negative, empty, and one-element lists; step count/values align with actual execution.
 **Commit 02:** `feat: implement bubble sort with step tracking`
 
-### Work package D1.3 — Visualization engine (data layer) (~45 min)
+### Work package D1.3 — Visualization engine (data layer) 
 
-- [x] Create `visualization/sorting_visualizer.py` for preparing step descriptions.
-- [x] Provide stable metadata for highlighted indices and swap events.
-- [x] Expose total step count and an index-based step retrieval function.
-- [x] Represent initial state and final sorted state clearly.
-- [x] Check that advancing through recorded steps ends at the actual sorted list.
+- [ ] Create `visualization/sorting_visualizer.py` for preparing step descriptions.
+- [ ] Provide stable metadata for highlighted indices and swap events.
+- [ ] Expose total step count and an index-based step retrieval function.
+- [ ] Represent initial state and final sorted state clearly.
+- [ ] Check that advancing through recorded steps ends at the actual sorted list.
 
-**Acceptance:** A non-UI test or example can iterate the steps in order; no Streamlit dependency is required yet.  
+**Acceptance:** A non-UI test or example can iterate the steps in order; no Streamlit dependency is required yet.
 **Commit 03:** `feat: add sorting visualization engine`
 
-### Work package D1.4 — Quickselect algorithm (~75 min)
+### Work package D1.4 — Quickselect algorithm 
 
-- [x] Implement partition-based selection for a **1-based** `k` parameter.
-- [x] Choose/document pivot policy; use randomized pivoting for expected linear performance if feasible.
-- [x] Reject empty input and `k < 1` or `k > n` with a clear exception.
-- [x] Handle repeated values, negatives, sorted lists, and reversed lists.
-- [x] Avoid unexpected caller-list mutation by copying internally or document/test a different policy.
-- [x] Document expected `O(n)` and worst `O(n²)` time for randomized Quickselect and relevant space costs.
+- [ ] Implement partition-based selection for a **1-based** `k` parameter.
+- [ ] Choose/document pivot policy; use randomized pivoting for expected linear performance if feasible.
+- [ ] Reject empty input and `k < 1` or `k > n` with a clear exception.
+- [ ] Handle repeated values, negatives, sorted lists, and reversed lists.
+- [ ] Avoid unexpected caller-list mutation by copying internally or document/test a different policy.
+- [ ] Document expected `O(n)` and worst `O(n²)` time for randomized Quickselect and relevant space costs.
 
-**Acceptance:** `quickselect(values, k) == sorted(values)[k - 1]` across all valid test scenarios.  
+**Acceptance:** `quickselect(values, k) == sorted(values)[k - 1]` across all valid test scenarios.
 **Commit 04:** `feat: implement quickselect with input validation`
 
-### Work package D1.5 — Automated tests (~60 min)
+### Work package D1.5 — Automated tests 
 
-- [x] Create `tests/test_bubble_sort.py` and `tests/test_quickselect.py`.
-- [x] Test Bubble Sort on sorted/reverse/empty/single/negative/duplicate lists.
-- [x] Assert that recorded comparisons and swaps reconstruct the expected step sequence.
-- [x] Test Quickselect for first, median/middle, last, duplicates, and invalid `k`.
-- [x] Compare outputs with Python's `sorted()` as a reference oracle.
-- [x] Run `python -m pytest tests/ -v` and fix any failures.
+- [ ] Create `tests/test_bubble_sort.py` and `tests/test_quickselect.py`.
+- [ ] Test Bubble Sort on sorted/reverse/empty/single/negative/duplicate lists.
+- [ ] Assert that recorded comparisons and swaps reconstruct the expected step sequence.
+- [ ] Test Quickselect for first, median/middle, last, duplicates, and invalid `k`.
+- [ ] Compare outputs with Python's `sorted()` as a reference oracle.
+- [ ] Run `python -m pytest tests/ -v` and fix any failures.
 
 **Acceptance:** All Day 1 tests pass, with no known critical algorithm defects.
 
-### Work package D1.6 — Documentation and gate review (~45 min)
+### Work package D1.6 — Documentation and gate review 
 
-- [x] Add usage examples for both algorithms to README or module docstrings.
-- [x] Explain inputs, outputs, errors, mutability, and complexity.
-- [x] Record the chosen API and pivot-policy decisions in `documentation/architecture.md`.
-- [x] Verify the visualization contract needed by Day 3 is consistent.
-- [x] Review Git diff, remove temporary debugging code, and commit tested files.
+- [ ] Add usage examples for both algorithms to README or module docstrings.
+- [ ] Explain inputs, outputs, errors, mutability, and complexity.
+- [ ] Record the chosen API and pivot-policy decisions in `documentation/architecture.md`.
+- [ ] Verify the visualization contract needed by Day 3 is consistent.
+- [ ] Review Git diff, remove temporary debugging code, and commit tested files.
 
-**Acceptance:** G1 passes and the algorithms can be imported without launching the UI.  
+**Acceptance:** G1 passes and the algorithms can be imported without launching the UI.
 **Commit 05 (D1.5 + D1.6):** `test: add core algorithm tests and documentation`
 
 #### Day 1 verification commands
@@ -326,13 +319,11 @@ git status
 
 #### Day 1 deliverables and gate G1
 
-- [x] `algorithms/bubble_sort.py` passes correctness and step-tracking tests.
-- [x] `algorithms/quickselect.py` passes selection and validation tests.
-- [x] `visualization/sorting_visualizer.py` exposes ordered, accurate step data.
-- [x] README and architecture notes describe the interfaces.
-- [x] **5 meaningful commits** represent completed work.
-
-**Verified status (2026-11-04):** G1 passed with 71 pytest cases. See `documentation/day1_verification.md` for evidence and `git log --oneline -5` for the five Day 1 commits. Existing Git/GitHub repositories and comprehensive README were preserved; activation was verified with the Windows batch script.
+- [ ] `algorithms/bubble_sort.py` passes correctness and step-tracking tests.
+- [ ] `algorithms/quickselect.py` passes selection and validation tests.
+- [ ] `visualization/sorting_visualizer.py` exposes ordered, accurate step data.
+- [ ] README and architecture notes describe the interfaces.
+- [ ] **5 meaningful commits** represent completed work.
 
 **Go/no-go decision:** Proceed to Day 2 only if core algorithm tests pass; otherwise correct defects before adding new functionality.
 
@@ -340,100 +331,102 @@ git status
 
 ## 6. Day 2 — Custom sets and data structures
 
-**One major objective:** Implement and verify the Custom Set plus Stack, Queue, BST, Graph, and Hash Table through one consistent manager.  
-**Estimate:** ~7 h 30 min, including documentation/review.  
+**One major objective:** Implement and verify the Custom Set plus Stack, Queue, BST, Graph, and Hash Table through one consistent manager.
+**Estimate:** ~7 h 30 min, including documentation/review.
 **Start condition:** Gate G1 passed.
 
-### Work package D2.1 — Custom Set (~90 min)
+### Work package D2.1 — Custom Set 
 
-- [ ] Create `CustomSet` with a documented storage strategy and uniqueness rules.
-- [ ] Implement `add`, `remove`/`discard`, membership, size, and inspect/display.
-- [ ] Implement `union` and `intersection` returning new sets.
-- [ ] Implement `difference` and `symmetric_difference` returning new sets.
-- [ ] Confirm results do not unexpectedly mutate operands.
-- [ ] Test empty sets, overlap, disjoint sets, duplicates, and order-independent equality.
-- [ ] Explain read-only/derived-set operations versus mutations in the documentation.
+- [x] Create `CustomSet` with a documented storage strategy and uniqueness rules.
+- [x] Implement `add`, `remove`/`discard`, membership, size, and inspect/display.
+- [x] Implement `union` and `intersection` returning new sets.
+- [x] Implement `difference` and `symmetric_difference` returning new sets.
+- [x] Confirm results do not unexpectedly mutate operands.
+- [x] Test empty sets, overlap, disjoint sets, duplicates, and order-independent equality.
+- [x] Explain read-only/derived-set operations versus mutations in the documentation.
 
-**Acceptance:** All four required operations match mathematical set semantics.  
+**Acceptance:** All four required operations match mathematical set semantics.
 **Commit 06:** `feat: implement custom set operations`
 
-### Work package D2.2 — Stack and Queue (~60 min)
+### Work package D2.2 — Stack and Queue 
 
-- [ ] Review/reuse previous-module code where appropriate.
-- [ ] Implement Stack `push`, `pop`, `peek`, `is_empty`.
-- [ ] Implement Queue `enqueue`, `dequeue`, `front`, `is_empty`.
-- [ ] Choose a queue representation that avoids repeated `list.pop(0)` costs (e.g., `collections.deque`).
-- [ ] Handle empty-state operations with consistent, documented errors.
-- [ ] Provide a read-only way to display contents for the UI.
+- [x] Review/reuse previous-module code where appropriate.
+- [x] Implement Stack `push`, `pop`, `peek`, `is_empty`.
+- [x] Implement Queue `enqueue`, `dequeue`, `front`, `is_empty`.
+- [x] Choose a queue representation that avoids repeated `list.pop(0)` costs (e.g., `collections.deque`).
+- [x] Handle empty-state operations with consistent, documented errors.
+- [x] Provide a read-only way to display contents for the UI.
 
-**Acceptance:** Stack obeys LIFO; Queue obeys FIFO; both handle empty states.  
+**Acceptance:** Stack obeys LIFO; Queue obeys FIFO; both handle empty states.
 **Commit 07:** `feat: add stack and queue implementations`
 
-### Work package D2.3 — Binary Search Tree and Graph (~90 min)
+### Work package D2.3 — Binary Search Tree and Graph 
 
-- [ ] Implement BST node structure and insertion with a stated duplicate policy.
-- [ ] Implement BST search and inorder/preorder/postorder traversals.
-- [ ] Test empty, skewed, and multi-node trees.
-- [ ] Implement Graph adjacency-list storage and add-vertex/add-edge operations.
-- [ ] Implement BFS and DFS with a visited set and deterministic traversal ordering.
-- [ ] Verify disconnected components and invalid starting vertices are handled clearly.
-- [ ] Document graph type (undirected/unweighted) and BST balance limitations.
+- [x] Implement BST node structure and insertion with a stated duplicate policy.
+- [x] Implement BST search and inorder/preorder/postorder traversals.
+- [x] Test empty, skewed, and multi-node trees.
+- [x] Implement Graph adjacency-list storage and add-vertex/add-edge operations.
+- [x] Implement BFS and DFS with a visited set and deterministic traversal ordering.
+- [x] Verify disconnected components and invalid starting vertices are handled clearly.
+- [x] Document graph type (undirected/unweighted) and BST balance limitations.
 
-**Acceptance:** BST inorder traversal is ordered under chosen duplicate policy; BFS/DFS visit the expected reachable vertices.  
+**Acceptance:** BST inorder traversal is ordered under chosen duplicate policy; BFS/DFS visit the expected reachable vertices.
 **Commit 08:** `feat: implement binary search tree and graph`
 
-### Work package D2.4 — Hash Table (~60 min)
+### Work package D2.4 — Hash Table
 
-- [ ] Create hash-bucket storage for key-value pairs.
-- [ ] Implement insertion/update, lookup, and deletion.
-- [ ] Handle collisions using separate chaining.
-- [ ] Define supported keys and missing-key behavior.
-- [ ] Test collision cases deliberately, not only typical keys.
-- [ ] Document average-case and worst-case search/insert/delete characteristics.
+- [x] Create hash-bucket storage for key-value pairs.
+- [x] Implement insertion/update, lookup, and deletion.
+- [x] Handle collisions using separate chaining.
+- [x] Define supported keys and missing-key behavior.
+- [x] Test collision cases deliberately, not only typical keys.
+- [x] Document average-case and worst-case search/insert/delete characteristics.
 
-**Acceptance:** Colliding keys remain independently retrievable and deletable.  
+**Acceptance:** Colliding keys remain independently retrievable and deletable.
 **Commit 09:** `feat: add hash table with collision handling`
 
-### Work package D2.5 — Unified manager (~60 min)
+### Work package D2.5 — Unified manager
 
-- [ ] Add `data_structures/manager.py` with a central registry of structures.
-- [ ] Map allowed operation names to methods without `eval()` or dynamic execution.
-- [ ] Define `execute(structure, operation, **kwargs)` or an equivalent documented API.
-- [ ] Preserve instances for stateful operation sequences.
-- [ ] Return plain, UI-friendly results and useful error messages.
-- [ ] Verify every required structure and operation is reachable through the manager.
+- [x] Add `data_structures/manager.py` with a central registry of structures.
+- [x] Map allowed operation names to methods without `eval()` or dynamic execution.
+- [x] Define `execute(structure, operation, **kwargs)` or an equivalent documented API.
+- [x] Preserve instances for stateful operation sequences.
+- [x] Return plain, UI-friendly results and useful error messages.
+- [x] Verify every required structure and operation is reachable through the manager.
 
-**Acceptance:** Integration calls work without the Streamlit UI; unsupported names are rejected cleanly.  
+**Acceptance:** Integration calls work without the Streamlit UI; unsupported names are rejected cleanly.
 **Commit 10:** `feat: integrate data structures through unified manager`
 
-### Work package D2.6 — Tests and regression (~60 min)
+### Work package D2.6 — Tests and regression 
 
-- [ ] Create tests for Set, Stack, Queue, BST, Graph, and Hash Table.
-- [ ] Test manager dispatch and persistence of state between operations.
-- [ ] Cover empty structures, duplicates, invalid requests, and collision scenarios.
-- [ ] Re-run Day 1 tests to check for regressions.
-- [ ] Fix detected defects and capture any behavior changes in docs.
+- [x] Create tests for Set, Stack, Queue, BST, Graph, and Hash Table.
+- [x] Test manager dispatch and persistence of state between operations.
+- [x] Cover empty structures, duplicates, invalid requests, and collision scenarios.
+- [x] Re-run Day 1 tests to check for regressions.
+- [x] Fix detected defects and capture any behavior changes in docs.
 
 **Acceptance:** All Day 1 and Day 2 unit tests pass.
 
-### Work package D2.7 — Documentation and gate review (~30 min)
+### Work package D2.7 — Documentation and gate review 
 
-- [ ] Write `documentation/data_structures.md` with supported operations and examples.
-- [ ] Add big-O expectations and important assumptions (tree balance, hash collision handling).
-- [ ] Note which previous-module implementations were reused or adapted.
-- [ ] Update architecture overview to include the manager.
-- [ ] Verify G2, inspect diff, and commit completed work.
+- [x] Write `documentation/data_structures.md` with supported operations and examples.
+- [x] Add big-O expectations and important assumptions (tree balance, hash collision handling).
+- [x] Note which previous-module implementations were reused or adapted.
+- [x] Update architecture overview to include the manager.
+- [x] Verify G2, inspect diff, and commit completed work.
 
-**Acceptance:** Interfaces are consistent and ready for Day 3 UI integration.  
+**Acceptance:** Interfaces are consistent and ready for Day 3 UI integration.
 **Commit 11 (D2.6 + D2.7):** `test: verify data structures and document operations`
 
 #### Day 2 deliverables and gate G2
 
-- [ ] `custom_set.py`, `stack.py`, `queue.py`, `tree.py`, `graph.py`, `hash_table.py` complete.
-- [ ] `manager.py` can invoke all supported operations.
-- [ ] Tests pass for correctness, edge conditions, and manager integration.
-- [ ] Data structure documentation includes time/space trade-offs.
-- [ ] **6 meaningful commits** represent completed work.
+- [x] `custom_set.py`, `stack.py`, `queue.py`, `tree.py`, `graph.py`, `hash_table.py` complete.
+- [x] `manager.py` can invoke all supported operations.
+- [x] Tests pass for correctness, edge conditions, and manager integration.
+- [x] Data structure documentation includes time/space trade-offs.
+- [x] **6 meaningful commits** represent completed work.
+
+**Verified status (2026-11-05):** G2 passed with 143 total pytest cases, including all Day 1 regressions and every one of the 49 manager operation routes. See `documentation/day2_verification.md` for evidence and `git log --oneline f2409c4..HEAD` for the six Day 2 commits.
 
 **Go/no-go decision:** Do not proceed to broad UI wiring until all manager operations have passing tests.
 
@@ -441,8 +434,8 @@ git status
 
 ## 7. Day 3 — Interactive application and benchmarking
 
-**One major objective:** Deliver a complete local interactive application, step-by-step Bubble Sort visualization, and reproducible performance measurement tools.  
-**Estimate:** ~7 hours.  
+**One major objective:** Deliver a complete local interactive application, step-by-step Bubble Sort visualization, and reproducible performance measurement tools.
+**Estimate:** ~7 hours.
 **Start condition:** Gate G2 passed.
 
 ### Work package D3.1 — Streamlit shell (~60 min)
@@ -454,7 +447,7 @@ git status
 - [ ] Do a technical spike confirming `st.session_state` preserves a sample object.
 - [ ] Launch with `streamlit run app.py` and check navigation.
 
-**Acceptance:** App starts and each section renders without crashing.  
+**Acceptance:** App starts and each section renders without crashing.
 **Commit 12:** `feat: build Streamlit dashboard and navigation`
 
 ### Work package D3.2 — Algorithm UI (~60 min)
@@ -466,7 +459,7 @@ git status
 - [ ] Display the kth smallest result and appropriate complexity notes.
 - [ ] Reset stale results/steps if the input dataset changes.
 
-**Acceptance:** Both algorithms run from the UI and display correct outputs and helpful errors.  
+**Acceptance:** Both algorithms run from the UI and display correct outputs and helpful errors.
 **Commit 13:** `feat: integrate bubble sort and quickselect interfaces`
 
 ### Work package D3.3 — Sorting visualization (~60 min)
@@ -479,7 +472,7 @@ git status
 - [ ] Cap visualized input size (e.g., 50 elements) to avoid excessive step storage.
 - [ ] Confirm navigating all steps ends at the sorted result.
 
-**Acceptance:** A user can inspect the algorithm's progression in order without inconsistent UI resets.  
+**Acceptance:** A user can inspect the algorithm's progression in order without inconsistent UI resets.
 **Commit 14:** `feat: add interactive bubble sort visualization`
 
 ### Work package D3.4 — Data structure controls (~90 min)
@@ -493,7 +486,7 @@ git status
 - [ ] Persist structure state across Streamlit reruns; provide a reset control.
 - [ ] Display current contents and useful validation/error messages.
 
-**Acceptance:** All six data structures work end to end through the UI.  
+**Acceptance:** All six data structures work end to end through the UI.
 **Commit 15:** `feat: build interactive data structure controls`
 
 ### Work package D3.5 — Benchmark framework (~60 min)
@@ -507,7 +500,7 @@ git status
 - [ ] Capture implementation, operation, size, pattern, trial, elapsed time, peak tracked bytes, seed, and environment.
 - [ ] Check benchmark correctness after each trial and export CSV-ready rows.
 
-**Acceptance:** Repeatable runs produce actual numeric measurements, not illustrative or hard-coded results.  
+**Acceptance:** Repeatable runs produce actual numeric measurements, not illustrative or hard-coded results.
 **Commit 16:** `perf: implement execution time and memory benchmarking`
 
 ### Work package D3.6 — Performance dashboard (~45 min)
@@ -519,7 +512,7 @@ git status
 - [ ] Provide download/export of `results/benchmark_results.csv`.
 - [ ] Explain that Bubble Sort and Quickselect solve **different problems**, so timings are not proof one replaces the other.
 
-**Acceptance:** Charts use measured values and labels are not misleading.  
+**Acceptance:** Charts use measured values and labels are not misleading.
 **Commit 17:** `feat: add performance charts and benchmark dashboard`
 
 ### Work package D3.7 — End-to-end validation (~45 min)
@@ -531,7 +524,7 @@ git status
 - [ ] Run the complete pytest suite and fix integration regressions.
 - [ ] Record any limitations for the final report and user guide.
 
-**Acceptance:** G3 passes; no critical user workflow is broken.  
+**Acceptance:** G3 passes; no critical user workflow is broken.
 **Commit 18:** `test: validate UI integration and performance tools`
 
 #### Day 3 verification commands
@@ -557,8 +550,8 @@ streamlit run app.py
 
 ## 8. Day 4 — Final QA, report, presentation, release
 
-**One major objective:** Verify every deliverable and produce a complete, academically defensible, submission-ready portfolio.  
-**Estimate:** ~7 h 20 min, plus contingency.  
+**One major objective:** Verify every deliverable and produce a complete, academically defensible, submission-ready portfolio.
+**Estimate:** ~7 h 20 min, plus contingency.
 **Start condition:** Gate G3 passed.
 
 ### Work package D4.1 — Final regression and integration QA (~75 min)
@@ -571,7 +564,7 @@ streamlit run app.py
 - [ ] Fix critical defects and re-run affected and full suites.
 - [ ] Record known noncritical limitations in documentation.
 
-**Acceptance:** No critical defects; reproducible tests pass.  
+**Acceptance:** No critical defects; reproducible tests pass.
 **Commit 19:** `test: complete final regression and integration testing`
 
 ### Work package D4.2 — Final benchmark runs and evidence (~60 min)
@@ -584,7 +577,7 @@ streamlit run app.py
 - [ ] Save `results/benchmark_results.csv` and generated chart assets if used.
 - [ ] Identify effects of input order, repeated values, tree skew, and hash collisions where observed.
 
-**Acceptance:** Raw data, chart labels, and reported summary values agree.  
+**Acceptance:** Raw data, chart labels, and reported summary values agree.
 **Commit 20:** `perf: finalize benchmarks and performance analysis`
 
 ### Work package D4.3 — Comprehensive performance report (~120 min)
@@ -608,7 +601,7 @@ streamlit run app.py
 - For a BST, average vs worst-case performance depends on balance; for hash tables, collision policy and load factor matter.
 - No invented timings, memory readings, source citations, test counts, or screenshots.
 
-**Acceptance:** `documentation/performance_analysis_report.pdf` opens, has 5+ substantive pages, and all figures match recorded data.  
+**Acceptance:** `documentation/performance_analysis_report.pdf` opens, has 5+ substantive pages, and all figures match recorded data.
 **Commit 21:** `docs: add comprehensive performance analysis report`
 
 ### Work package D4.4 — Final portfolio presentation (~75 min)
@@ -652,7 +645,7 @@ streamlit run app.py
 - [ ] Record what worked well in the four-day process.
 - [ ] Identify two or three realistic improvements for a future version.
 
-**Acceptance:** `documentation/retrospective.md` captures learning and known limitations.  
+**Acceptance:** `documentation/retrospective.md` captures learning and known limitations.
 **Commit 22 (D4.4–D4.7):** `docs: finalize presentation and release documentation`
 
 #### Day 4 release commands
@@ -684,39 +677,39 @@ git tag -a v1.0.0 -m "AlgoNexis Portfolio v1.0.0"
 
 ### 9.1 Commit accounting
 
-| Day | Count | Number range | Cumulative |
-|---|---:|---|---:|
-| Day 1 | **5** | 01–05 | 5 |
-| Day 2 | **6** | 06–11 | 11 |
-| Day 3 | **7** | 12–18 | 18 |
-| Day 4 | **4** | 19–22 | **22** |
+| Day   |       Count | Number range |   Cumulative |
+| ----- | ----------: | ------------ | -----------: |
+| Day 1 | **5** | 01–05       |            5 |
+| Day 2 | **6** | 06–11       |           11 |
+| Day 3 | **7** | 12–18       |           18 |
+| Day 4 | **4** | 19–22       | **22** |
 
 ### 9.2 Ordered commit messages and expected changes
 
-| # | Day | Commit message | Scope that must exist before commit |
-|---:|---|---|---|
-| 01 | 1 | `chore: initialize AlgoNexis project structure` | Repo, folders, requirements, README, ignores |
-| 02 | 1 | `feat: implement bubble sort with step tracking` | Sort logic, statistics, steps |
-| 03 | 1 | `feat: add sorting visualization engine` | Consumable step data and navigation helpers |
-| 04 | 1 | `feat: implement quickselect with input validation` | Partitioning, valid ranks, errors |
-| 05 | 1 | `test: add core algorithm tests and documentation` | Algorithm tests and usage/complexity notes |
-| 06 | 2 | `feat: implement custom set operations` | Set class, uniqueness, four operations |
-| 07 | 2 | `feat: add stack and queue implementations` | LIFO/FIFO operations and errors |
-| 08 | 2 | `feat: implement binary search tree and graph` | BST traversal/search; Graph BFS/DFS |
-| 09 | 2 | `feat: add hash table with collision handling` | Key/value CRUD and separate chaining |
-| 10 | 2 | `feat: integrate data structures through unified manager` | Manager dispatch and stateful access |
-| 11 | 2 | `test: verify data structures and document operations` | All structures/manager tests, docs |
-| 12 | 3 | `feat: build Streamlit dashboard and navigation` | App shell, sections, startup |
-| 13 | 3 | `feat: integrate bubble sort and quickselect interfaces` | Algorithm controls and results |
-| 14 | 3 | `feat: add interactive bubble sort visualization` | Step chart and navigation |
-| 15 | 3 | `feat: build interactive data structure controls` | All six structure panels |
-| 16 | 3 | `perf: implement execution time and memory benchmarking` | Measurement and repeatable datasets |
-| 17 | 3 | `feat: add performance charts and benchmark dashboard` | Tables/charts/export |
-| 18 | 3 | `test: validate UI integration and performance tools` | Integration checks and fixes |
-| 19 | 4 | `test: complete final regression and integration testing` | Final code QA and fixes |
-| 20 | 4 | `perf: finalize benchmarks and performance analysis` | Verified raw/summary benchmark evidence |
-| 21 | 4 | `docs: add comprehensive performance analysis report` | Final PDF report |
-| 22 | 4 | `docs: finalize presentation and release documentation` | Slides, guides, retrospective, release checks |
+|  # | Day | Commit message                                              | Scope that must exist before commit           |
+| -: | --- | ----------------------------------------------------------- | --------------------------------------------- |
+| 01 | 1   | `chore: initialize AlgoNexis project structure`           | Repo, folders, requirements, README, ignores  |
+| 02 | 1   | `feat: implement bubble sort with step tracking`          | Sort logic, statistics, steps                 |
+| 03 | 1   | `feat: add sorting visualization engine`                  | Consumable step data and navigation helpers   |
+| 04 | 1   | `feat: implement quickselect with input validation`       | Partitioning, valid ranks, errors             |
+| 05 | 1   | `test: add core algorithm tests and documentation`        | Algorithm tests and usage/complexity notes    |
+| 06 | 2   | `feat: implement custom set operations`                   | Set class, uniqueness, four operations        |
+| 07 | 2   | `feat: add stack and queue implementations`               | LIFO/FIFO operations and errors               |
+| 08 | 2   | `feat: implement binary search tree and graph`            | BST traversal/search; Graph BFS/DFS           |
+| 09 | 2   | `feat: add hash table with collision handling`            | Key/value CRUD and separate chaining          |
+| 10 | 2   | `feat: integrate data structures through unified manager` | Manager dispatch and stateful access          |
+| 11 | 2   | `test: verify data structures and document operations`    | All structures/manager tests, docs            |
+| 12 | 3   | `feat: build Streamlit dashboard and navigation`          | App shell, sections, startup                  |
+| 13 | 3   | `feat: integrate bubble sort and quickselect interfaces`  | Algorithm controls and results                |
+| 14 | 3   | `feat: add interactive bubble sort visualization`         | Step chart and navigation                     |
+| 15 | 3   | `feat: build interactive data structure controls`         | All six structure panels                      |
+| 16 | 3   | `perf: implement execution time and memory benchmarking`  | Measurement and repeatable datasets           |
+| 17 | 3   | `feat: add performance charts and benchmark dashboard`    | Tables/charts/export                          |
+| 18 | 3   | `test: validate UI integration and performance tools`     | Integration checks and fixes                  |
+| 19 | 4   | `test: complete final regression and integration testing` | Final code QA and fixes                       |
+| 20 | 4   | `perf: finalize benchmarks and performance analysis`      | Verified raw/summary benchmark evidence       |
+| 21 | 4   | `docs: add comprehensive performance analysis report`     | Final PDF report                              |
+| 22 | 4   | `docs: finalize presentation and release documentation`   | Slides, guides, retrospective, release checks |
 
 ### 9.3 Safe Git workflow per completed work package
 
@@ -743,20 +736,20 @@ Commit messages are a **schedule**, not commands to run in bulk. Do not pre-crea
 
 ### 10.1 Test matrix
 
-| Feature | Normal cases | Edge cases / failure cases | Reference check |
-|---|---|---|---|
-| Bubble Sort | Mixed integers, ascending result | Empty, single, sorted, reverse, duplicates, negatives | `sorted(values)` |
-| Step records | Each compare/swap is represented | Zero swaps, repeated values | Replay states → final sorted list |
-| Quickselect | First/middle/last rank | Empty, invalid k, duplicates | `sorted(values)[k-1]` |
-| Custom Set | Four required operations | Empty, disjoint, identical, duplicates | Mathematical set semantics (test oracle only) |
-| Stack | Push/pop/peek | Empty pop/peek | LIFO order |
-| Queue | Enqueue/dequeue/front | Empty dequeue/front | FIFO order |
-| BST | Insert/search/traverse | Empty, duplicates, skew | Inorder consistency |
-| Graph | Vertex/edge/BFS/DFS | Disconnected, invalid start, cycles | Expected reachable set/order |
-| Hash Table | Add/update/get/delete | Collisions, missing key | Expected key/value behavior |
-| Manager | All dispatch paths | Unknown structure/operation | Correct target method/error |
-| UI | Input and display for each feature | Bad parsing, stale state, reset | Manual end-to-end cases |
-| Benchmarks | Multiple sizes/trials | Bounds, invalid samples | Recomputed outputs and CSV/chart agreement |
+| Feature      | Normal cases                       | Edge cases / failure cases                            | Reference check                               |
+| ------------ | ---------------------------------- | ----------------------------------------------------- | --------------------------------------------- |
+| Bubble Sort  | Mixed integers, ascending result   | Empty, single, sorted, reverse, duplicates, negatives | `sorted(values)`                            |
+| Step records | Each compare/swap is represented   | Zero swaps, repeated values                           | Replay states → final sorted list            |
+| Quickselect  | First/middle/last rank             | Empty, invalid k, duplicates                          | `sorted(values)[k-1]`                       |
+| Custom Set   | Four required operations           | Empty, disjoint, identical, duplicates                | Mathematical set semantics (test oracle only) |
+| Stack        | Push/pop/peek                      | Empty pop/peek                                        | LIFO order                                    |
+| Queue        | Enqueue/dequeue/front              | Empty dequeue/front                                   | FIFO order                                    |
+| BST          | Insert/search/traverse             | Empty, duplicates, skew                               | Inorder consistency                           |
+| Graph        | Vertex/edge/BFS/DFS                | Disconnected, invalid start, cycles                   | Expected reachable set/order                  |
+| Hash Table   | Add/update/get/delete              | Collisions, missing key                               | Expected key/value behavior                   |
+| Manager      | All dispatch paths                 | Unknown structure/operation                           | Correct target method/error                   |
+| UI           | Input and display for each feature | Bad parsing, stale state, reset                       | Manual end-to-end cases                       |
+| Benchmarks   | Multiple sizes/trials              | Bounds, invalid samples                               | Recomputed outputs and CSV/chart agreement    |
 
 ### 10.2 Benchmark measurement protocol
 
@@ -785,16 +778,16 @@ Commit messages are a **schedule**, not commands to run in bulk. Do not pre-crea
 
 ## 11. Deliverable-to-requirement traceability
 
-| # | Required deliverable | Planned evidence | Day completed | Acceptance check |
-|---:|---|---|---:|---|
-| 1 | Bubble Sort source with visualization | `algorithms/bubble_sort.py`, `visualization/sorting_visualizer.py`, UI | 1 + 3 | Correct sorting and inspectable sequential steps |
-| 2 | Quickselect source | `algorithms/quickselect.py` | 1 | Correct kth value, validated input |
-| 3 | Complete Set class | `data_structures/custom_set.py`, docs/tests | 2 | Four set operations correct and documented |
-| 4 | Integrated portfolio | `data_structures/manager.py` and app integrations | 2 + 3 | All course structures accessible |
-| 5 | Interactive user interface | `app.py` | 3 | User can test algorithms and structures |
-| 6 | Performance report (5+ pages) | `documentation/performance_analysis_report.pdf` | 4 | Actual comparisons, charts, meaningful trade-offs |
-| 7 | Final presentation | `documentation/portfolio_presentation.pptx` **or** video | 4 | Demonstrates working system and learning |
-| 8 | Complete documentation | `README.md`, user guide, architecture, DS docs | 4 | Setup, usage, design decisions are clear |
+| # | Required deliverable                  | Planned evidence                                                           | Day completed | Acceptance check                                  |
+| -: | ------------------------------------- | -------------------------------------------------------------------------- | ------------: | ------------------------------------------------- |
+| 1 | Bubble Sort source with visualization | `algorithms/bubble_sort.py`, `visualization/sorting_visualizer.py`, UI |         1 + 3 | Correct sorting and inspectable sequential steps  |
+| 2 | Quickselect source                    | `algorithms/quickselect.py`                                              |             1 | Correct kth value, validated input                |
+| 3 | Complete Set class                    | `data_structures/custom_set.py`, docs/tests                              |             2 | Four set operations correct and documented        |
+| 4 | Integrated portfolio                  | `data_structures/manager.py` and app integrations                        |         2 + 3 | All course structures accessible                  |
+| 5 | Interactive user interface            | `app.py`                                                                 |             3 | User can test algorithms and structures           |
+| 6 | Performance report (5+ pages)         | `documentation/performance_analysis_report.pdf`                          |             4 | Actual comparisons, charts, meaningful trade-offs |
+| 7 | Final presentation                    | `documentation/portfolio_presentation.pptx` **or** video           |             4 | Demonstrates working system and learning          |
+| 8 | Complete documentation                | `README.md`, user guide, architecture, DS docs                           |             4 | Setup, usage, design decisions are clear          |
 
 **Assignment-level success criteria:** Bubble Sort sorts and visualizes, Quickselect selects efficiently, sets operate correctly, all structures integrate, the analysis conveys trade-offs, and the final presentation explains technical achievement and learning.
 
@@ -804,16 +797,16 @@ Commit messages are a **schedule**, not commands to run in bulk. Do not pre-crea
 
 ### 12.1 Required / recommended files
 
-| Artifact | Purpose | Owner/day |
-|---|---|---|
-| `README.md` | Project overview, install, run, test, known limitations | Start D1, finalize D4 |
-| `documentation/architecture.md` | Module map, APIs, interface and design decisions | Start D1, update D2–D4 |
-| `documentation/data_structures.md` | Supported operations, definitions, use cases, complexity | D2 |
-| `documentation/user_guide.md` | How to use algorithms, structures, visualizer, benchmarks | D4 |
-| `results/benchmark_results.csv` | Reproducible measurement evidence | D3–D4 |
-| `documentation/performance_analysis_report.pdf` | 5+ page analysis | D4 |
-| `documentation/portfolio_presentation.pptx` | Visual system demonstration; substitute video if chosen | D4 |
-| `documentation/retrospective.md` | Challenges, decisions, learning, enhancements | D4 |
+| Artifact                                          | Purpose                                                   | Owner/day               |
+| ------------------------------------------------- | --------------------------------------------------------- | ----------------------- |
+| `README.md`                                     | Project overview, install, run, test, known limitations   | Start D1, finalize D4   |
+| `documentation/architecture.md`                 | Module map, APIs, interface and design decisions          | Start D1, update D2–D4 |
+| `documentation/data_structures.md`              | Supported operations, definitions, use cases, complexity  | D2                      |
+| `documentation/user_guide.md`                   | How to use algorithms, structures, visualizer, benchmarks | D4                      |
+| `results/benchmark_results.csv`                 | Reproducible measurement evidence                         | D3–D4                  |
+| `documentation/performance_analysis_report.pdf` | 5+ page analysis                                          | D4                      |
+| `documentation/portfolio_presentation.pptx`     | Visual system demonstration; substitute video if chosen   | D4                      |
+| `documentation/retrospective.md`                | Challenges, decisions, learning, enhancements             | D4                      |
 
 ### 12.2 Essential architecture documentation
 
@@ -833,16 +826,16 @@ Include one simple diagram (ASCII/Markdown is acceptable), the manager dispatch 
 
 ## 13. Risks, dependencies, and contingency plan
 
-| Risk | Likelihood / impact | Early signal | Response |
-|---|---|---|---|
-| Prior-module code unavailable or inconsistent | Medium / High | D1 inventory reveals missing APIs | Implement minimal correct operations first; prioritize required methods |
-| Scope too large for four days | Medium / High | D2 takes longer than planned | Reuse tested modules, defer cosmetic enhancements, preserve all required functionality |
-| Streamlit session state errors | Medium / Medium | UI loses operations on rerun | Prototype state on D3.1 before full control integration |
-| Benchmark runs are too slow | Medium / Medium | Bubble Sort size 5,000 causes delays | Cap sizes, run batch offline, document bounded sample selection |
-| Unstable timing results | High / Medium | Large trial-to-trial variance | Repeat, summarize distributions, control seeds, describe limitations |
-| Misleading algorithm comparison | Medium / High | Report calls Quickselect “faster sort” | Compare scaling but distinguish distinct tasks |
-| Report or slides rushed | Medium / High | Day 3 lacks verified charts | Begin report outline before Day 4; reserve Day 4 for verified results and clear interpretation |
-| Wrong citation/format requirements | Medium / Medium | Course rubric differs from assumptions | Reconcile requirements before final PDF/slides export |
+| Risk                                          | Likelihood / impact | Early signal                             | Response                                                                                       |
+| --------------------------------------------- | ------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Prior-module code unavailable or inconsistent | Medium / High       | D1 inventory reveals missing APIs        | Implement minimal correct operations first; prioritize required methods                        |
+| Scope too large for four days                 | Medium / High       | D2 takes longer than planned             | Reuse tested modules, defer cosmetic enhancements, preserve all required functionality         |
+| Streamlit session state errors                | Medium / Medium     | UI loses operations on rerun             | Prototype state on D3.1 before full control integration                                        |
+| Benchmark runs are too slow                   | Medium / Medium     | Bubble Sort size 5,000 causes delays     | Cap sizes, run batch offline, document bounded sample selection                                |
+| Unstable timing results                       | High / Medium       | Large trial-to-trial variance            | Repeat, summarize distributions, control seeds, describe limitations                           |
+| Misleading algorithm comparison               | Medium / High       | Report calls Quickselect “faster sort” | Compare scaling but distinguish distinct tasks                                                 |
+| Report or slides rushed                       | Medium / High       | Day 3 lacks verified charts              | Begin report outline before Day 4; reserve Day 4 for verified results and clear interpretation |
+| Wrong citation/format requirements            | Medium / Medium     | Course rubric differs from assumptions   | Reconcile requirements before final PDF/slides export                                          |
 
 **Priority if time is limited:** (1) correct core algorithms/sets/structures, (2) working unified UI, (3) validated measurements, (4) required 5+ page report and presentation, (5) aesthetic refinements. Never replace missing required deliverables with optional polish.
 
