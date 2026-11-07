@@ -1,0 +1,9 @@
+# Stable source/provenance bytes across Windows and POSIX checkouts.
+* text=auto eol=lf
+# CSV writers deliberately emit CRLF; preserve exact downloadable evidence.
+*.csv -text
+# Generated evidence is hashed byte-for-byte, including JSON and SVG line endings.
+results/** -text
+*.png binary
+*.pdf binary
+*.pptx binary

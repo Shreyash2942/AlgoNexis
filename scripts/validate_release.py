@@ -89,11 +89,36 @@ def verify_artifacts(root: Path = ROOT) -> dict:
     return {'report_pages': pages, 'substantive_pages': len(substantive), 'slides': len(slides.slides)}
 
 
+def verify_collisions(root: Path = ROOT) -> int:
+    path = root / 'results/hash_collision_results.csv'
+    rows = load_rows(path)
+    metadata = json.loads(path.with_suffix('.environment.json').read_text(encoding='utf-8'))
+    expected = Counter((n, c, trial, kind) for n in (10, 100, 1000) for c in (1, 2*n)
+                       for trial in range(1, 6) for kind in ('timing', 'memory'))
+    actual = Counter((r['input_size'], r['hash_capacity'], r['trial'], r['measurement']) for r in rows)
+    if actual != expected or len(rows) != metadata['observed_rows']:
+        raise ValueError('Controlled hash trial coverage differs from its design.')
+    for row in rows:
+        if (row['run_id'] != metadata['run_id'] or row['status'] != 'ok' or
+                row['input_pattern'] != 'unique_integer_keys' or row['fixture_items'] != row['input_size'] or
+                row['algorithm_or_structure'] != 'hash_table' or row['operation'] != 'find_all' or
+                row['source_digest'] != metadata['source_digest']):
+            raise ValueError('Controlled hash provenance or workload mismatch.')
+    if sha256((root / 'scripts/measure_hash_collisions.py').read_bytes()).hexdigest() != metadata['script_sha256']:
+        raise ValueError('Controlled measurement script changed.')
+    for relative, digest in metadata['source_sha256'].items():
+        if sha256((root / relative).read_bytes()).hexdigest() != digest:
+            raise ValueError(f'Controlled experiment source changed: {relative}.')
+    return len(rows)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--artifacts', action='store_true')
     args = parser.parse_args()
     result = verify_measurements(ROOT / 'results/benchmark_results.csv')
+    if (ROOT / 'results/hash_collision_results.csv').exists():
+        result['supplemental_observations'] = verify_collisions()
     if args.artifacts:
         result.update(verify_artifacts())
     print(json.dumps(result, indent=2))

@@ -1,0 +1,229 @@
+run_id,algorithm_or_structure,operation,input_size,input_pattern,measurement,hash_capacity,trials,mean,median,minimum,maximum,unit
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,random,timing,,5,0.01796,0.0159,0.0144,0.0264,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,random,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,random,timing,,5,0.00488,0.005,0.0034,0.0063,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,random,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,random,timing,,5,0.00078,0.0008,0.0007,0.0009,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,random,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,random,timing,,5,0.00098,0.001,0.0008,0.0011,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,random,memory,,5,160,160,160,160,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,random,timing,,5,0.00094,0.0009,0.0009,0.001,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,random,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,random,timing,,5,0.0022,0.0022,0.002,0.0024,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,random,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,random,timing,20,5,0.0027199999999999998,0.0027,0.0026,0.0029,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,random,memory,20,5,200,200,200,200,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,sorted,timing,,5,0.00242,0.0021,0.002,0.0032,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,sorted,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,sorted,timing,,5,0.00398,0.0039,0.0032,0.0047,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,sorted,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,sorted,timing,,5,0.0007,0.0007,0.0006,0.0008,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,sorted,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,sorted,timing,,5,0.00096,0.0009,0.0008,0.0012,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,sorted,memory,,5,160,160,160,160,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,sorted,timing,,5,0.00092,0.0009,0.0009,0.001,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,sorted,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,sorted,timing,,5,0.00302,0.0028,0.0027,0.0038,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,sorted,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,sorted,timing,20,5,0.0028,0.0028,0.0027,0.0029,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,sorted,memory,20,5,200,200,200,200,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,reverse,timing,,5,0.00554,0.0055,0.0052,0.0058,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,reverse,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,reverse,timing,,5,0.00424,0.0043,0.0036,0.0046,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,reverse,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,reverse,timing,,5,0.00066,0.0007,0.0005,0.0008,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,reverse,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,reverse,timing,,5,0.00092,0.0009,0.0009,0.001,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,reverse,memory,,5,160,160,160,160,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,reverse,timing,,5,0.0009,0.0009,0.0008,0.001,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,reverse,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,reverse,timing,,5,0.00278,0.0027,0.0027,0.0029,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,reverse,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,reverse,timing,20,5,0.0027199999999999998,0.0027,0.0026,0.0029,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,reverse,memory,20,5,200,200,200,200,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,duplicates,timing,,5,0.0052,0.0051,0.005,0.0055,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,10,duplicates,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,duplicates,timing,,5,0.00362,0.0034,0.0026,0.0049,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,10,duplicates,memory,,5,392,392,392,392,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,duplicates,timing,,5,0.00078,0.0008,0.0007,0.0008,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,10,duplicates,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,duplicates,timing,,5,0.001,0.001,0.0009,0.0011,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,10,duplicates,memory,,5,160,160,160,160,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,duplicates,timing,,5,0.00084,0.0008,0.0008,0.0009,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,10,duplicates,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,duplicates,timing,,5,0.0025,0.0026,0.0017,0.0029,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,10,duplicates,memory,,5,128,128,128,128,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,duplicates,timing,20,5,0.00344,0.0034,0.0033,0.0037,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,10,duplicates,memory,20,5,200,200,200,200,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,random,timing,,5,0.32156,0.3067,0.3046,0.3816,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,random,memory,,5,1832,1832,1832,1832,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,random,timing,,5,0.03126,0.0333,0.0256,0.0364,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,random,memory,,5,856,856,856,856,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,random,timing,,5,0.00482,0.0047,0.0046,0.0052,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,random,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,random,timing,,5,0.0073,0.0072,0.0072,0.0076,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,random,memory,,5,1088,1088,1088,1088,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,random,timing,,5,0.00648,0.0065,0.0063,0.0067,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,random,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,random,timing,,5,0.03274,0.0327,0.0327,0.0328,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,random,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,random,timing,200,5,0.02424,0.0235,0.023,0.0278,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,random,memory,200,5,936,936,936,936,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,sorted,timing,,5,0.010020000000000001,0.0099,0.0097,0.0106,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,sorted,memory,,5,1768,1768,1768,1768,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,sorted,timing,,5,0.0277,0.0285,0.0232,0.0311,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,sorted,memory,,5,856,856,856,856,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,sorted,timing,,5,0.00462,0.0046,0.0045,0.0048,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,sorted,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,sorted,timing,,5,0.00724,0.0072,0.007,0.0075,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,sorted,memory,,5,1088,1088,1088,1088,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,sorted,timing,,5,0.00642,0.0064,0.0063,0.0065,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,sorted,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,sorted,timing,,5,0.14584,0.1458,0.1456,0.1463,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,sorted,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,sorted,timing,200,5,0.02536,0.023,0.0228,0.0351,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,sorted,memory,200,5,936,936,936,936,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,reverse,timing,,5,0.37688,0.3777,0.3721,0.3823,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,reverse,memory,,5,1768,1768,1768,1768,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,reverse,timing,,5,0.02486,0.0251,0.0185,0.0296,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,reverse,memory,,5,856,856,856,856,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,reverse,timing,,5,0.0047,0.0043,0.0042,0.0064,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,reverse,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,reverse,timing,,5,0.00672,0.0067,0.0066,0.0069,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,reverse,memory,,5,1088,1088,1088,1088,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,reverse,timing,,5,0.0059,0.0059,0.0058,0.006,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,reverse,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,reverse,timing,,5,0.13562,0.1349,0.1332,0.1382,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,reverse,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,reverse,timing,200,5,0.01964,0.0195,0.0194,0.0201,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,reverse,memory,200,5,936,936,936,936,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,duplicates,timing,,5,0.25374,0.2555,0.2421,0.2602,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,100,duplicates,memory,,5,1768,1768,1768,1768,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,duplicates,timing,,5,0.01592,0.0142,0.0103,0.0215,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,100,duplicates,memory,,5,856,856,856,856,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,duplicates,timing,,5,0.00386,0.0039,0.0037,0.004,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,100,duplicates,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,duplicates,timing,,5,0.0061,0.006,0.006,0.0063,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,100,duplicates,memory,,5,1088,1088,1088,1088,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,duplicates,timing,,5,0.00538,0.0054,0.0053,0.0054,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,100,duplicates,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,duplicates,timing,,5,0.01588,0.0159,0.0157,0.0161,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,100,duplicates,memory,,5,864,864,864,864,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,duplicates,timing,200,5,0.018099999999999998,0.018,0.018,0.0183,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,100,duplicates,memory,200,5,936,936,936,936,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,random,timing,,5,26.5049,25.9588,25.2322,29.9177,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,random,memory,,5,16232,16232,16232,16232,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,random,timing,,5,0.2155,0.1989,0.1864,0.2636,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,random,memory,,5,8056,8056,8056,8056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,random,timing,,5,0.03762,0.0375,0.0369,0.0387,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,random,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,random,timing,,5,0.04962,0.0492,0.0488,0.0511,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,random,memory,,5,10592,10592,10592,10592,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,random,timing,,5,0.04942,0.049,0.0486,0.0517,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,random,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,random,timing,,5,0.39718,0.3979,0.3938,0.3989,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,random,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,random,timing,2000,5,0.19686,0.1972,0.1948,0.1984,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,random,memory,2000,5,8872,8872,8872,8872,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,sorted,timing,,5,0.07892,0.0788,0.0785,0.0797,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,sorted,memory,,5,16168,16168,16168,16168,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,sorted,timing,,5,0.18508,0.1928,0.1328,0.2259,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,sorted,memory,,5,8056,8056,8056,8056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,sorted,timing,,5,0.0368,0.0366,0.0365,0.0375,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,sorted,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,sorted,timing,,5,0.0498,0.0498,0.0497,0.0499,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,sorted,memory,,5,10592,10592,10592,10592,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,sorted,timing,,5,0.05002,0.0499,0.0496,0.0504,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,sorted,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,sorted,timing,,5,10.51242,10.3313,10.2152,11.1236,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,sorted,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,sorted,timing,2000,5,0.18776,0.1881,0.1858,0.1899,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,sorted,memory,2000,5,8872,8872,8872,8872,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,reverse,timing,,5,31.43836,31.5257,30.2675,32.1191,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,reverse,memory,,5,16168,16168,16168,16168,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,reverse,timing,,5,0.19754,0.2258,0.1244,0.233,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,reverse,memory,,5,8056,8056,8056,8056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,reverse,timing,,5,0.039599999999999996,0.0383,0.0378,0.0447,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,reverse,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,reverse,timing,,5,0.0717,0.05,0.0494,0.158,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,reverse,memory,,5,10592,10592,10592,10592,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,reverse,timing,,5,0.0498,0.0494,0.0487,0.0516,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,reverse,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,reverse,timing,,5,11.0121,10.9178,10.7812,11.3527,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,reverse,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,reverse,timing,2000,5,0.18764,0.1875,0.1841,0.1901,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,reverse,memory,2000,5,8872,8872,8872,8872,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,duplicates,timing,,5,24.32138,24.2866,23.7152,24.982,ms
+c6f11506577d47dc87eddb2fc4391644,bubble_sort,sort,1000,duplicates,memory,,5,16168,16168,16168,16168,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,duplicates,timing,,5,0.13848,0.1443,0.0927,0.1618,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,1000,duplicates,memory,,5,8056,8056,8056,8056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,duplicates,timing,,5,0.0357,0.0358,0.034,0.0381,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,1000,duplicates,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,duplicates,timing,,5,0.048960000000000004,0.0487,0.0476,0.0502,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,1000,duplicates,memory,,5,10592,10592,10592,10592,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,duplicates,timing,,5,0.04852,0.0483,0.0477,0.0494,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,1000,duplicates,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,duplicates,timing,,5,0.1507,0.1452,0.1444,0.1727,ms
+c6f11506577d47dc87eddb2fc4391644,bst,search_all,1000,duplicates,memory,,5,8800,8800,8800,8800,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,duplicates,timing,2000,5,0.17848,0.1771,0.1764,0.1843,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,1000,duplicates,memory,2000,5,8872,8872,8872,8872,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,random,timing,,5,1.26264,1.242,0.7844,1.7544,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,random,memory,,5,40088,40088,40088,40088,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,random,timing,,5,0.19061999999999998,0.1892,0.1875,0.1972,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,random,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,random,timing,,5,0.23544,0.2351,0.2346,0.2368,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,random,memory,,5,51808,51808,51808,51808,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,random,timing,,5,0.26206,0.2399,0.239,0.3519,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,random,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,random,timing,10000,5,1.0119799999999999,1.0085,0.9806,1.0433,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,random,memory,10000,5,41896,41896,41896,41896,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,sorted,timing,,5,1.1258,1.1333,0.985,1.3073,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,sorted,memory,,5,40056,40056,40056,40056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,sorted,timing,,5,0.18566,0.1852,0.183,0.1891,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,sorted,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,sorted,timing,,5,0.23732,0.2358,0.2355,0.2408,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,sorted,memory,,5,51808,51808,51808,51808,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,sorted,timing,,5,0.27172,0.2488,0.2441,0.3677,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,sorted,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,sorted,timing,10000,5,1.2045000000000001,1.12,1.0256,1.4734,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,sorted,memory,10000,5,41896,41896,41896,41896,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,reverse,timing,,5,1.1247800000000001,1.1515,0.8265,1.3219,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,reverse,memory,,5,40056,40056,40056,40056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,reverse,timing,,5,0.18278,0.1817,0.1812,0.1875,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,reverse,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,reverse,timing,,5,0.23322,0.2312,0.2308,0.2381,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,reverse,memory,,5,51808,51808,51808,51808,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,reverse,timing,,5,0.2363,0.2356,0.2348,0.2399,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,reverse,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,reverse,timing,10000,5,1.04518,1.0204,0.9459,1.2343,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,reverse,memory,10000,5,41896,41896,41896,41896,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,duplicates,timing,,5,0.73078,0.7534,0.63,0.8453,ms
+c6f11506577d47dc87eddb2fc4391644,quickselect,select_middle,5000,duplicates,memory,,5,40056,40056,40056,40056,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,duplicates,timing,,5,0.17221999999999998,0.1702,0.1666,0.1862,ms
+c6f11506577d47dc87eddb2fc4391644,custom_set,contains_all,5000,duplicates,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,duplicates,timing,,5,0.24208,0.2427,0.2379,0.2471,ms
+c6f11506577d47dc87eddb2fc4391644,stack,pop_all,5000,duplicates,memory,,5,51808,51808,51808,51808,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,duplicates,timing,,5,0.26938,0.2485,0.2435,0.3585,ms
+c6f11506577d47dc87eddb2fc4391644,queue,dequeue_all,5000,duplicates,memory,,5,41824,41824,41824,41824,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,duplicates,timing,10000,5,0.89378,0.8814,0.8701,0.9382,ms
+c6f11506577d47dc87eddb2fc4391644,hash_table,find_all,5000,duplicates,memory,10000,5,41896,41896,41896,41896,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,10,path,timing,,5,0.00202,0.0019,0.0016,0.0026,ms
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,10,path,memory,,5,1688,1688,1688,1688,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,100,path,timing,,5,0.01144,0.0115,0.0111,0.0118,ms
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,100,path,memory,,5,11896,11896,11896,11896,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,1000,path,timing,,5,0.11944,0.1193,0.1176,0.1222,ms
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,1000,path,memory,,5,44472,44472,44472,44472,Python-tracked bytes
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,5000,path,timing,,5,0.6817,0.6976,0.6146,0.7024,ms
+c6f11506577d47dc87eddb2fc4391644,graph,bfs_path,5000,path,memory,,5,698232,698232,698232,698232,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,10,unique_integer_keys,timing,1,5,0.00318,0.0031,0.003,0.0035,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,10,unique_integer_keys,memory,1,5,200,200,200,200,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,10,unique_integer_keys,timing,20,5,0.00202,0.002,0.002,0.0021,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,10,unique_integer_keys,memory,20,5,200,200,200,200,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,100,unique_integer_keys,timing,1,5,0.12558,0.1253,0.1245,0.1278,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,100,unique_integer_keys,memory,1,5,936,936,936,936,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,100,unique_integer_keys,timing,200,5,0.017560000000000003,0.0175,0.0175,0.0177,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,100,unique_integer_keys,memory,200,5,936,936,936,936,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,1000,unique_integer_keys,timing,1,5,12.69258,12.8762,11.9242,13.3044,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,1000,unique_integer_keys,memory,1,5,8872,8872,8872,8872,Python-tracked bytes
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,1000,unique_integer_keys,timing,2000,5,0.18611999999999998,0.1888,0.1798,0.1921,ms
+4244c025485d493bb2ad3d3361618a76,hash_table,find_all,1000,unique_integer_keys,memory,2000,5,8872,8872,8872,8872,Python-tracked bytes

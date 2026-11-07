@@ -2,7 +2,7 @@
   "python_version": "3.14.4",
   "platform": "Windows-11-10.0.26300-SP0",
   "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
-  "implementation_revision": "f7b0febaacfda5ad8c989694d5267fc124ad3e2a",
+  "implementation_revision": "388fbf8bbcc2eae76d8e344004319bb3aca09bf1",
   "source_digest": "c41dfbc6a20fda9b7f6d1b0e4a3a6fb7e72de342b6755642a1d5d651ec4b5a87",
   "source_sha256": {
     "algorithms/__init__.py": "2a19dda91ec584b3954a0219061b25c7e6eafe1cdfe7b173d32140c33465b674",
@@ -26,9 +26,9 @@
     "streamlit": "1.66.1",
     "pytest": "9.2.0",
     "altair": "6.3.0",
-    "pandas": "3.1.1"
+    "pandas": "3.0.6"
   },
-  "run_id": "517ff3a682b74ef8b3a6c3631996ddf8",
+  "run_id": "c6f11506577d47dc87eddb2fc4391644",
   "config": {
     "sizes": [
       10,

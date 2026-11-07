@@ -1,4 +1,4 @@
-# Day 3 benchmark method
+# Benchmark methodology ? final Day 4 evidence
 
 The framework calls core APIs directly; Streamlit rendering is outside every
 measurement. These are operation microbenchmarks, not end-to-end application
@@ -87,3 +87,29 @@ Bubble Sort sorts a complete list; Quickselect selects one rank. Structure
 workloads also differ in purpose and setup. Compare scaling and method tradeoffs,
 not raw timings as proof that one different-purpose operation replaces another.
 Day 4 analysis must use these real observations and their limits.
+# Day 4 final evidence and controlled supplement
+
+The final default run is `c6f11506577d47dc87eddb2fc4391644`, measured with
+Python 3.14.4 and pandas 3.0.6 at source revision `388fbf8`. It contains 1,080
+observations (540 timing and 540 allocation rows), eight guard skips, and 216
+separate summary groups. The 60-row supplemental hash run contributes another
+12 groups, for 228 groups in `results/summary_statistics.csv`.
+
+`python -m scripts.measure_hash_collisions` measures unique keys `range(n)` at
+n=10,100,1000, with capacity 1 versus 2n, five timing and five separate memory
+trials, fresh prebuilt fixtures, a warm-up, and exact result checks. Capacity 1
+forces collisions; the particular integer keys occupy separate buckets at 2n.
+This controlled supplement is distinct from the default random/duplicate input
+profile. Neither profile measures fixture construction or automatic resizing.
+
+`python -m scripts.analyze_results` validates coverage/provenance and produces
+mean, median, minimum, maximum, trial counts, CSV/JSON summaries, and five PNG/SVG
+figures. Whiskers are observed min–max, not confidence intervals; logarithmic
+axes are labeled. The manifest hashes raw CSVs, environment sidecars, summaries,
+hardware details, and figures. `python -m scripts.validate_release --artifacts`
+checks these hashes and document structure once the final slides exist.
+
+To reproduce a new study, rerun the two measurement commands, then analysis,
+report, and presentation builders. Measurements naturally vary; do not retain
+old report values after replacing their CSV source. Existing Day 3 verification
+records are historical and identify their own prior run.

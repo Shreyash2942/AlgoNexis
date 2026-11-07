@@ -1,0 +1,27 @@
+{
+  "run_id": "c6f11506577d47dc87eddb2fc4391644",
+  "observed_rows": 1080,
+  "skipped_cases": 8,
+  "source_digest": "c41dfbc6a20fda9b7f6d1b0e4a3a6fb7e72de342b6755642a1d5d651ec4b5a87",
+  "summary_groups": 228,
+  "supplemental_observations": 60,
+  "files_sha256": {
+    "results/benchmark_results.csv": "2319c81158f36b6a8737f737b2775333ad062e4eb5db028ad391e000e97ca717",
+    "results/benchmark_results.environment.json": "221905ff87ed93cf5efa4fdc4d589883029bf8a41cc4df5a5738f43da24e130d",
+    "results/hardware_environment.json": "67568bff4b2461d63edffe68e144a645f3b1ca8433c1b2b92b2ae81dcde31484",
+    "results/hash_collision_results.csv": "d1267dcea92b50355cb2cbc8845afcb98021f595a82dac8ddb24baa5d18fc9be",
+    "results/hash_collision_results.environment.json": "0388034fb939339a11406bbc849b42bce79e9b7c18359831b43820ad3ee2f70d",
+    "results/summary_statistics.csv": "48e9e884443dab0968e0254471c7d1c06c8b025cd4f4eb20c3ab989f548c243b",
+    "results/summary_statistics.json": "c02a0a2b637d2dc780e5701c86e2338ba0e14bea8e143d5fbb90f2a24e49b55c",
+    "results/figures/allocations.png": "36d3609caf4e85ac6d40f6653cca306fa5b49902f7cbb0082c6970e0d09c2a04",
+    "results/figures/allocations.svg": "e2fa2ed66ad12cf5f936e97fd6e5f9950799499d3782d31ea332a17b1d123cba",
+    "results/figures/bst.png": "2d48352bd7cdc70e21107cd68067bd2ac8a6718571ab3259678b630156050e83",
+    "results/figures/bst.svg": "866395279ce9a40e34ace0f81e91374052fc6bf55c07124b3092bf09bf6f1cc0",
+    "results/figures/bubble_sort.png": "6ef0aa7ced06eed01a2766ac85931e5b0f4458b7c98b60e2f77226e31206de6c",
+    "results/figures/bubble_sort.svg": "edaf811926337bf03085052d26ae1ebf3567ba913bc23778af44853982a7f9e8",
+    "results/figures/hash_collisions.png": "18e19ff88c099eacf5ed8075f54392dba2a7f4b5c6447f6894d1850d1957262c",
+    "results/figures/hash_collisions.svg": "bd663c70037847534f3c7dabcfd8d5d3bb684dfce67f431618993b7d1605caa7",
+    "results/figures/quickselect.png": "53871dba41d4a5fe6a14066df62deebd031f83e8429c3078f4dfb980e382cbe2",
+    "results/figures/quickselect.svg": "354ac75556a11551199f1667eaf6b533037550212e15845bc7c13b87db74e594"
+  }
+}
