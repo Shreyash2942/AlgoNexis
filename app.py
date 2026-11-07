@@ -32,8 +32,8 @@ def main() -> None:
         from ui.algorithms_view import render
         render()
     elif page == "Data Structures":
-        st.title("Data Structures")
-        st.info("Structure controls are being delivered in D3.4.")
+        from ui.structures_view import render
+        render()
     else:
         st.title("Performance Analysis")
         st.info("Measured tables and charts are being delivered in D3.5–D3.6.")
