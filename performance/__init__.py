@@ -1,1 +1,1 @@
-"""Package reserved for the Day 3 performance measurement tools."""
+"""UI-independent correctness-checked timing and Python allocation tools."""
