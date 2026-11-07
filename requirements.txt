@@ -1,4 +1,5 @@
 streamlit>=1.66.1,<2
 pytest>=8,<10
 altair>=6.3,<7
-pandas>=3.1,<4
+# Tested maintenance series; see Day 4 clean-install notes for Windows 3.1.1 issue.
+pandas>=3.0.6,<3.1

@@ -1,0 +1,6 @@
+# Optional tools for rebuilding and verifying the academic artifacts.
+-r requirements.txt
+matplotlib>=3.10,<4
+reportlab>=4,<5
+python-pptx>=1,<2
+PyMuPDF>=1.26,<2
