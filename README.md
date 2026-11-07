@@ -2,7 +2,7 @@
 
 **An Interactive Algorithms & Data Structures Portfolio**
 
-> **Project stage:** Days 1 and 2 complete; G1 and G2 passed. Core algorithms, sorting records, six data structures, and the stateful manager are implemented with 143 passing tests. Streamlit UI, benchmark evidence, report, and presentation remain planned for Days 3–4. See [`documentation/day2_verification.md`](documentation/day2_verification.md) for current evidence and the [Day 1 record](documentation/day1_verification.md) for earlier results.
+> **Project stage:** Day 3 complete; G1–G3 passed. The local Streamlit portfolio, algorithms, six structures, step visualization, and benchmark dashboard are implemented with 191 passing tests. Real evidence contains 1,080 measured observations and eight explicit skipped cases. Final report/presentation/release work remains Day 4. See [`documentation/day3_verification.md`](documentation/day3_verification.md) and the [user guide](documentation/user_guide.md).
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
 
@@ -183,8 +183,8 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 | Day | Status (verify in repository) | Gate evidence | Commits actually created |
 |---|---|---|---|
 | Day 1 | G1 passed | 71 original tests retained in the full regression; [verification](documentation/day1_verification.md) | Five Day 1 commits; `git log --oneline f2409c4` |
-| Day 2 | G2 passed | 143 total tests, all 49 manager routes, standard-library-only integration; [verification](documentation/day2_verification.md) | Six Day 2 commits; `git log --oneline f2409c4..HEAD` |
-| Day 3 | ☐ Unverified | App walkthrough + benchmark evidence | _check `git log`_ |
+| Day 2 | G2 passed | 143 original tests retained; all 49 manager routes; [verification](documentation/day2_verification.md) | Six Day 2 commits; `git log --oneline f2409c4..7fa29e5` |
+| Day 3 | G3 passed | 191 tests, real Edge walkthrough/screenshots, 1,080 observations + 8 skips; [verification](documentation/day3_verification.md) | Seven Day 3 commits; `git log --oneline 7fa29e5..HEAD` |
 | Day 4 | ☐ Unverified | Full QA + final artifacts | _check `git log`_ |
 
 ### Planned Conventional Commit sequence
@@ -218,7 +218,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 ## 7. Local development and verification
 
-> Day 1–2 environment setup, algorithms, data structures, manager, and tests are available. `app.py` and interactive launch remain planned for Day 3.
+> The Day 1–3 local application, core APIs, benchmarks, and tests are implemented. Final academic artifacts remain Day 4 work.
 
 ### Environment setup
 
@@ -255,12 +255,32 @@ Reviewed prior-course adaptations and structure APIs are listed in
 # Run automated tests after their modules exist
 python -m pytest tests/ -v
 
-# Launch the interactive app after Day 3 integration
-streamlit run app.py
+# Launch the local interactive app
+python -m streamlit run app.py
 
-# Day 1 syntax check (app.py does not exist yet)
-python -m compileall -q algorithms data_structures visualization performance tests
+# Syntax check
+python -m compileall -q algorithms data_structures visualization performance ui tests app.py
 ```
+
+The four sections are Dashboard, Algorithms, Data Structures, and Performance
+Analysis. Dataset/rank changes clear stale algorithm results; structure state and
+sorting position persist across navigation. Visualized sorts are limited to 50
+values, untraced sorts to 1,000, selections to 5,000, and interactive structures to
+200 items. See the [user guide](documentation/user_guide.md) for controls and errors.
+
+Reproduce the measured evidence:
+
+```powershell
+& .\.venv\Scripts\python.exe -m performance.benchmark --trials 5 --seed 506
+```
+
+Results are saved to [`results/benchmark_results.csv`](results/benchmark_results.csv)
+and its [environment/source record](results/benchmark_results.environment.json).
+The dashboard uses these same observations for separate time/allocation charts and
+CSV download. Read the [measurement method](documentation/benchmark_methodology.md)
+before drawing conclusions: timing and allocation trials are separate, prebuilt
+fixtures are excluded, allocations are not total RAM, and different-purpose
+operations are not substitutes. No skipped case is plotted as zero.
 
 ### Implemented Day 1 APIs
 

@@ -23,7 +23,7 @@ def _chart(frame: pd.DataFrame, measurement: str, title: str):
     chart = alt.Chart(selected).mark_line(point=True).encode(
         x=alt.X("input_size:Q", title="Input size", scale=alt.Scale(type="log", base=10)),
         y=alt.Y("mean:Q", title=title, scale=alt.Scale(zero=True)),
-        color=alt.Color("Workload:N", legend=alt.Legend(orient="bottom")),
+        color=alt.Color("Workload:N", legend=alt.Legend(orient="bottom", columns=1, labelLimit=350)),
         tooltip=["Workload:N", "input_size:Q", "trials:Q", "mean:Q", "median:Q", "minimum:Q", "maximum:Q"],
     ).properties(height=320)
     st.altair_chart(chart, width="stretch", alt=title + " by input size and workload")

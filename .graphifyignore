@@ -2,3 +2,6 @@
 graphify-out/
 .venv/
 requirements.lock.txt
+# Bulk generated evidence is referenced by the methodology/verification docs.
+results/
+documentation/screenshots/

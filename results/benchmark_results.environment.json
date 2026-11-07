@@ -2,8 +2,8 @@
   "python_version": "3.14.4",
   "platform": "Windows-11-10.0.26300-SP0",
   "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
-  "implementation_revision": "94a17ca7ab663a9f174dd11d3fbb6337055b2832",
-  "source_digest": "58b5de2f6728f56308deab516e2e5d8d18be530fe70b07f9674eacdd35f6c904",
+  "implementation_revision": "f7b0febaacfda5ad8c989694d5267fc124ad3e2a",
+  "source_digest": "c41dfbc6a20fda9b7f6d1b0e4a3a6fb7e72de342b6755642a1d5d651ec4b5a87",
   "source_sha256": {
     "algorithms/__init__.py": "2a19dda91ec584b3954a0219061b25c7e6eafe1cdfe7b173d32140c33465b674",
     "algorithms/_validation.py": "385944938d6ce2052b359cba6f2b0e38118165c8b43f4f03dfab88a2f1f535c0",
@@ -19,7 +19,8 @@
     "data_structures/tree.py": "04e77bc89e8f0789673cf4d6c20030f19aec111db1dff078fda9dedad03e4364",
     "performance/__init__.py": "fb7c95734ceef1106b71291c2d2d97cacc11baf70c3bc38cae7c757e4f7ba310",
     "performance/benchmark.py": "0b3191595ebd791b33c47d11a74da24a0c1c67614a1c4608fa5b55fe9ab399b8",
-    "performance/metrics.py": "eaddebde6e6c7d4820eb6a118a76a223e190807f58af14a77156671c00be265c"
+    "performance/metrics.py": "eaddebde6e6c7d4820eb6a118a76a223e190807f58af14a77156671c00be265c",
+    "performance/summary.py": "32cafc094a0d7ea2072c4035cdb75f6161a34e1f7584cf9e6d0c901a0a4a0a6c"
   },
   "package_versions": {
     "streamlit": "1.66.1",
@@ -27,7 +28,7 @@
     "altair": "6.3.0",
     "pandas": "3.1.1"
   },
-  "run_id": "0686b2b4b42744e2aa74bff87765b297",
+  "run_id": "517ff3a682b74ef8b3a6c3631996ddf8",
   "config": {
     "sizes": [
       10,

@@ -440,89 +440,89 @@ git status
 
 ### Work package D3.1 — Streamlit shell (~60 min)
 
-- [ ] Install/confirm Streamlit and create a working `app.py` entry point.
-- [ ] Add navigation: Dashboard, Algorithms, Data Structures, Performance Analysis.
-- [ ] Add short explanations and consistent input/output panels.
-- [ ] Provide user-friendly exceptions rather than raw tracebacks where appropriate.
-- [ ] Do a technical spike confirming `st.session_state` preserves a sample object.
-- [ ] Launch with `streamlit run app.py` and check navigation.
+- [x] Install/confirm Streamlit and create a working `app.py` entry point.
+- [x] Add navigation: Dashboard, Algorithms, Data Structures, Performance Analysis.
+- [x] Add short explanations and consistent input/output panels.
+- [x] Provide user-friendly exceptions rather than raw tracebacks where appropriate.
+- [x] Do a technical spike confirming `st.session_state` preserves a sample object.
+- [x] Launch with `streamlit run app.py` and check navigation.
 
 **Acceptance:** App starts and each section renders without crashing.
 **Commit 12:** `feat: build Streamlit dashboard and navigation`
 
 ### Work package D3.2 — Algorithm UI (~60 min)
 
-- [ ] Add text/sample dataset input with strict integer parsing.
-- [ ] Connect Bubble Sort execution and show original/sorted lists.
-- [ ] Show comparison and swap counts from real algorithm outputs.
-- [ ] Add Quickselect input, `k` selector, and range validation.
-- [ ] Display the kth smallest result and appropriate complexity notes.
-- [ ] Reset stale results/steps if the input dataset changes.
+- [x] Add text/sample dataset input with strict integer parsing.
+- [x] Connect Bubble Sort execution and show original/sorted lists.
+- [x] Show comparison and swap counts from real algorithm outputs.
+- [x] Add Quickselect input, `k` selector, and range validation.
+- [x] Display the kth smallest result and appropriate complexity notes.
+- [x] Reset stale results/steps if the input dataset changes.
 
 **Acceptance:** Both algorithms run from the UI and display correct outputs and helpful errors.
 **Commit 13:** `feat: integrate bubble sort and quickselect interfaces`
 
 ### Work package D3.3 — Sorting visualization (~60 min)
 
-- [ ] Connect Day 1 step records to a bar-chart or equivalent visual view.
-- [ ] Highlight compared elements and swaps in the active step.
-- [ ] Add Previous, Next, Reset, and current-step/total-step controls.
-- [ ] Store the visualization index and dataset identity in session state.
-- [ ] Show the initial and final states distinctly.
-- [ ] Cap visualized input size (e.g., 50 elements) to avoid excessive step storage.
-- [ ] Confirm navigating all steps ends at the sorted result.
+- [x] Connect Day 1 step records to a bar-chart or equivalent visual view.
+- [x] Highlight compared elements and swaps in the active step.
+- [x] Add Previous, Next, Reset, and current-step/total-step controls.
+- [x] Store the visualization index and dataset identity in session state.
+- [x] Show the initial and final states distinctly.
+- [x] Cap visualized input size (e.g., 50 elements) to avoid excessive step storage.
+- [x] Confirm navigating all steps ends at the sorted result.
 
 **Acceptance:** A user can inspect the algorithm's progression in order without inconsistent UI resets.
 **Commit 14:** `feat: add interactive bubble sort visualization`
 
 ### Work package D3.4 — Data structure controls (~90 min)
 
-- [ ] Provide Set input and buttons for all four binary operations plus add/remove.
-- [ ] Add Stack push/pop/peek and Queue enqueue/dequeue/front views.
-- [ ] Add BST insertion/search/traversal controls.
-- [ ] Add Graph vertex/edge controls plus BFS/DFS start selection.
-- [ ] Add Hash Table insert/search/delete controls.
-- [ ] Route actions through the manager or the documented public APIs.
-- [ ] Persist structure state across Streamlit reruns; provide a reset control.
-- [ ] Display current contents and useful validation/error messages.
+- [x] Provide Set input and buttons for all four binary operations plus add/remove.
+- [x] Add Stack push/pop/peek and Queue enqueue/dequeue/front views.
+- [x] Add BST insertion/search/traversal controls.
+- [x] Add Graph vertex/edge controls plus BFS/DFS start selection.
+- [x] Add Hash Table insert/search/delete controls.
+- [x] Route actions through the manager or the documented public APIs.
+- [x] Persist structure state across Streamlit reruns; provide a reset control.
+- [x] Display current contents and useful validation/error messages.
 
 **Acceptance:** All six data structures work end to end through the UI.
 **Commit 15:** `feat: build interactive data structure controls`
 
 ### Work package D3.5 — Benchmark framework (~60 min)
 
-- [ ] Implement timing with `time.perf_counter_ns()` or `time.perf_counter()`.
-- [ ] Implement Python-tracked peak allocation measurement with `tracemalloc`.
-- [ ] Separate timing trials from memory-measurement trials when feasible to reduce instrumentation bias.
-- [ ] Define dataset sizes **10, 100, 1,000, 5,000** where practical; guard Bubble Sort workload.
-- [ ] Support random, sorted, reverse-sorted, and duplicate-heavy lists.
-- [ ] Use fixed random seeds, a warm-up where useful, and repeated trials (e.g., 5).
-- [ ] Capture implementation, operation, size, pattern, trial, elapsed time, peak tracked bytes, seed, and environment.
-- [ ] Check benchmark correctness after each trial and export CSV-ready rows.
+- [x] Implement timing with `time.perf_counter_ns()` or `time.perf_counter()`.
+- [x] Implement Python-tracked peak allocation measurement with `tracemalloc`.
+- [x] Separate timing trials from memory-measurement trials when feasible to reduce instrumentation bias.
+- [x] Define dataset sizes **10, 100, 1,000, 5,000** where practical; guard Bubble Sort workload.
+- [x] Support random, sorted, reverse-sorted, and duplicate-heavy lists.
+- [x] Use fixed random seeds, a warm-up where useful, and repeated trials (e.g., 5).
+- [x] Capture implementation, operation, size, pattern, trial, elapsed time, peak tracked bytes, seed, and environment.
+- [x] Check benchmark correctness after each trial and export CSV-ready rows.
 
 **Acceptance:** Repeatable runs produce actual numeric measurements, not illustrative or hard-coded results.
 **Commit 16:** `perf: implement execution time and memory benchmarking`
 
 ### Work package D3.6 — Performance dashboard (~45 min)
 
-- [ ] Create execution-time tables and charts by dataset size.
-- [ ] Create tracked-memory tables/charts with the measurement definition displayed.
-- [ ] Show counts (comparisons/swaps) only for algorithms that expose them.
-- [ ] Include operation-level comparisons for data structures with clear labels.
-- [ ] Provide download/export of `results/benchmark_results.csv`.
-- [ ] Explain that Bubble Sort and Quickselect solve **different problems**, so timings are not proof one replaces the other.
+- [x] Create execution-time tables and charts by dataset size.
+- [x] Create tracked-memory tables/charts with the measurement definition displayed.
+- [x] Show counts (comparisons/swaps) only for algorithms that expose them.
+- [x] Include operation-level comparisons for data structures with clear labels.
+- [x] Provide download/export of `results/benchmark_results.csv`.
+- [x] Explain that Bubble Sort and Quickselect solve **different problems**, so timings are not proof one replaces the other.
 
 **Acceptance:** Charts use measured values and labels are not misleading.
 **Commit 17:** `feat: add performance charts and benchmark dashboard`
 
 ### Work package D3.7 — End-to-end validation (~45 min)
 
-- [ ] Test navigation and each algorithm/data structure through the actual app.
-- [ ] Test invalid integers, invalid `k`, empty values, unsupported operations, and resets.
-- [ ] Verify session state does not leak prior datasets into new results.
-- [ ] Check visualization last-step correctness and benchmark CSV values.
-- [ ] Run the complete pytest suite and fix integration regressions.
-- [ ] Record any limitations for the final report and user guide.
+- [x] Test navigation and each algorithm/data structure through the actual app.
+- [x] Test invalid integers, invalid `k`, empty values, unsupported operations, and resets.
+- [x] Verify session state does not leak prior datasets into new results.
+- [x] Check visualization last-step correctness and benchmark CSV values.
+- [x] Run the complete pytest suite and fix integration regressions.
+- [x] Record any limitations for the final report and user guide.
 
 **Acceptance:** G3 passes; no critical user workflow is broken.
 **Commit 18:** `test: validate UI integration and performance tools`
@@ -537,12 +537,14 @@ streamlit run app.py
 
 #### Day 3 deliverables and gate G3
 
-- [ ] Working Streamlit portfolio with all required sections.
-- [ ] Bubble Sort step-through visualization and Quickselect input/result interface.
-- [ ] Working Set, Stack, Queue, BST, Graph, and Hash Table interactions.
-- [ ] Reproducible benchmark framework and real measured outputs.
-- [ ] Accurate tables/charts plus CSV export.
-- [ ] **7 meaningful commits** represent completed work.
+- [x] Working Streamlit portfolio with all required sections.
+- [x] Bubble Sort step-through visualization and Quickselect input/result interface.
+- [x] Working Set, Stack, Queue, BST, Graph, and Hash Table interactions.
+- [x] Reproducible benchmark framework and real measured outputs.
+- [x] Accurate tables/charts plus CSV export.
+- [x] **7 meaningful commits** represent completed work.
+
+**Verified status (2026-11-06):** G3 passed: 191 tests, fresh-launch Edge walkthrough, authentic screenshots, 1,080 correctness-checked observations plus eight guarded cases, and an exact CSV download match. See `documentation/day3_verification.md` and `git log --oneline 7fa29e5..HEAD` for seven Day 3 commits.
 
 **Go/no-go decision:** Day 4 writing must use verified Day 3 measurements; fix missing benchmark or UI data before drafting conclusions.
 

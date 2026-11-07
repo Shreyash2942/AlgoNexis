@@ -3,8 +3,8 @@
 ## Foundation
 
 The root README and four-day implementation plan define the target system.
-Days 1 and 2 establish importable core algorithms, data structures, and manager.
-Streamlit views, measurements, and academic deliverables belong to Days 3 and 4.
+Days 1-3 deliver importable core algorithms, data structures, manager, Streamlit
+views, and verified operation measurements. Academic artifacts remain Day 4 work.
 
 - Existing Git repository and `origin` are preserved; the default branch is `main`.
 - GitHub repository: https://github.com/Shreyash2942/AlgoNexis (verified existing).
@@ -19,9 +19,10 @@ Streamlit views, measurements, and academic deliverables belong to Days 3 and 4.
 
 `algorithms` owns sorting and selection. `visualization` consumes immutable
 sorting records. `data_structures` owns the six structures and their persistent
-manager; `performance` remains planned for Day 3.
-`results` will hold actual benchmark output once measurements are implemented.
-No placeholder benchmark CSV, UI, report PDF, or presentation is created on Day 1.
+manager. `performance` measures core operations independently of Streamlit;
+`ui` owns input parsing, session helpers, views, and chart rendering. `app.py`
+selects four sections. `results` stores real CSV observations and environment
+metadata. No placeholder report PDF or presentation is created.
 
 ## Bubble Sort contract (D1.2)
 
@@ -142,3 +143,44 @@ routes and preserve Day 1 behavior; no Streamlit app or benchmark output is
 claimed at G2. UI code should translate documented domain errors to user messages,
 keep manager lifetime in session state, and apply workload limits before calling
 the structures. No UI dependency is introduced into core packages.
+
+## Streamlit session and rendering contracts (Day 3)
+
+One manager lives in session state. `ui.state` initializes absent fields only,
+invalidates algorithm results on dataset change, resets playback for a new sort,
+and replaces all six structures on reset. Widget keys are separate from persistent
+dataset/rank/playback model values so widget cleanup on navigation does not erase
+the model. Quickselect rank changes invalidate only its result. Tests exercise
+navigation, resets, samples, invalid input, and independent state.
+
+`ui.inputs` accepts comma/whitespace-separated ASCII integers, with no eval,
+bracket expressions, floats, or partial coercion. UI limits are 100,000 text
+characters, values within +/- 1e9, 5,000 selection values, 1,000 untraced sort
+values, 50 traced sort values, and 200 items per interactive structure. Growth
+checks run before mutations and allow existing-key updates at capacity.
+
+`ui.sorting_view` consumes immutable frames unchanged. Previous/Next/Reset/slider
+update a persistent zero-based index; initial/final events, highlights, current
+counts, and ordered bars come from the recorded trace. Boundary buttons disable
+appropriately; no events are truncated. Native Streamlit controls and a consistent
+teal/light theme provide keyboard labels and responsive layout.
+
+## Measurement and evidence contracts (Day 3)
+
+`performance.metrics` separates perf_counter_ns timing from tracemalloc peak
+allocation trials. `performance.benchmark` creates fresh fixtures/seeded inputs
+outside measurement, checks each result, and returns a complete run before saving.
+Core files are hashed; revision, environment, config, and seeds are recorded.
+Bubble Sort/BST cases above 1,000 are explicit skips with blank metric cells.
+
+`performance.summary` groups observed repeats by run, workload, size, pattern,
+measurement kind, and hash capacity. Skips are excluded. Charts use these same
+rows; units are separated, and the full-run CSV download matches the saved data.
+The allocation metric excludes prebuilt fixtures, includes operation outputs,
+and is not whole-process RAM. Hash-table measurement uses a recorded low-load
+capacity profile; UI exploration remains fixed at 8. See `benchmark_methodology.md`
+for operation definitions, seed policy, and limits.
+
+G3 evidence is in `day3_verification.md`. Real Edge/browser and Streamlit AppTest
+checks exercise the app; screenshots are authentic. The app remains local, while
+repository commits and measured artifacts are pushed to the existing GitHub repo.
