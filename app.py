@@ -29,8 +29,8 @@ def main() -> None:
             st.write("Work with sets, stacks, queues, trees, graphs, and collision chains. State persists as you navigate.")
         st.info("Bubble Sort orders a complete list. Quickselect finds one rank. Their measurements describe different tasks.")
     elif page == "Algorithms":
-        st.title("Algorithms")
-        st.info("Algorithm controls are being delivered in D3.2.")
+        from ui.algorithms_view import render
+        render()
     elif page == "Data Structures":
         st.title("Data Structures")
         st.info("Structure controls are being delivered in D3.4.")

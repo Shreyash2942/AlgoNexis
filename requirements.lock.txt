@@ -1,4 +1,4 @@
-# Verified with CPython 3.14.4 on Windows.
+# Verified with CPython 3.14.4 on Windows; includes optional browser QA dependencies.
 altair==6.3.0
 anyio==4.16.0
 attrs==26.1.0
@@ -6,6 +6,7 @@ certifi==2026.10.23
 charset-normalizer==3.5.2
 click==8.5.0
 colorama==0.4.6
+greenlet==3.5.6
 h11==0.16.0
 idna==3.20
 iniconfig==2.3.1
@@ -19,10 +20,12 @@ numpy==2.5.4
 packaging==26.3
 pandas==3.1.1
 pillow==13.0.0
+playwright==1.64.1
 pluggy==1.7.0
 protobuf==7.36.2
 pyarrow==26.0.1
 pydeck==0.9.3
+pyee==14.0.0
 Pygments==2.21.0
 pytest==9.2.0
 python-dateutil==4.0.0
