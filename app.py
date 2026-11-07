@@ -35,8 +35,8 @@ def main() -> None:
         from ui.structures_view import render
         render()
     else:
-        st.title("Performance Analysis")
-        st.info("Measured tables and charts are being delivered in D3.5–D3.6.")
+        from ui.performance_view import render
+        render()
 
 
 if __name__ == "__main__":

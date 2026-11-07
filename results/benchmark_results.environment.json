@@ -1,0 +1,55 @@
+{
+  "python_version": "3.14.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+  "implementation_revision": "94a17ca7ab663a9f174dd11d3fbb6337055b2832",
+  "source_digest": "58b5de2f6728f56308deab516e2e5d8d18be530fe70b07f9674eacdd35f6c904",
+  "source_sha256": {
+    "algorithms/__init__.py": "2a19dda91ec584b3954a0219061b25c7e6eafe1cdfe7b173d32140c33465b674",
+    "algorithms/_validation.py": "385944938d6ce2052b359cba6f2b0e38118165c8b43f4f03dfab88a2f1f535c0",
+    "algorithms/bubble_sort.py": "900218c90211256ad36d962d2e3bacb7682cf4fc5f8c4ce16a747eb227a62dbb",
+    "algorithms/quickselect.py": "679857876820fc463d9b7e9abb687248f75ce2edff3ec265e531f102fedfe1d9",
+    "data_structures/__init__.py": "83c69b4364444d0e75796fc00e1674c9dcaa8056a3de69ae9cbbd5bc38a514b4",
+    "data_structures/custom_set.py": "7278bc9bcad2c8e965c144fce0d11e6f1ab1a9077c185d913aaee44ec07c8232",
+    "data_structures/graph.py": "c173f1ef72bd1f8fda37296de0aca82eb31889e80f55fe9e862276828a4be0c8",
+    "data_structures/hash_table.py": "525cf99e6cfdfd55e0724da175d9940c03ccd6806e65ec94f62bb573d669f63c",
+    "data_structures/manager.py": "fc3c6a0b8b57171fbf088ab3defdf54fc3c49b86ae52a9dde504fbe7cc037efe",
+    "data_structures/queue.py": "4c04850a72251d7600bede43067c0670eb6ba269b9048a8c56c7c5aae1cf46c5",
+    "data_structures/stack.py": "8b475807f651a96f0dc8a5ef8ac6173b99cccf55c7d5cf4aad444410fc619d30",
+    "data_structures/tree.py": "04e77bc89e8f0789673cf4d6c20030f19aec111db1dff078fda9dedad03e4364",
+    "performance/__init__.py": "fb7c95734ceef1106b71291c2d2d97cacc11baf70c3bc38cae7c757e4f7ba310",
+    "performance/benchmark.py": "0b3191595ebd791b33c47d11a74da24a0c1c67614a1c4608fa5b55fe9ab399b8",
+    "performance/metrics.py": "eaddebde6e6c7d4820eb6a118a76a223e190807f58af14a77156671c00be265c"
+  },
+  "package_versions": {
+    "streamlit": "1.66.1",
+    "pytest": "9.2.0",
+    "altair": "6.3.0",
+    "pandas": "3.1.1"
+  },
+  "run_id": "0686b2b4b42744e2aa74bff87765b297",
+  "config": {
+    "sizes": [
+      10,
+      100,
+      1000,
+      5000
+    ],
+    "patterns": [
+      "random",
+      "sorted",
+      "reverse",
+      "duplicates"
+    ],
+    "trials": 5,
+    "seed": 506,
+    "algorithms": [
+      "bubble_sort",
+      "quickselect"
+    ],
+    "include_structures": true,
+    "warmup": true
+  },
+  "observed_rows": 1080,
+  "skipped_cases": 8
+}
