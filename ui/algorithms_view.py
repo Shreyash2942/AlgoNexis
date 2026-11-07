@@ -84,4 +84,7 @@ def render() -> None:
         st.caption("Expected O(n), worst O(n squared); input-copy space O(n). Pivot seed: 506.")
 
     if result is not None and result.steps:
-        st.info(f"{len(result.steps)} complete recorded states are ready for step navigation.")
+        from ui.sorting_view import render as render_sorting
+        render_sorting(result)
+    elif result is not None:
+        st.info("Step recording was disabled for this run. Enable it and use at most 50 values to visualize every event.")
