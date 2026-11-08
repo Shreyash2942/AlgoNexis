@@ -63,8 +63,13 @@ def verify_artifacts(root: Path = ROOT) -> dict:
     # These dependencies belong only to requirements-report.txt, never to core imports.
     import pymupdf
     from pptx import Presentation
+    from scripts.build_report import report_values
 
     docs = root / 'documentation'
+    markdown = (docs / 'performance_analysis_report.md').read_text(encoding='utf-8')
+    for name, value in report_values().items():
+        if value not in markdown:
+            raise ValueError(f'Report differs from the recorded summary: {name}.')
     with pymupdf.open(docs / 'performance_analysis_report.pdf') as report:
         substantive = [page for page in report if len(page.get_text().split()) >= 180
                        and 'References' not in page.get_text().splitlines()[:5]
@@ -72,6 +77,8 @@ def verify_artifacts(root: Path = ROOT) -> dict:
         if len(substantive) < 5:
             raise ValueError('Fewer than five substantive report pages.')
         pages = len(report)
+        if sum(len(page.get_images()) for page in report) < 3:
+            raise ValueError('Report figures are missing.')
     slides = Presentation(docs / 'portfolio_presentation.pptx')
     if not 10 <= len(slides.slides) <= 12:
         raise ValueError('Presentation must contain 10–12 slides.')
@@ -82,6 +89,15 @@ def verify_artifacts(root: Path = ROOT) -> dict:
             if (shape.left < 0 or shape.top < 0 or shape.left + shape.width > slides.slide_width + 100
                     or shape.top + shape.height > slides.slide_height + 100):
                 raise ValueError('A slide shape extends beyond the canvas.')
+    with pymupdf.open(docs / 'portfolio_presentation_preview.pdf') as preview:
+        if len(preview) != len(slides.slides):
+            raise ValueError('Native presentation preview has the wrong page count.')
+        for page in preview:
+            for block in page.get_text('dict')['blocks']:
+                for line in block.get('lines', []):
+                    for span in line['spans']:
+                        if span['size'] >= 16 and span['bbox'][3] > 493:
+                            raise ValueError('Rendered slide body text overlaps the footer.')
     manifest = json.loads((root / 'results/analysis_manifest.json').read_text(encoding='utf-8'))
     for relative, digest in manifest['files_sha256'].items():
         if sha256((root / relative).read_bytes()).hexdigest() != digest:

@@ -1,4 +1,4 @@
-# Benchmark methodology ? final Day 4 evidence
+# Benchmark methodology — final Day 4 evidence
 
 The framework calls core APIs directly; Streamlit rendering is outside every
 measurement. These are operation microbenchmarks, not end-to-end application

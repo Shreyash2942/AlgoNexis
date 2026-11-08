@@ -558,26 +558,26 @@ streamlit run app.py
 
 ### Work package D4.1 — Final regression and integration QA (~75 min)
 
-- [ ] Run all tests from a fresh environment, record pass/fail results.
-- [ ] Verify Bubble Sort, Quickselect, Set operations, and all five data structures.
-- [ ] Verify visualization indices, UI navigation, state persistence, and reset paths.
-- [ ] Exercise failure cases and ensure bounded input handling.
-- [ ] Run `python -m compileall -q algorithms data_structures visualization performance app.py`.
-- [ ] Fix critical defects and re-run affected and full suites.
-- [ ] Record known noncritical limitations in documentation.
+- [x] Run all tests from a fresh environment, record pass/fail results.
+- [x] Verify Bubble Sort, Quickselect, Set operations, and all five data structures.
+- [x] Verify visualization indices, UI navigation, state persistence, and reset paths.
+- [x] Exercise failure cases and ensure bounded input handling.
+- [x] Run `python -m compileall -q algorithms data_structures visualization performance app.py`.
+- [x] Fix critical defects and re-run affected and full suites.
+- [x] Record known noncritical limitations in documentation.
 
 **Acceptance:** No critical defects; reproducible tests pass.
 **Commit 19:** `test: complete final regression and integration testing`
 
 ### Work package D4.2 — Final benchmark runs and evidence (~60 min)
 
-- [ ] Confirm software/hardware/Python environment details for the report.
-- [ ] Run timed trials across approved input sizes and patterns.
-- [ ] Run separate peak tracked-allocation trials where feasible.
-- [ ] Check each operation's result for correctness before recording performance.
-- [ ] Compute representative summary statistics (mean, optionally median and spread).
-- [ ] Save `results/benchmark_results.csv` and generated chart assets if used.
-- [ ] Identify effects of input order, repeated values, tree skew, and hash collisions where observed.
+- [x] Confirm software/hardware/Python environment details for the report.
+- [x] Run timed trials across approved input sizes and patterns.
+- [x] Run separate peak tracked-allocation trials where feasible.
+- [x] Check each operation's result for correctness before recording performance.
+- [x] Compute representative summary statistics (mean, optionally median and spread).
+- [x] Save `results/benchmark_results.csv` and generated chart assets if used.
+- [x] Identify effects of input order, repeated values, tree skew, and hash collisions where observed.
 
 **Acceptance:** Raw data, chart labels, and reported summary values agree.
 **Commit 20:** `perf: finalize benchmarks and performance analysis`
@@ -586,14 +586,14 @@ streamlit run app.py
 
 **Target:** **At least five substantive pages**, excluding an unusually large title page/reference-only filler. Follow specific course page and APA requirements if provided.
 
-- [ ] **Introduction (~½ page):** objective, system scope, and why performance analysis matters.
-- [ ] **Algorithm/data structure overview (~1 page):** describe the actual implementations and complexity expectations.
-- [ ] **Methodology (~1 page):** environment, input patterns/sizes, seeds, repetitions, timing, memory limits, and caveats.
-- [ ] **Results (~1½ pages):** insert actual CSV-derived tables/charts; discuss patterns and variability.
-- [ ] **Trade-offs (~1 page):** Bubble Sort simplicity vs quadratic behavior, Quickselect pivot sensitivity, unbalanced BST, hash collisions, BFS/DFS complexity, Set/Queue representation.
-- [ ] **Conclusion (~½ page):** evidence-based findings, limitations, and future improvements.
-- [ ] **References:** use required course style (APA 7 if applicable); properly attribute algorithms, libraries, and outside claims.
-- [ ] Review academic style: define terms before evaluating them; prefer third person, original paraphrasing, analytical reasoning, and accurate in-text citations.
+- [x] **Introduction (~½ page):** objective, system scope, and why performance analysis matters.
+- [x] **Algorithm/data structure overview (~1 page):** describe the actual implementations and complexity expectations.
+- [x] **Methodology (~1 page):** environment, input patterns/sizes, seeds, repetitions, timing, memory limits, and caveats.
+- [x] **Results (~1½ pages):** insert actual CSV-derived tables/charts; discuss patterns and variability.
+- [x] **Trade-offs (~1 page):** Bubble Sort simplicity vs quadratic behavior, Quickselect pivot sensitivity, unbalanced BST, hash collisions, BFS/DFS complexity, Set/Queue representation.
+- [x] **Conclusion (~½ page):** evidence-based findings, limitations, and future improvements.
+- [x] **References:** use required course style (APA 7 if applicable); properly attribute algorithms, libraries, and outside claims.
+- [x] Review academic style: define terms before evaluating them; prefer third person, original paraphrasing, analytical reasoning, and accurate in-text citations.
 
 **Mandatory cautions for the report:**
 
@@ -608,44 +608,44 @@ streamlit run app.py
 
 ### Work package D4.4 — Final portfolio presentation (~75 min)
 
-- [ ] Prepare **PowerPoint slides or video** (slides are the default here unless the course requests video).
-- [ ] Create a 10–12-slide narrative: title, purpose, architecture, Bubble Sort, Quickselect, Set, linear structures, tree/graph/hash, UI, benchmarks, learning outcomes, conclusion.
-- [ ] Use authentic screenshots of the finished app and actual benchmark charts.
-- [ ] Explain why each data structure was chosen and its main performance trade-off.
-- [ ] Verify fonts, layouts, readable charts, title information, and slide order.
-- [ ] Rehearse a concise walkthrough that explicitly covers all assignment requirements.
+- [x] Prepare **PowerPoint slides or video** (slides are the default here unless the course requests video).
+- [x] Create a 10–12-slide narrative: title, purpose, architecture, Bubble Sort, Quickselect, Set, linear structures, tree/graph/hash, UI, benchmarks, learning outcomes, conclusion.
+- [x] Use authentic screenshots of the finished app and actual benchmark charts.
+- [x] Explain why each data structure was chosen and its main performance trade-off.
+- [x] Verify fonts, layouts, readable charts, title information, and slide order.
+- [x] Rehearse a concise walkthrough that explicitly covers all assignment requirements.
 
 **Acceptance:** `documentation/portfolio_presentation.pptx` opens correctly and demonstrates both implementation and learning outcomes.
 
 ### Work package D4.5 — Final technical documentation (~45 min)
 
-- [ ] Complete README: overview, features, technology, structure, setup, launch, usage, test, and limitations.
-- [ ] Complete `documentation/user_guide.md` with inputs and instructions for every UI section.
-- [ ] Complete `documentation/architecture.md` with module diagram and design decisions.
-- [ ] Confirm `documentation/data_structures.md` includes operation examples and assumptions.
-- [ ] Confirm documentation uses commands that work from a fresh clone.
-- [ ] Update dependency list to match installed packages and remove unused packages.
+- [x] Complete README: overview, features, technology, structure, setup, launch, usage, test, and limitations.
+- [x] Complete `documentation/user_guide.md` with inputs and instructions for every UI section.
+- [x] Complete `documentation/architecture.md` with module diagram and design decisions.
+- [x] Confirm `documentation/data_structures.md` includes operation examples and assumptions.
+- [x] Confirm documentation uses commands that work from a fresh clone.
+- [x] Update dependency list to match installed packages and remove unused packages.
 
 **Acceptance:** An unfamiliar reader can install, run, test, and use the portfolio without guessing.
 
 ### Work package D4.6 — Release readiness (~45 min)
 
-- [ ] Run full tests once more after all edits.
-- [ ] Test a clean install and `streamlit run app.py`.
-- [ ] Verify every expected submission file opens and is not empty/corrupted.
-- [ ] Inspect Git for secrets, temporary files, caches, venvs, large unintended assets, and debug output.
-- [ ] Create a ZIP of required files **if** the course requests a single archive; exclude `.venv`, `.git`, caches, and unnecessary intermediates.
-- [ ] Confirm commits, repo status, and the eight required deliverables.
+- [x] Run full tests once more after all edits.
+- [x] Test a clean install and `streamlit run app.py`.
+- [x] Verify every expected submission file opens and is not empty/corrupted.
+- [x] Inspect Git for secrets, temporary files, caches, venvs, large unintended assets, and debug output.
+- [x] ZIP packaging assessed: not applicable; no single-archive request was supplied.
+- [x] Confirm commits, repo status, and the eight required deliverables.
 
 **Acceptance:** G4 release checklist passes, with no unstaged submission changes.
 
 ### Work package D4.7 — Short retrospective (~20 min)
 
-- [ ] Record what was delivered against the initial scope.
-- [ ] Summarize the most important algorithm and integration challenges.
-- [ ] Explain how defects and performance-measurement issues were resolved.
-- [ ] Record what worked well in the four-day process.
-- [ ] Identify two or three realistic improvements for a future version.
+- [x] Record what was delivered against the initial scope.
+- [x] Summarize the most important algorithm and integration challenges.
+- [x] Explain how defects and performance-measurement issues were resolved.
+- [x] Record what worked well in the four-day process.
+- [x] Identify two or three realistic improvements for a future version.
 
 **Acceptance:** `documentation/retrospective.md` captures learning and known limitations.
 **Commit 22 (D4.4–D4.7):** `docs: finalize presentation and release documentation`
@@ -664,16 +664,19 @@ git tag -a v1.0.0 -m "AlgoNexis Portfolio v1.0.0"
 
 #### Day 4 deliverables and gate G4
 
-- [ ] Full source code and working UI.
-- [ ] All tests pass and major workflows manually verified.
-- [ ] Verified benchmark CSV plus performance charts.
-- [ ] **5+ page** substantive performance analysis report.
-- [ ] Final slides **or** video showing real system capabilities.
-- [ ] Complete README, architecture notes, user guide, and design decisions.
-- [ ] Retrospective and final release checklist.
-- [ ] **4 meaningful commits** representing completed work; version tag only after release.
+- [x] Full source code and working UI.
+- [x] All tests pass and major workflows manually verified.
+- [x] Verified benchmark CSV plus performance charts.
+- [x] **5+ page** substantive performance analysis report.
+- [x] Final slides **or** video showing real system capabilities.
+- [x] Complete README, architecture notes, user guide, and design decisions.
+- [x] Retrospective and final release checklist.
+- [x] **4 meaningful commits** representing completed work; version tag only after release.
 
 ---
+
+
+Day 4 evidence: `documentation/day4_verification.md` and `documentation/release_checklist.md`. Report: ten pages with eight substantive body pages. Presentation: twelve slides, native PowerPoint export, speaker script, and browser walkthrough; no human oral rehearsal is claimed.
 
 ## 9. Complete Git commit schedule
 

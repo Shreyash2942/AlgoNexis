@@ -129,8 +129,8 @@ assert manager.execute("hash_table", "find", key="a") is None
 ```
 
 Use one manager in session state; a new manager resets all six structures. Returned
-containers are plain Python values. The Day 3 integer-oriented UI must validate
-its inputs and format arbitrary payloads if it chooses to expose them.
+containers are plain Python values. The integer-oriented UI validates its inputs;
+the importable APIs retain their documented key and arbitrary-payload contracts.
 
 ## Reviewed prior-course adaptations
 

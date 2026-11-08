@@ -3,7 +3,7 @@
 # CSV writers deliberately emit CRLF; preserve exact downloadable evidence.
 *.csv -text
 # Generated evidence is hashed byte-for-byte, including JSON and SVG line endings.
-results/** -text
+results/** -text -whitespace
 *.png binary
 *.pdf binary
 *.pptx binary

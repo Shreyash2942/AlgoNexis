@@ -1,30 +1,25 @@
 {
-  "corpus_tokens": 39276,
-  "corpus_words": 29457,
-  "nodes": 501,
-  "edges": 1123,
-  "avg_query_tokens": 5495,
-  "reduction_ratio": 7.1,
+  "corpus_tokens": 54326,
+  "corpus_words": 40745,
+  "nodes": 552,
+  "edges": 1243,
+  "avg_query_tokens": 6087,
+  "reduction_ratio": 8.9,
   "per_question": [
     {
-      "question": "How does DataStructureManager retain state in the app?",
-      "query_tokens": 6357,
-      "reduction": 6.2
+      "question": "How do immutable sorting snapshots affect trace cost and UI limits?",
+      "query_tokens": 8120,
+      "reduction": 6.7
     },
     {
-      "question": "How does SortingVisualizer connect recorded steps to charts?",
-      "query_tokens": 5699,
-      "reduction": 6.9
+      "question": "How do source hashes and correctness checks connect benchmark CSVs to the report?",
+      "query_tokens": 2991,
+      "reduction": 18.2
     },
     {
-      "question": "How are benchmark correctness and allocation trials isolated?",
-      "query_tokens": 4481,
-      "reduction": 8.8
-    },
-    {
-      "question": "What evidence verifies G3?",
-      "query_tokens": 5446,
-      "reduction": 7.2
+      "question": "Why do prebuilt fixtures prevent allocation readings from ranking total structure memory?",
+      "query_tokens": 7151,
+      "reduction": 7.6
     }
   ]
 }

@@ -7,7 +7,7 @@ From the repository root:
 
 ```powershell
 python -m venv .venv
-& .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+& .\.venv\Scripts\python.exe -m pip install -r requirements.lock.txt
 & .\.venv\Scripts\python.exe -m streamlit run app.py
 ```
 
@@ -90,7 +90,7 @@ Bubble Sort/BST cases are listed with reasons and never plotted as zero.
 Comparison/swap counts are shown only for Bubble Sort.
 
 **Download full run CSV** exports the complete saved run, not only a chart-filtered
-subset. The default recorded Day 3 run has 1,080 measured observations plus eight
+subset. The final recorded Day 4 run has 1,080 measured observations plus eight
 skipped cases. CSV timing rows have blank allocation cells, and vice versa.
 
 Peak Python-tracked allocation means allocations during the measured operation,
@@ -128,3 +128,36 @@ checks in pytest use isolated temporary benchmark storage. Browser screenshots i
 charts. Restart a running development server after source edits if imported modules
 remain cached. The finished app was verified from a fresh launch; no Site hosting
 or external deployment is needed.
+
+
+## Final report and presentation
+
+Open `performance_analysis_report.pdf` with any PDF reader. Its eight substantive
+body pages are separate from the title and references. Open
+`portfolio_presentation.pptx` in PowerPoint; `portfolio_presentation_preview.pdf`
+is a native PowerPoint export for readers without Office. Speaker notes and the
+full script in `presentation_walkthrough.md` cover the eight deliverables.
+
+Optional reproduction from the repository root:
+
+```powershell
+python -m pip install -r requirements-report.lock.txt
+python -m scripts.analyze_results
+python -m scripts.build_report
+python -m scripts.build_presentation
+python -m scripts.validate_release --artifacts
+```
+
+The report authoring template is `documentation/report_template.md`; the slide
+builder is `scripts/build_presentation.py`. Both resolve reported numbers from
+saved measured summaries. The optional Windows PowerPoint rendering script
+exports the slide preview PDF when existing PowerShell policy allows scripts;
+the application itself needs no Office license. The prebuilt PDF is supplied.
+After a new measurement run, rebuild analysis and both artifacts together. The
+controlled hash study is `python -m scripts.measure_hash_collisions`; it is a
+separate profile and is not displayed as default-run data in the app.
+
+The exact tested environment uses pandas 3.0.6. A clean 3.1.1 installation was
+blocked by this computer's Application Control policy; the tested maintenance
+wheel passed the full suite. See `day4_verification.md` for details. No system
+policy changes or PowerShell activation are required by the setup commands.

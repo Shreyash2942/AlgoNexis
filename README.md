@@ -2,7 +2,7 @@
 
 **An Interactive Algorithms & Data Structures Portfolio**
 
-> **Project stage:** Day 3 complete; G1–G3 passed. The local Streamlit portfolio, algorithms, six structures, step visualization, and benchmark dashboard are implemented with 191 passing tests. Real evidence contains 1,080 measured observations and eight explicit skipped cases. Final report/presentation/release work remains Day 4. See [`documentation/day3_verification.md`](documentation/day3_verification.md) and the [user guide](documentation/user_guide.md).
+> **Project stage:** Day 4 complete; G1–G4 passed. The portfolio has 195 passing tests, 1,080 default observations plus eight guarded skips, and 60 controlled collision observations. The final report has eight substantive body pages; the presentation has twelve slides. See the [release checklist](documentation/release_checklist.md), [verification record](documentation/day4_verification.md), and [user guide](documentation/user_guide.md).
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
 
@@ -17,7 +17,7 @@
 | **Data structures** | Custom Set, Stack, Queue, Binary Search Tree, Graph, and Hash Table. |
 | **Interface** | Local Streamlit application for hands-on testing and comparisons. |
 | **Performance analysis** | Repeatable timing, Python-tracked memory measurements, operation counts, tables, charts, and CSV exports. |
-| **Planned stack** | Python 3.11+, Streamlit, pytest, Python standard library; add charting dependencies only as needed. |
+| **Technology** | Python 3.11+, Streamlit, pytest, Python standard library; add charting dependencies only as needed. |
 | **Development strategy** | Four-day lightweight Hybrid Agile plan with PSEPF-style quality gates G1–G4. |
 | **Commit targets** | Day 1: 5; Day 2: 6; Day 3: 7; Day 4: 4 (**22 planned meaningful commits**). |
 | **Final academic artifacts** | Source code, functional app, 5+ page performance analysis report, slides **or** video, and full usage/design documentation. |
@@ -86,9 +86,9 @@ The portfolio should demonstrate **correctness, algorithmic understanding, integ
 
 **Design rules:** Keep core algorithms and data structures independent of Streamlit. The UI calls these modules; it must not contain their underlying algorithm implementations. Measure algorithm operations **outside** rendering logic. Use plain results and explicit errors to support tests and UI integration.
 
-### Planned repository layout
+### Implemented repository layout (principal files)
 
-> The tree below is a **target structure**, not a statement that these files currently exist. Create files in the appropriate work package; do not add empty report/slides or fabricate benchmark data.
+> Principal source and submission artifacts are shown below. Optional `scripts/` builders, `ui/` view modules, results figures, and supporting verification records extend this layout.
 
 ```text
 AlgoNexis/
@@ -139,7 +139,7 @@ AlgoNexis/
     └── benchmark_results.csv
 ```
 
-The final presentation may be a **video instead of slides** if that submission option is selected. Place generated files in `documentation/` only once they are actually created.
+The release includes [the PDF report](documentation/performance_analysis_report.pdf), [editable PowerPoint slides](documentation/portfolio_presentation.pptx), and a [PowerPoint-rendered PDF preview](documentation/portfolio_presentation_preview.pdf). The [presentation walkthrough](documentation/presentation_walkthrough.md) accompanies the slides.
 
 ## 5. Key implementation contracts
 
@@ -184,8 +184,8 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 |---|---|---|---|
 | Day 1 | G1 passed | 71 original tests retained in the full regression; [verification](documentation/day1_verification.md) | Five Day 1 commits; `git log --oneline f2409c4` |
 | Day 2 | G2 passed | 143 original tests retained; all 49 manager routes; [verification](documentation/day2_verification.md) | Six Day 2 commits; `git log --oneline f2409c4..7fa29e5` |
-| Day 3 | G3 passed | 191 tests, real Edge walkthrough/screenshots, 1,080 observations + 8 skips; [verification](documentation/day3_verification.md) | Seven Day 3 commits; `git log --oneline 7fa29e5..HEAD` |
-| Day 4 | ☐ Unverified | Full QA + final artifacts | _check `git log`_ |
+| Day 3 | G3 passed | 191 tests, real Edge walkthrough/screenshots, 1,080 observations + 8 skips; [verification](documentation/day3_verification.md) | Seven Day 3 commits; `git log --oneline 7fa29e5..c44dd50` |
+| Day 4 | G4 passed | 195 tests, clean-install and browser checks, verified report/slides/evidence; [verification](documentation/day4_verification.md) | Four meaningful commits; `git log --oneline c44dd50..HEAD` |
 
 ### Planned Conventional Commit sequence
 
@@ -218,7 +218,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 
 ## 7. Local development and verification
 
-> The Day 1–3 local application, core APIs, benchmarks, and tests are implemented. Final academic artifacts remain Day 4 work.
+> The local application and all eight submission deliverables are implemented and verified. Launch and rebuild commands are below.
 
 ### Environment setup
 
@@ -245,14 +245,14 @@ directly; activation is not required:
 
 `requirements.lock.txt` records the tested development environment. Install it
 instead of `requirements.txt` to reproduce those exact dependency versions on a
-compatible Python/platform. The initial environment uses CPython 3.14.4 on Windows.
+compatible Python/platform. The final verified environment uses CPython 3.14.4 on Windows and pandas 3.0.6. The Day 4 record explains the tested pandas maintenance-series choice.
 Reviewed prior-course adaptations and structure APIs are listed in
 [`documentation/data_structures.md`](documentation/data_structures.md).
 
 ### Run and test
 
 ```bash
-# Run automated tests after their modules exist
+# Run automated tests
 python -m pytest tests/ -v
 
 # Launch the local interactive app
@@ -281,6 +281,36 @@ CSV download. Read the [measurement method](documentation/benchmark_methodology.
 before drawing conclusions: timing and allocation trials are separate, prebuilt
 fixtures are excluded, allocations are not total RAM, and different-purpose
 operations are not substitutes. No skipped case is plotted as zero.
+
+
+### Rebuild and validate the final academic artifacts
+
+The app does not require the report-building tools. To reproduce the exact tested
+artifact environment, install `requirements-report.lock.txt` in a separate venv;
+`requirements-report.txt` lists the optional direct dependencies.
+
+```bash
+python -m pip install -r requirements-report.lock.txt
+# Preserve the checked-in CSVs to reproduce the submitted analysis:
+python -m scripts.analyze_results
+python -m scripts.build_report
+python -m scripts.build_presentation
+python -m scripts.validate_release --artifacts
+```
+
+To collect a **new** study first, run `python -m performance.benchmark --trials 5
+--seed 506` and `python -m scripts.measure_hash_collisions`, then rebuild every
+summary, figure, report, and slide. Replacing data alone leaves old analysis stale.
+The [methodology](documentation/benchmark_methodology.md) documents measurement
+boundaries. `results/summary_statistics.csv` includes mean, median, min, max, and
+trial counts. Five figures are supplied in PNG and SVG. The report template and
+presentation builder are editable, with generated Markdown companions.
+
+Known scope limits include an unbalanced BST, fixed-capacity custom hashing,
+undirected/unweighted graph traversal, bounded UI inputs, and single-machine
+microbenchmarks. Tracked operation allocation excludes prebuilt fixtures and is
+not total RAM. The [retrospective](documentation/retrospective.md) records future
+work. Historical Day 1–3 verification records retain their original measurements.
 
 ### Implemented Day 1 APIs
 
@@ -487,16 +517,16 @@ results, actual commit hashes/messages, gate status, and next task.
 
 The project is ready for submission only after all of the following are **actually verified**:
 
-- [ ] Bubble Sort correctly sorts and displays every required step; Quickselect correctly finds valid kth values.
-- [ ] Custom Set operations and all five additional data structures function correctly.
-- [ ] Every required component is available in the interactive UI; errors and resets work.
-- [ ] All applicable automated tests pass; the app launches from a clean environment.
-- [ ] Benchmark charts are supported by saved real measurements and correctly labeled.
-- [ ] The performance report has **at least five substantive pages** and analyzes meaningful trade-offs.
-- [ ] The final presentation demonstrates real system features and course learning.
-- [ ] Setup, usage, architecture, and design decisions are documented.
-- [ ] The final repository is clean of secrets, caches, and unnecessary files; deliverables open correctly.
-- [ ] Commits accurately reflect completed development; tag `v1.0.0` **only after** G4 passes.
+- [x] Bubble Sort correctly sorts and displays every required step; Quickselect correctly finds valid kth values.
+- [x] Custom Set operations and all five additional data structures function correctly.
+- [x] Every required component is available in the interactive UI; errors and resets work.
+- [x] All applicable automated tests pass; the app launches from a clean environment.
+- [x] Benchmark charts are supported by saved real measurements and correctly labeled.
+- [x] The performance report has **at least five substantive pages** and analyzes meaningful trade-offs.
+- [x] The final presentation demonstrates real system features and course learning.
+- [x] Setup, usage, architecture, and design decisions are documented.
+- [x] The final repository is clean of secrets, caches, and unnecessary files; deliverables open correctly.
+- [x] Commits accurately reflect completed development; tag `v1.0.0` **only after** G4 passes.
 
 ---
 

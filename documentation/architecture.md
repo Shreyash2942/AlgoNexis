@@ -3,8 +3,8 @@
 ## Foundation
 
 The root README and four-day implementation plan define the target system.
-Days 1-3 deliver importable core algorithms, data structures, manager, Streamlit
-views, and verified operation measurements. Academic artifacts remain Day 4 work.
+Days 1-4 deliver importable core algorithms, data structures, manager, Streamlit
+views, verified operation measurements, and completed academic artifacts.
 
 - Existing Git repository and `origin` are preserved; the default branch is `main`.
 - GitHub repository: https://github.com/Shreyash2942/AlgoNexis (verified existing).
@@ -22,7 +22,44 @@ sorting records. `data_structures` owns the six structures and their persistent
 manager. `performance` measures core operations independently of Streamlit;
 `ui` owns input parsing, session helpers, views, and chart rendering. `app.py`
 selects four sections. `results` stores real CSV observations and environment
-metadata. No placeholder report PDF or presentation is created.
+metadata. `scripts` supplies optional evidence validation, analysis, and academic
+artifact builders; none is required to launch the app.
+
+```text
+app.py -> ui views / session state
+             |                      |
+      algorithms                 manager -> six structures
+             |                      |
+      immutable steps               |
+             |                      |
+       visualization        performance benchmark (direct core calls)
+                                    |
+                        CSV + environment/source provenance
+                                    |
+                       summaries + PNG/SVG figures
+                                    |
+                      report PDF + presentation PPTX
+```
+
+## Release evidence decisions (Day 4)
+
+- The runtime stays limited to Streamlit, pandas, Altair, pytest and their
+  dependencies. Optional `requirements-report.txt` adds Matplotlib, ReportLab,
+  python-pptx, and PyMuPDF for rebuilding/verifying submission artifacts.
+- pandas 3.0.6 is the tested maintenance version after a new 3.1.1 Windows wheel
+  was blocked by local Application Control. No system policy was changed.
+- `scripts.validate_release` verifies configured trial coverage, provenance,
+  unchanged measured sources, the controlled hash profile, figure hashes, report
+  page content, and slide structure. `.gitattributes` keeps source LF and preserves
+  generated evidence bytes across platforms so checkout conversion cannot break
+  provenance hashes or the exact CSV download contract.
+- The report uses an original editable template with data tokens resolved from
+  measured summaries. The presentation uses the same values, authentic browser
+  screenshots, and charts. Its editable outline and speaker notes accompany the
+  PPTX. Microsoft PowerPoint opened and rendered the deck for visual inspection.
+- The supplementary hash profile deliberately varies capacity using fixed unique
+  keys; it remains separate from the default random/duplicate profile. Neither
+  experiment measures prebuilt-fixture storage or construction.
 
 ## Bubble Sort contract (D1.2)
 

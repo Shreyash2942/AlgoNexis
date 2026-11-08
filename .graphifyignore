@@ -5,3 +5,10 @@ requirements.lock.txt
 # Bulk generated evidence is referenced by the methodology/verification docs.
 results/
 documentation/screenshots/
+# Editable report/slide Markdown carries the same narrative and evidence links.
+documentation/performance_analysis_report.pdf
+documentation/portfolio_presentation.pptx
+documentation/portfolio_presentation_preview.pdf
+documentation/slide_previews/
+documentation/report_template.md
+requirements-report.lock.txt
