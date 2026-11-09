@@ -2,6 +2,12 @@
 
 **An Interactive Algorithms & Data Structures Portfolio**
 
+New here? Start with [guide.md](guide.md) for installation, examples, troubleshooting,
+tests, and document rebuilding. The editable [APA Word report](documentation/performance_analysis_report.docx)
+and its [PDF preview](documentation/performance_analysis_report_apa.pdf) complement
+the original Day 4 artifacts. Personalize its [title-page fields](documentation/apa_title_page.json)
+before submission; see [APA setup notes](documentation/apa_report_setup.md).
+
 > **Project stage:** Day 4 complete; G1–G4 passed. The portfolio has 195 passing tests, 1,080 default observations plus eight guarded skips, and 60 controlled collision observations. The final report has eight substantive body pages; the presentation has twelve slides. See the [release checklist](documentation/release_checklist.md), [verification record](documentation/day4_verification.md), and [user guide](documentation/user_guide.md).
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
@@ -185,7 +191,7 @@ Complete tasks in the linked implementation plan **in order**. The daily milesto
 | Day 1 | G1 passed | 71 original tests retained in the full regression; [verification](documentation/day1_verification.md) | Five Day 1 commits; `git log --oneline f2409c4` |
 | Day 2 | G2 passed | 143 original tests retained; all 49 manager routes; [verification](documentation/day2_verification.md) | Six Day 2 commits; `git log --oneline f2409c4..7fa29e5` |
 | Day 3 | G3 passed | 191 tests, real Edge walkthrough/screenshots, 1,080 observations + 8 skips; [verification](documentation/day3_verification.md) | Seven Day 3 commits; `git log --oneline 7fa29e5..c44dd50` |
-| Day 4 | G4 passed | 195 tests, clean-install and browser checks, verified report/slides/evidence; [verification](documentation/day4_verification.md) | Four meaningful commits; `git log --oneline c44dd50..HEAD` |
+| Day 4 | G4 passed | 195 tests, clean-install and browser checks, verified report/slides/evidence; [verification](documentation/day4_verification.md) | Four release commits; `git log --oneline c44dd50..v1.0.0`; later documentation additions follow on `main` |
 
 ### Planned Conventional Commit sequence
 

@@ -1,26 +1,27 @@
-# Graph Report - AlgoNexis Day 4 (2026-11-07)
+# Graph Report - APA Report and User Guide (2026-11-08)
 
 ## Corpus Check
-- Corpus is ~40,745 words - fits in a single context window. You may not need a graph.
+- Corpus is ~44,807 words - fits in a single context window. You may not need a graph.
 
 ## Summary
-- 552 nodes · 1243 edges · 25 communities detected
-- Extraction: 67% EXTRACTED · 14% INFERRED · 19% AMBIGUOUS · INFERRED: 176 edges (avg confidence: 0.9)
-- Token usage/cost: unavailable; zero serialization fields are placeholders, not measured free usage.
+- 593 nodes · 1332 edges · 26 communities detected
+- Extraction: 69% EXTRACTED · 14% INFERRED · 17% AMBIGUOUS · INFERRED: 185 edges (avg confidence: 0.9)
+- Token usage/cost: unavailable; zero serialization fields are placeholders, not measured usage.
 
 ## Community Hubs (Navigation)
-- Benchmark and Evidence Validation
-- Day Four Release Evidence
-- Contracts and Prior Gates
-- Selection and Input State
-- Sorting Events and Playback
-- Manager and Interface Integration
-- Graph Traversal and Fixtures
+- Measurement and Evidence Validation
+- Release Evidence and References
+- APA Style and Core Contracts
+- Manager and UI Integration
+- Sorting Frames and Replay
 - Stack and Tree Algorithms
+- Selection and Dataset State
 - Explicit Custom Set Algebra
-- Queue and Structure Representations
 - Separate Chaining Hash Table
-- Academic Sources and Interpretation
+- Graph Traversal and Fixtures
+- APA Build and Reproducibility
+- Deque Queue Operations
+- Integer Bounds and Trace Costs
 - Algorithms Package Boundary
 - Structures Package Boundary
 - Performance Package Boundary
@@ -36,123 +37,129 @@
 - Historical G4 Pending
 
 ## God Nodes (most connected - your core abstractions)
-1. `CustomSet` - 34 edges
-2. `HashTable` - 32 edges
-3. `Graph` - 31 edges
+1. `CustomSet` - 33 edges
+2. `HashTable` - 31 edges
+3. `Graph` - 30 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Preserve Saved CSVs or Rebuild All Artifacts After New Measurements` --references--> `run_benchmarks()`  [EXTRACTED]
+  guide.md → performance/benchmark.py
 - `perf_counter_ns Elapsed Milliseconds` --references--> `measure_time()`  [EXTRACTED]
   documentation/benchmark_methodology.md → performance/metrics.py
-- `Complete Immutable Comparison and Swap Events` --references--> `SortingStep`  [EXTRACTED]
-  README.md → algorithms/bubble_sort.py
 
 ## Hyperedges (group relationships)
+- **Reusable Core Preserves Inputs Frames and Allowed Dispatch** — arch_separation, arch_copy, arch_frame, arch_allowlist [EXTRACTED 1.00]
+- **Operation Measurements Exclude Setup Check Results and Separate Units** — method_fixture, day3_correctness, method_time, day3_allocations, method_different_tasks [EXTRACTED 1.00]
 - **Day 1 Verified Algorithm and Playback Evidence** — readme_bubble, readme_quickselect, readme_visualizer, readme_tests, arch_imports [EXTRACTED 1.00]
 - **G2 Acceptance Through Regression and All Manager Routes** — readme_g2, day2_tests, manager_routes, day2_record, arch_imports [EXTRACTED 1.00]
 - **G3 Combines Regression Browser and Measurement Evidence** — day3_g3, day3_tests191, day3_browser, day3_observations, day3_csv_match [EXTRACTED 1.00]
 - **Measured Evidence Feeds Verified Report and Presentation** — method_matrix, method_collision, method_summary, method_manifest, day4_report_pages, day4_powerpoint [EXTRACTED 1.00]
-- **Reusable Core Preserves Inputs Frames and Allowed Dispatch** — arch_separation, arch_copy, arch_frame, arch_allowlist [EXTRACTED 1.00]
-- **Operation Measurements Exclude Setup Check Results and Separate Units** — method_fixture, day3_correctness, method_time, day3_allocations, method_different_tasks [EXTRACTED 1.00]
+- **APA Edition Combines Layout References Metadata and Figures** — apa_word_edition, apa_format_contract, apa_reference_format, apa_title_metadata, apa_five_figures [EXTRACTED 1.00]
+- **Saved Observations Support Rebuilt Analysis Report Slides and APA Edition** — guide_preserve_evidence, readme_rebuild, apa_shared_values, method_manifest [EXTRACTED 1.00]
 
 ## Communities
 
-### Community 0 - "Benchmark and Evidence Validation"
+### Community 0 - "Measurement and Evidence Validation"
+Cohesion: 0.04
+Nodes (82): altair (external import), Generate exportable scientific figures and summaries from recorded CSVs only., argparse (external import), _atomic_write(), BenchmarkConfig, BenchmarkRun, dataset(), _environment() (+74 more)
+
+### Community 1 - "Release Evidence and References"
+Cohesion: 0.04
+Nodes (75): Alphabetized References with Hanging Indents and Italic Work Titles, BreadthFirstPaths Before BST Determines Matched Undated Suffixes, APA Edition Reuses Verified Original Analysis and Measured Summaries, APA Webpage Reference Examples, Report and Slides Resolve Shared Measured Values, Keep Controlled Capacity Profile Separate, LF Sources and Byte-Preserved Evidence Protect Hashes, Independent Core UI Measurement and Artifact Layers (+67 more)
+
+### Community 2 - "APA Style and Core Contracts"
 Cohesion: 0.05
-Nodes (77): Generate exportable scientific figures and summaries from recorded CSVs only., run(), argparse (external import), _atomic_write(), BenchmarkConfig, BenchmarkRun, dataset(), _environment() (+69 more)
+Nodes (72): Letter One-Inch Margins TNR12 Double Spacing and Indents, Word PDF Preview Requires Separate Native Export, Portable DOCX Builder Checks Measured Source Provenance, Regeneration Overwrites Direct Word Edits, Student Title Page Page Numbers and Unnumbered Introduction, APA Student Paper Setup Guide, APA Title Page Setup, Personalize Author Affiliation Instructor and Actual Due Date (+64 more)
 
-### Community 1 - "Day Four Release Evidence"
-Cohesion: 0.05
-Nodes (63): Report and Slides Resolve Shared Measured Values, Keep Controlled Capacity Profile Separate, LF Sources and Byte-Preserved Evidence Protect Hashes, Independent Core UI Measurement and Artifact Layers, Separate Persistent Models from Widget Cleanup, Strict Integer and Explicit Operation Validation, Fresh Headless Edge End-to-End Walkthrough, Development Module Caching Resolved by Fresh Launch (+55 more)
-
-### Community 2 - "Contracts and Prior Gates"
-Cohesion: 0.06
-Nodes (59): Bound-Method Allowlist Prevents Arbitrary Dispatch, Protect Caller Data with Input Copies, Frozen Sorting Frames Reuse Immutable Snapshots, Standard-Library-Only Core Imports, Injected Random Instance Avoids Global RNG Mutation, Complete Snapshots Can Cost Cubic Time and Storage, Day 2 Acceptance Evidence, 143 Passing Day 1 and Day 2 Tests (+51 more)
-
-### Community 3 - "Selection and Input State"
+### Community 3 - "Manager and UI Integration"
 Cohesion: 0.07
-Nodes (43): _load_sample(), Algorithm controls call core APIs and retain independent result state., render(), Local AlgoNexis portfolio. Launch with python -m streamlit run app.py., parse_integer(), parse_integer_list(), Strict, bounded integer input parsing without eval or permissive coercion., Accept comma/whitespace-separated ASCII integers within +/- 1e9. (+35 more)
+Nodes (48): main(), Local AlgoNexis portfolio. Launch with python -m streamlit run app.py., run(), DataStructureManager, Detached registry metadata for UI choices; exposes no bound methods., Dispatch a named operation with keyword arguments and preserve state.          U, execute_structure(), initialize() (+40 more)
 
-### Community 4 - "Sorting Events and Playback"
-Cohesion: 0.07
-Nodes (39): altair (external import), bubble_sort(), BubbleSortResult, Adjacent-element Bubble Sort with an optional complete, immutable trace.  The ca, One observed event; counters are cumulative as of this snapshot.      A compare, Sorted values, exact operation totals, and an optional event sequence., Return a nonmutating sort result; duplicates keep their relative order.      ``t, SortingStep (+31 more)
-
-### Community 5 - "Manager and Interface Integration"
+### Community 4 - "Sorting Frames and Replay"
 Cohesion: 0.09
-Nodes (38): main(), run(), DataStructureManager, Detached registry metadata for UI choices; exposes no bound methods., Dispatch a named operation with keyword arguments and preserve state.          U, execute_structure(), initialize(), Apply UI growth limits before invoking the manager's domain validation. (+30 more)
+Nodes (34): bubble_sort(), BubbleSortResult, One observed event; counters are cumulative as of this snapshot.      A compare, Sorted values, exact operation totals, and an optional event sequence., Return a nonmutating sort result; duplicates keep their relative order.      ``t, SortingStep, render(), UI-ready metadata; values reuse the algorithm's immutable snapshot. (+26 more)
 
-### Community 6 - "Graph Traversal and Fixtures"
-Cohesion: 0.12
-Nodes (22): _prepare(), Return operation, external correctness checker, and prebuilt fixture size., collections (external import), Graph, Undirected, unweighted graph with insertion-ordered adjacency lists.  Hashable v, Add if missing; return whether the vertex is new., Validate both endpoints before mutating, then add an undirected edge., Match recursive preorder using neighbor iterators, without recursion. (+14 more)
-
-### Community 7 - "Stack and Tree Algorithms"
+### Community 5 - "Stack and Tree Algorithms"
 Cohesion: 0.13
-Nodes (18): Shallow copy in bottom-to-top order., Stack, LIFO, error, and detached-inspection contracts., test_empty_operations_raise_index_error(), test_lifo_peek_size_and_detached_input_display(), test_seeded_mixed_workload_matches_list_model(), Traversal, uniqueness, skew, and integer-domain checks., test_empty_and_singleton() (+10 more)
+Nodes (17): Shallow copy in bottom-to-top order., Stack, LIFO, error, and detached-inspection contracts., test_empty_operations_raise_index_error(), test_lifo_peek_size_and_detached_input_display(), test_seeded_mixed_workload_matches_list_model(), Traversal, uniqueness, skew, and integer-domain checks., test_empty_and_singleton() (+9 more)
 
-### Community 8 - "Explicit Custom Set Algebra"
-Cohesion: 0.1
-Nodes (16): CustomSet, Mutable membership with nonmutating, new-set derived operations., Insert a hashable value; return True only when membership changes., Remove a member, raising KeyError if absent., Remove if present; return whether membership changed., Return a detached member list in insertion order., New set of both operands, left members followed by new right members., _require_set() (+8 more)
-
-### Community 9 - "Queue and Structure Representations"
+### Community 6 - "Selection and Dataset State"
 Cohesion: 0.11
-Nodes (16): collections.abc (external import), Insertion-ordered custom set with explicitly implemented set algebra.  A dict st, functools (external import), Custom fixed-capacity hash buckets with separate chaining.  Keys are hashable an, inspect (external import), Persistent structure instances behind an explicit operation allowlist.  No eval,, pytest (external import), Queue (+8 more)
+Nodes (28): _load_sample(), Algorithm controls call core APIs and retain independent result state., render(), quickselect(), Iterative randomized Quickselect with one-based ranks and duplicate support.  Un, Return the kth-smallest integer without sorting or changing caller data.      Ra, Random, update_dataset() (+20 more)
 
-### Community 10 - "Separate Chaining Hash Table"
+### Community 7 - "Explicit Custom Set Algebra"
+Cohesion: 0.1
+Nodes (17): Reproducible, correctness-checked microbenchmarks independent of Streamlit.  Tim, CustomSet, Mutable membership with nonmutating, new-set derived operations., Insert a hashable value; return True only when membership changes., Remove a member, raising KeyError if absent., Remove if present; return whether membership changed., Return a detached member list in insertion order., New set of both operands, left members followed by new right members. (+9 more)
+
+### Community 8 - "Separate Chaining Hash Table"
 Cohesion: 0.12
-Nodes (15): HashTable, Insert/update; True for a new key, False for an update., Return the stored value, including None; raise KeyError if missing., Remove/return the value; raise KeyError if missing., Detached key/value pairs in bucket order, then chain insertion order., Detached bucket and chain containers for collision inspection., CollidingKey, Collision chains, missing keys, updates, and mapping-model workloads. (+7 more)
+Nodes (15): HashTable, Insert/update; True for a new key, False for an update., Return the stored value, including None; raise KeyError if missing., Remove/return the value; raise KeyError if missing., Detached key/value pairs in bucket order, then chain insertion order., Detached bucket and chain containers for collision inspection., Persistent structure instances behind an explicit operation allowlist.  No eval,, CollidingKey (+7 more)
 
-### Community 11 - "Academic Sources and Interpretation"
-Cohesion: 0.33
-Nodes (6): perf_counter_ns Elapsed Milliseconds, OpenDSA Bubble Sort Attribution, Original Third-Person Implementation and Performance Analysis, Sedgewick and Wayne Algorithm Source Attribution, Python Software Foundation Time Allocation and Deque Sources, Finite Timings Support Rather Than Prove Complexity Analysis
+### Community 9 - "Graph Traversal and Fixtures"
+Cohesion: 0.17
+Nodes (16): _prepare(), Return operation, external correctness checker, and prebuilt fixture size., Graph, Add if missing; return whether the vertex is new., Validate both endpoints before mutating, then add an undirected edge., Match recursive preorder using neighbor iterators, without recursion., Copy the adjacency mapping and each neighbor container, in order., test_seeded_graph_traversals_match_independent_small_reference() (+8 more)
 
-### Community 12 - "Algorithms Package Boundary"
+### Community 10 - "APA Build and Reproducibility"
+Cohesion: 0.12
+Nodes (27): run(), Five Sequential Measured Figures on Pages After References, APA Figure Setup and Placement Options, APA Structure and Optional Native Preview Validation Commands, load_rows(), body_sections(), build(), report_values() (+19 more)
+
+### Community 11 - "Deque Queue Operations"
+Cohesion: 0.24
+Nodes (7): pytest (external import), Queue, Shallow copy in front-to-rear order., FIFO, error, and detached-inspection contracts., test_empty_operations_raise_index_error(), test_fifo_front_size_and_detached_input_display(), test_seeded_mixed_workload_matches_fifo_list_model()
+
+### Community 12 - "Integer Bounds and Trace Costs"
+Cohesion: 0.2
+Nodes (13): Complete Snapshots Can Cost Cubic Time and Storage, Strict Integer and Explicit Operation Validation, Strict Integer Dataset and One-Based Rank Examples, Trace Limit 50 Reflects Cubic Snapshot Cost, UI Bounds 50 Traced 1000 Sort 5000 Select and 200 Structure Items, parse_integer(), parse_integer_list(), Strict, bounded integer input parsing without eval or permissive coercion. (+5 more)
+
+### Community 13 - "Algorithms Package Boundary"
 Cohesion: 1.0
 Nodes (1): UI-independent algorithms for AlgoNexis.
 
-### Community 13 - "Structures Package Boundary"
+### Community 14 - "Structures Package Boundary"
 Cohesion: 1.0
 Nodes (1): Standalone custom sets, data structures, and allowlisted stateful dispatch.
 
-### Community 14 - "Performance Package Boundary"
+### Community 15 - "Performance Package Boundary"
 Cohesion: 1.0
 Nodes (1): UI-independent correctness-checked timing and Python allocation tools.
 
-### Community 15 - "Artifact Scripts Package"
+### Community 16 - "Artifact Scripts Package"
 Cohesion: 1.0
 Nodes (1): Optional, reproducible portfolio evidence and document utilities.
 
-### Community 16 - "Test Package Boundary"
+### Community 17 - "Test Package Boundary"
 Cohesion: 1.0
 Nodes (1): Automated AlgoNexis correctness and integration checks.
 
-### Community 17 - "UI Package Boundary"
+### Community 18 - "UI Package Boundary"
 Cohesion: 1.0
 Nodes (1): Streamlit views and independently testable input/session helpers.
 
-### Community 18 - "Visualization Package Boundary"
+### Community 19 - "Visualization Package Boundary"
 Cohesion: 1.0
 Nodes (1): UI-independent visualization data for AlgoNexis.
 
-### Community 19 - "Native PowerPoint Rendering"
+### Community 20 - "Native PowerPoint Rendering"
 Cohesion: 1.0
 Source-file-only community: render_powerpoint.ps1 (1 node).
 
-### Community 20 - "Optional Browser QA"
+### Community 21 - "Optional Browser QA"
 Cohesion: 1.0
 Nodes (1): Optional Playwright Browser QA Dependency
 
-### Community 21 - "Historical Evidence Integrity Rule"
+### Community 22 - "Historical Evidence Integrity Rule"
 Cohesion: 1.0
 Nodes (1): Verified Evidence and No Placeholder Results
 
-### Community 22 - "Historical Custom Set Plan"
+### Community 23 - "Historical Custom Set Plan"
 Cohesion: 1.0
 Nodes (1): Historical Day 1 Plan for CustomSet
 
-### Community 23 - "Historical G3 Pending"
+### Community 24 - "Historical G3 Pending"
 Cohesion: 1.0
 Nodes (1): Historical Day 2 G3 Pending Status
 
-### Community 24 - "Historical G4 Pending"
+### Community 25 - "Historical G4 Pending"
 Cohesion: 1.0
 Nodes (1): Historical Day 1 Unverified G4 Release Gate
 
@@ -461,6 +468,8 @@ Nodes (1): Historical Day 1 Unverified G4 Release Gate
   tests/test_tree.py · relation: uses
 - `.insert()` → `_prepare()`  [AMBIGUOUS]
   performance/benchmark.py · relation: calls
+- `.insert()` → `body_sections()`  [AMBIGUOUS]
+  scripts/build_apa_report.py · relation: calls
 - `.insert()` → `test_colliding_keys_update_find_and_delete_independently()`  [AMBIGUOUS]
   tests/test_hash_table.py · relation: calls
 - `.insert()` → `test_none_values_missing_keys_and_detached_buckets()`  [AMBIGUOUS]
@@ -565,6 +574,8 @@ Nodes (1): Historical Day 1 Unverified G4 Release Gate
   scripts/measure_hash_collisions.py · relation: uses
 - `_environment()` → `run()`  [AMBIGUOUS]
   performance/benchmark.py · relation: calls
+- `build()` → `run()`  [AMBIGUOUS]
+  scripts/build_report.py · relation: calls
 - `run()` → `algorithms()`  [AMBIGUOUS]
   tests/test_algorithm_ui.py · relation: calls
 - `run()` → `test_both_algorithms_and_dataset_change_clear_stale_results()`  [AMBIGUOUS]
@@ -621,7 +632,7 @@ Nodes (1): Historical Day 1 Unverified G4 Release Gate
   ui/sorting_view.py · relation: uses
 
 ## Knowledge Gaps
-- **102 isolated node(s):** `Local AlgoNexis portfolio. Launch with python -m streamlit run app.py.`, `Adjacent-element Bubble Sort with an optional complete, immutable trace.  The ca`, `One observed event; counters are cumulative as of this snapshot.      A compare`, `Sorted values, exact operation totals, and an optional event sequence.`, `Return a nonmutating sort result; duplicates keep their relative order.      ``t` (+97 more)
+- **111 isolated node(s):** `Local AlgoNexis portfolio. Launch with python -m streamlit run app.py.`, `Adjacent-element Bubble Sort with an optional complete, immutable trace.  The ca`, `One observed event; counters are cumulative as of this snapshot.      A compare`, `Sorted values, exact operation totals, and an optional event sequence.`, `Return a nonmutating sort result; duplicates keep their relative order.      ``t` (+106 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **Thin community `Algorithms Package Boundary`** (2 nodes): `UI-independent algorithms for AlgoNexis.`, `__init__.py`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
@@ -653,41 +664,52 @@ Nodes (1): Historical Day 1 Unverified G4 Release Gate
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `_prepare()` connect `Graph Traversal and Fixtures` to `Benchmark and Evidence Validation`, `Selection and Input State`, `Sorting Events and Playback`, `Stack and Tree Algorithms`, `Explicit Custom Set Algebra`, `Queue and Structure Representations`, `Separate Chaining Hash Table`?**
-  _High betweenness centrality (0.134) - this node is a cross-community bridge._
-- **Why does `CustomSet` connect `Explicit Custom Set Algebra` to `Benchmark and Evidence Validation`, `Contracts and Prior Gates`, `Manager and Interface Integration`, `Graph Traversal and Fixtures`, `Queue and Structure Representations`?**
-  _High betweenness centrality (0.087) - this node is a cross-community bridge._
-- **Why does `run_benchmarks()` connect `Benchmark and Evidence Validation` to `Day Four Release Evidence`, `Graph Traversal and Fixtures`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
-## Day 4 outcome and extraction audit
+- **Why does `_prepare()` connect `Graph Traversal and Fixtures` to `Measurement and Evidence Validation`, `Sorting Frames and Replay`, `Stack and Tree Algorithms`, `Selection and Dataset State`, `Explicit Custom Set Algebra`, `Separate Chaining Hash Table`, `Deque Queue Operations`?**
+  _High betweenness centrality (0.144) - this node is a cross-community bridge._
+- **Why does `DataStructureManager` connect `Manager and UI Integration` to `Measurement and Evidence Validation`, `APA Style and Core Contracts`, `Stack and Tree Algorithms`, `Explicit Custom Set Algebra`, `Separate Chaining Hash Table`, `Graph Traversal and Fixtures`, `Deque Queue Operations`?**
+  _High betweenness centrality (0.110) - this node is a cross-community bridge._
+## APA report and guide outcome
 
-The portfolio now includes 195 passing regression tests, a 1,080-observation
-default study with eight guard skips, 60 controlled hash observations, five
-exportable measured figures, a ten-page report with eight substantive body pages,
-and twelve PowerPoint slides with a native PDF preview. Candidate-checkout
-regression, artifact/provenance, and real Edge launch/workflow checks passed.
-See `documentation/day4_verification.md` and `documentation/release_checklist.md`.
-Tag/push ordering is a release requirement in this graph, not a claim that the
-pending final commit/tag had already occurred during extraction.
+The root `guide.md` covers installation on Windows and POSIX, a first-use tour,
+all algorithms/structures, persistence and resets, bounded input, measured-data
+interpretation, benchmark preservation/rebuilding, tests, core API examples,
+troubleshooting, artifact locations, and the historical v1.0.0 release snapshot.
+The guide's executable Python example passed; its local links were checked.
 
-The 73-file corpus contains 55 code and 18 documentation files (~40,745 words).
-Four documents were cached; a mandatory semantic agent extracted 14 changed/new
-documents into 102 nodes, 185 edges, three hyperedges, and 22 exact AST references.
-Generated results, screenshots, PDF/PPTX/preview files, and duplicate authoring
-templates are excluded through `.graphifyignore`; editable report/slide Markdown
-and verification docs carry their narrative, citations, and evidence links.
+`documentation/performance_analysis_report.docx` is an editable APA 7 student
+paper using the verified original analysis and observed summaries. A native
+Microsoft Word export, `performance_analysis_report_apa.pdf`, has 18 pages:
+title, eleven text pages (ten meet the >=150-word substantive-page check), one
+reference page, and five figure pages. Its five figures and eight references
+are complete. Validation checks page size/margins, TNR12, double spacing, paragraph
+and reference indents, page fields, figure order, citation suffixes, current data
+values, and rendered fonts. Title/body/reference/figure pages were inspected.
+Fresh APA styles remove the stock template's theme font and decorative title rule.
+Instructor and actual due date remain explicit prompts because they were not
+supplied; edit `documentation/apa_title_page.json` or the Word document.
 
-AST extraction is heuristic, not a complete call graph. Six duplicate rationale
-IDs were namespaced. Local module/property references were resolved to actual
-nodes; 36 external-import nodes are explicitly labeled rather than invented
-definitions. Scoped name-use evidence supports retained inferred relationships;
-231 unsupported co-occurrence inferences were downgraded to AMBIGUOUS (0.2).
-All IDs and endpoints were checked. Historical pending gates remain historical.
-Community cohesion is the graph library's raw structural score; it does not
-measure software quality. Displayed community lists omit source-file anchors;
-overall graph counts include them. Extraction token counters are unavailable.
+All 195 existing tests passed after the initial documentation additions; the core
+measured source and original Day 4 artifacts continue to pass provenance checks.
+The optional python-docx dependency is confined to document building. The original
+v1.0.0 tag identifies the completed Day 4 snapshot; these additions follow on main.
 
-The retrieval benchmark below estimates context sizes heuristically. It is not
-measured model token usage, demonstrated savings, or an answer-quality evaluation.
+## Extraction audit
 
-Graph change since Day 3: 108 new nodes, 254 new edges, 57 nodes removed, 134 edges removed.
+The final corpus contains 77 files: 57 code and 20 documentation files, about
+44,807 words. Sixteen documents came from semantic cache; one mandatory semantic
+agent extracted four changed/new documents into 50 nodes, 100 edges, two
+hyperedges, and ten exact doc-to-AST references. Generated Word/PDF files are
+excluded via `.graphifyignore`; existing report prose plus APA setup notes carry
+their narrative and formatting sources. Images/results and environment locks
+are also excluded to avoid duplicate generated evidence.
+
+Six colliding rationale IDs are namespaced. Local references resolve to actual
+nodes; 36 external modules are explicitly labeled imports. Unsupported AST
+co-occurrence uses (233 candidates) are marked AMBIGUOUS with score 0.2, while
+scoped name use only supports INFERRED relationships. This is not a full call
+graph. Every ID and endpoint is checked. Community cohesion is a raw structural
+score, not a software-quality grade; community lists omit source-file anchors.
+Token cost counters are unavailable. Retrieval/context sizes are heuristic
+estimates, not measured model usage, proven savings, or answer-quality scores.
+
+Change since the prior graph: 42 new nodes, 116 new edges, 1 node removed, 27 edges removed.

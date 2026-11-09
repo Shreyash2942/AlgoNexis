@@ -7,3 +7,4 @@ results/** -text -whitespace
 *.png binary
 *.pdf binary
 *.pptx binary
+*.docx binary

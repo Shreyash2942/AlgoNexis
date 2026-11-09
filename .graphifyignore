@@ -1,6 +1,7 @@
 # Analyze source and documentation, not generated graphs or environment locks.
 graphify-out/
 .venv/
+.venv-docs/
 requirements.lock.txt
 # Bulk generated evidence is referenced by the methodology/verification docs.
 results/
@@ -12,3 +13,6 @@ documentation/portfolio_presentation_preview.pdf
 documentation/slide_previews/
 documentation/report_template.md
 requirements-report.lock.txt
+# The Word/PDF APA edition reuses the analyzed report text and measured figures.
+documentation/performance_analysis_report.docx
+documentation/performance_analysis_report_apa.pdf
