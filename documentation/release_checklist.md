@@ -12,7 +12,7 @@ eight required deliverables map to actual artifacts below.
 | 5 | Interactive application | `app.py`, four UI sections, AppTest coverage, Edge walkthrough and authentic screenshots |
 | 6 | Substantive report | [10-page PDF](performance_analysis_report.pdf), eight body pages, actual measured results and attributed sources |
 | 7 | Presentation | [12-slide PPTX](portfolio_presentation.pptx), [native PDF preview](portfolio_presentation_preview.pdf), [speaker script](presentation_walkthrough.md) |
-| 8 | Complete documentation | Root README, [architecture](architecture.md), [user guide](user_guide.md), [structure contracts](data_structures.md), [methodology](benchmark_methodology.md) |
+| 8 | Complete documentation | Root README, [architecture](architecture.md), [user guide](../guide.md), [structure contracts](data_structures.md), [methodology](benchmark_methodology.md) |
 
 Release checks:
 

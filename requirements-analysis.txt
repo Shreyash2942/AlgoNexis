@@ -1,0 +1,3 @@
+# Optional plotting tools; the application and benchmark runner do not need them.
+-r requirements.txt
+matplotlib>=3.10,<4

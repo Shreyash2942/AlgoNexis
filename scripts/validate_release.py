@@ -1,4 +1,4 @@
-"""Validate complete trial coverage, source provenance, and optional release artifacts."""
+"""Validate benchmark trial coverage, source provenance, and saved analysis evidence."""
 
 import argparse
 from collections import Counter
@@ -59,50 +59,16 @@ def verify_measurements(csv_path: Path, *, root: Path = ROOT) -> dict:
             'source_digest': metadata['source_digest']}
 
 
-def verify_artifacts(root: Path = ROOT) -> dict:
-    # These dependencies belong only to requirements-report.txt, never to core imports.
-    import pymupdf
-    from pptx import Presentation
-    from scripts.build_report import report_values
-
-    docs = root / 'documentation'
-    markdown = (docs / 'performance_analysis_report.md').read_text(encoding='utf-8')
-    for name, value in report_values().items():
-        if value not in markdown:
-            raise ValueError(f'Report differs from the recorded summary: {name}.')
-    with pymupdf.open(docs / 'performance_analysis_report.pdf') as report:
-        substantive = [page for page in report if len(page.get_text().split()) >= 180
-                       and 'References' not in page.get_text().splitlines()[:5]
-                       and 'Portfolio performance analysis' not in page.get_text().splitlines()[:5]]
-        if len(substantive) < 5:
-            raise ValueError('Fewer than five substantive report pages.')
-        pages = len(report)
-        if sum(len(page.get_images()) for page in report) < 3:
-            raise ValueError('Report figures are missing.')
-    slides = Presentation(docs / 'portfolio_presentation.pptx')
-    if not 10 <= len(slides.slides) <= 12:
-        raise ValueError('Presentation must contain 10–12 slides.')
-    for slide in slides.slides:
-        if not slide.has_notes_slide or not slide.notes_slide.notes_text_frame.text.strip():
-            raise ValueError('A presentation slide is missing speaker notes.')
-        for shape in slide.shapes:
-            if (shape.left < 0 or shape.top < 0 or shape.left + shape.width > slides.slide_width + 100
-                    or shape.top + shape.height > slides.slide_height + 100):
-                raise ValueError('A slide shape extends beyond the canvas.')
-    with pymupdf.open(docs / 'portfolio_presentation_preview.pdf') as preview:
-        if len(preview) != len(slides.slides):
-            raise ValueError('Native presentation preview has the wrong page count.')
-        for page in preview:
-            for block in page.get_text('dict')['blocks']:
-                for line in block.get('lines', []):
-                    for span in line['spans']:
-                        if span['size'] >= 16 and span['bbox'][3] > 493:
-                            raise ValueError('Rendered slide body text overlaps the footer.')
+def verify_analysis(root: Path = ROOT) -> dict:
+    """Check saved evidence hashes using only the Python standard library."""
     manifest = json.loads((root / 'results/analysis_manifest.json').read_text(encoding='utf-8'))
     for relative, digest in manifest['files_sha256'].items():
         if sha256((root / relative).read_bytes()).hexdigest() != digest:
             raise ValueError(f'Analysis evidence changed: {relative}.')
-    return {'report_pages': pages, 'substantive_pages': len(substantive), 'slides': len(slides.slides)}
+    summaries = json.loads((root / 'results/summary_statistics.json').read_text(encoding='utf-8'))
+    if len(summaries) != manifest['summary_groups']:
+        raise ValueError('Summary group count disagrees with the analysis manifest.')
+    return {'summary_groups': len(summaries), 'verified_evidence_files': len(manifest['files_sha256'])}
 
 
 def verify_collisions(root: Path = ROOT) -> int:
@@ -130,11 +96,11 @@ def verify_collisions(root: Path = ROOT) -> int:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--artifacts', action='store_true')
+    parser.add_argument('--analysis', action='store_true', help='Also verify saved summaries and figure hashes.')
     args = parser.parse_args()
     result = verify_measurements(ROOT / 'results/benchmark_results.csv')
     if (ROOT / 'results/hash_collision_results.csv').exists():
         result['supplemental_observations'] = verify_collisions()
-    if args.artifacts:
-        result.update(verify_artifacts())
+    if args.analysis:
+        result.update(verify_analysis())
     print(json.dumps(result, indent=2))

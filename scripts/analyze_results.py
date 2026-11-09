@@ -3,7 +3,6 @@
 import csv
 from hashlib import sha256
 import json
-from pathlib import Path
 
 from performance.benchmark import ROOT, load_rows
 from performance.summary import summarize

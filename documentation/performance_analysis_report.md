@@ -6,7 +6,7 @@ Shreyash • CSU Global • CSC506 Design and Analysis of Algorithms
 
 November 7, 2026
 
-Original implementation analysis and reproducible measurements. Eight substantive body sections follow this title page; references appear separately. Editable authoring template: documentation/report_template.md. Generated analysis: documentation/performance_analysis_report.md.
+Original implementation analysis and reproducible measurements. Eight substantive body sections follow this title page; references appear separately. This Markdown analysis and the Word edition remain editable; the one-time authoring template and document generators have been removed.
 
 @PAGE
 # 1. Purpose, scope, and evidence

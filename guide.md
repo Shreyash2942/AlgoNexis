@@ -142,7 +142,7 @@ analysis, keep the saved CSVs and rebuild from them. To collect a new study:
 & .\.venv\Scripts\python.exe -m scripts.measure_hash_collisions
 ```
 
-Rebuild summaries, figures, and all reports/slides after collecting new data;
+Regenerate summaries and figures, then update reports/slides after collecting new data;
 otherwise documents can describe an earlier run. Environment sidecars record
 source hashes, revision, Python/packages, seeds, and configuration. The analysis
 manifest checks raw data and figure integrity. See the full
@@ -165,29 +165,26 @@ reference list with hanging indents. Figures are numbered sequentially and place
 on separate pages after references. Its analysis and numbers come from the same
 verified source used for the original report.
 
-Personalize `documentation/apa_title_page.json` with the full author name,
-institution/department if required, instructor name, and actual assignment due
-date. Bracketed missing fields are deliberate prompts, not invented course details.
-You may edit the DOCX directly; regenerating it overwrites direct Word edits, so
-put repeatable metadata changes in the JSON configuration.
+Edit the DOCX directly in Word or a compatible editor to add the full author
+name, institution/department if required, instructor, and actual assignment due
+date. Bracketed missing fields are deliberate prompts. Export the edited report
+to PDF to refresh its preview. Edit the PPTX directly and export its preview in
+the same way. The finished documents need no Python document-generation tools.
 
-Optional report-building tools go in a separate environment:
+Optional benchmark plot regeneration:
 
 ```powershell
-python -m venv .venv-docs
-& .\.venv-docs\Scripts\python.exe -m pip install -r requirements-report.lock.txt
-& .\.venv-docs\Scripts\python.exe -m scripts.analyze_results
-& .\.venv-docs\Scripts\python.exe -m scripts.build_report
-& .\.venv-docs\Scripts\python.exe -m scripts.build_apa_report
-& .\.venv-docs\Scripts\python.exe -m scripts.build_presentation
-& .\.venv-docs\Scripts\python.exe -m scripts.validate_release --artifacts
-& .\.venv-docs\Scripts\python.exe -m scripts.validate_apa_report
+& .\.venv\Scripts\python.exe -m pip install -r requirements-analysis.txt
+& .\.venv\Scripts\python.exe -m scripts.analyze_results
+& .\.venv\Scripts\python.exe -m scripts.validate_release --analysis
 ```
 
-The APA DOCX builder is portable. The supplied APA PDF was exported with Microsoft
-Word; refreshing that preview after Word edits requires exporting it again in Word
-or another compatible renderer. Likewise, PowerPoint can refresh the slide PDF.
-The app itself needs neither program nor the optional document packages.
+The remaining helper scripts measure the controlled hash profile, regenerate
+CSV/JSON summaries and standalone figures, and check evidence integrity. Plotting
+uses optional Matplotlib; the app and benchmark runner do not require it. The
+repository no longer includes Word/PowerPoint/PDF builders, duplicate templates,
+or their package locks. Historical generators are available from commit
+`3d8019f` if needed later.
 
 ## 7. Run tests and inspect the core APIs
 
@@ -258,18 +255,17 @@ assert manager.execute("stack", "pop") == 10
 | `data_structures/` | Six models and explicit manager dispatch |
 | `performance/` | Correctness-checked timing, allocation, CSV, and summaries |
 | `tests/` | Algorithm, structure, UI, evidence, and browser checks |
-| `scripts/` | Optional evidence analysis, artifact builders, and validation |
+| `scripts/` | Benchmark analysis, controlled hash measurements, and evidence validation |
 | `results/` | Raw observations, provenance, summaries, figure assets, and manifest |
 | `documentation/` | Reports, slides, architecture, detailed guides, verification, and retrospective |
-| `graphify-out/` | Interactive knowledge graph, JSON, and extraction audit |
 
 Read [README.md](README.md) for requirements and progress,
 [architecture.md](documentation/architecture.md) for design decisions,
 [data_structures.md](documentation/data_structures.md) for API contracts and
 attribution, and the [release checklist](documentation/release_checklist.md) for
-the eight deliverables. Open [graph.html](graphify-out/graph.html) in a browser to
-explore source/document connections; graph edges label extracted, inferred, or
-ambiguous evidence. The graph viewer may need network access for its viewer assets.
+the eight deliverables. This root guide is the single usage guide. Earlier
+Graphify analysis, temporary QA checkouts, and rendered slide PNG previews were
+development aids and have been removed from the working repository.
 
 The tagged [v1.0.0 snapshot](https://github.com/Shreyash2942/AlgoNexis/tree/v1.0.0)
 preserves the original completed Day 4 release. Later documentation additions live

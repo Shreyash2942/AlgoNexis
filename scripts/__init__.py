@@ -1,1 +1,1 @@
-"""Optional, reproducible portfolio evidence and document utilities."""
+"""Benchmark analysis, controlled measurements, and evidence validation."""

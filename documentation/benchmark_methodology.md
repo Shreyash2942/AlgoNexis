@@ -106,10 +106,11 @@ profile. Neither profile measures fixture construction or automatic resizing.
 mean, median, minimum, maximum, trial counts, CSV/JSON summaries, and five PNG/SVG
 figures. Whiskers are observed min–max, not confidence intervals; logarithmic
 axes are labeled. The manifest hashes raw CSVs, environment sidecars, summaries,
-hardware details, and figures. `python -m scripts.validate_release --artifacts`
-checks these hashes and document structure once the final slides exist.
+hardware details, and figures. `python -m scripts.validate_release --analysis`
+checks saved evidence hashes and summary totals without document-building packages.
 
-To reproduce a new study, rerun the two measurement commands, then analysis,
-report, and presentation builders. Measurements naturally vary; do not retain
-old report values after replacing their CSV source. Existing Day 3 verification
+To reproduce a new study, rerun the two measurement commands, then analysis.
+Finished reports/slides are edited directly; update their values and figures
+when replacing the underlying CSV source. Optional plotting dependencies are in
+`requirements-analysis.txt`. Measurements naturally vary across runs. Existing Day 3 verification
 records are historical and identify their own prior run.

@@ -22,8 +22,8 @@ sorting records. `data_structures` owns the six structures and their persistent
 manager. `performance` measures core operations independently of Streamlit;
 `ui` owns input parsing, session helpers, views, and chart rendering. `app.py`
 selects four sections. `results` stores real CSV observations and environment
-metadata. `scripts` supplies optional evidence validation, analysis, and academic
-artifact builders; none is required to launch the app.
+metadata. `scripts` supplies optional benchmark analysis, controlled hash measurements,
+and evidence validation. Finished documents are edited directly in Word/PowerPoint.
 
 ```text
 app.py -> ui views / session state
@@ -44,17 +44,19 @@ app.py -> ui views / session state
 ## Release evidence decisions (Day 4)
 
 - The runtime stays limited to Streamlit, pandas, Altair, pytest and their
-  dependencies. Optional `requirements-report.txt` adds Matplotlib, ReportLab,
-  python-pptx, and PyMuPDF for rebuilding/verifying submission artifacts.
+  dependencies. Optional `requirements-analysis.txt` adds only Matplotlib for
+  regenerating standalone benchmark plots. Document-building dependencies have
+  been removed with the one-time generators.
 - pandas 3.0.6 is the tested maintenance version after a new 3.1.1 Windows wheel
   was blocked by local Application Control. No system policy was changed.
 - `scripts.validate_release` verifies configured trial coverage, provenance,
-  unchanged measured sources, the controlled hash profile, figure hashes, report
-  page content, and slide structure. `.gitattributes` keeps source LF and preserves
+  unchanged measured sources, the controlled hash profile, saved figure hashes,
+  and summary-group totals using the standard library. `.gitattributes` keeps source LF and preserves
   generated evidence bytes across platforms so checkout conversion cannot break
   provenance hashes or the exact CSV download contract.
-- The report uses an original editable template with data tokens resolved from
-  measured summaries. The presentation uses the same values, authentic browser
+- The report was generated from measured summaries. Its editable DOCX and the
+  presentation PPTX are now maintained directly; one-time builders and templates
+  have been removed. The presentation uses the same values, authentic browser
   screenshots, and charts. Its editable outline and speaker notes accompany the
   PPTX. Microsoft PowerPoint opened and rendered the deck for visual inspection.
 - The supplementary hash profile deliberately varies capacity using fixed unique

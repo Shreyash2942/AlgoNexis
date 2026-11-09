@@ -1,5 +1,9 @@
 # Day 4 verification — November 7, 2026
 
+Historical verification record for the Day 4 release. Document-building tools
+and their dependencies mentioned below were later removed during cleanup.
+Use the current root [guide.md](../guide.md) for supported commands.
+
 ## Regression gate (D4.1)
 
 The original environment passed 191 existing tests before edits. Four release

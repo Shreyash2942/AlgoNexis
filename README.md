@@ -3,12 +3,12 @@
 **An Interactive Algorithms & Data Structures Portfolio**
 
 New here? Start with [guide.md](guide.md) for installation, examples, troubleshooting,
-tests, and document rebuilding. The editable [APA Word report](documentation/performance_analysis_report.docx)
+tests, and benchmark analysis. The editable [APA Word report](documentation/performance_analysis_report.docx)
 and its [PDF preview](documentation/performance_analysis_report_apa.pdf) complement
-the original Day 4 artifacts. Personalize its [title-page fields](documentation/apa_title_page.json)
-before submission; see [APA setup notes](documentation/apa_report_setup.md).
+the original Day 4 artifacts. Edit the Word title page directly to add the full
+author name, instructor, and actual assignment due date before submission.
 
-> **Project stage:** Day 4 complete; G1–G4 passed. The portfolio has 195 passing tests, 1,080 default observations plus eight guarded skips, and 60 controlled collision observations. The final report has eight substantive body pages; the presentation has twelve slides. See the [release checklist](documentation/release_checklist.md), [verification record](documentation/day4_verification.md), and [user guide](documentation/user_guide.md).
+> **Project stage:** Day 4 complete; G1–G4 passed. The portfolio has 195 passing tests, 1,080 default observations plus eight guarded skips, and 60 controlled collision observations. The final report has eight substantive body pages; the presentation has twelve slides. See the [release checklist](documentation/release_checklist.md), [verification record](documentation/day4_verification.md), and [user guide](guide.md).
 >
 > **Execution plan:** [`AlgoNexis_4_Day_Implementation_Plan.md`](./AlgoNexis_4_Day_Implementation_Plan.md) — the detailed task-by-task source of truth for the four development days and quality gates. **Keep this file in the repository root beside `README.md`.**
 
@@ -94,11 +94,12 @@ The portfolio should demonstrate **correctness, algorithmic understanding, integ
 
 ### Implemented repository layout (principal files)
 
-> Principal source and submission artifacts are shown below. Optional `scripts/` builders, `ui/` view modules, results figures, and supporting verification records extend this layout.
+> Principal source and submission artifacts are shown below. `scripts/` contains benchmark analysis and evidence checks; `ui/` contains the application views.
 
 ```text
 AlgoNexis/
 ├── README.md
+├── guide.md
 ├── AlgoNexis_4_Day_Implementation_Plan.md
 ├── .gitignore
 ├── requirements.txt
@@ -137,7 +138,6 @@ AlgoNexis/
 ├── documentation/
 │   ├── architecture.md
 │   ├── data_structures.md
-│   ├── user_guide.md
 │   ├── performance_analysis_report.pdf
 │   ├── portfolio_presentation.pptx
 │   └── retrospective.md
@@ -272,7 +272,7 @@ The four sections are Dashboard, Algorithms, Data Structures, and Performance
 Analysis. Dataset/rank changes clear stale algorithm results; structure state and
 sorting position persist across navigation. Visualized sorts are limited to 50
 values, untraced sorts to 1,000, selections to 5,000, and interactive structures to
-200 items. See the [user guide](documentation/user_guide.md) for controls and errors.
+200 items. See the [user guide](guide.md) for controls and errors.
 
 Reproduce the measured evidence:
 
@@ -289,28 +289,28 @@ fixtures are excluded, allocations are not total RAM, and different-purpose
 operations are not substitutes. No skipped case is plotted as zero.
 
 
-### Rebuild and validate the final academic artifacts
+### Benchmark analysis and finished documents
 
-The app does not require the report-building tools. To reproduce the exact tested
-artifact environment, install `requirements-report.lock.txt` in a separate venv;
-`requirements-report.txt` lists the optional direct dependencies.
+The reports and slides are finished submission files. Edit the DOCX and PPTX
+in Word/PowerPoint (or compatible editors) and export their PDF previews after
+changes. Document-generation scripts, templates, and their dependencies were
+removed during repository cleanup. They remain available in the Git history.
+
+Benchmark reproduction and evidence checks remain supported:
 
 ```bash
-python -m pip install -r requirements-report.lock.txt
-# Preserve the checked-in CSVs to reproduce the submitted analysis:
+# Optional; needed only to regenerate the standalone plots:
+python -m pip install -r requirements-analysis.txt
 python -m scripts.analyze_results
-python -m scripts.build_report
-python -m scripts.build_presentation
-python -m scripts.validate_release --artifacts
+python -m scripts.validate_release --analysis
 ```
 
-To collect a **new** study first, run `python -m performance.benchmark --trials 5
---seed 506` and `python -m scripts.measure_hash_collisions`, then rebuild every
-summary, figure, report, and slide. Replacing data alone leaves old analysis stale.
+To collect a new study, run `python -m performance.benchmark --trials 5 --seed 506`
+and `python -m scripts.measure_hash_collisions`, then regenerate the analysis.
+Update report/slide text and figures manually if you replace their source data.
 The [methodology](documentation/benchmark_methodology.md) documents measurement
 boundaries. `results/summary_statistics.csv` includes mean, median, min, max, and
-trial counts. Five figures are supplied in PNG and SVG. The report template and
-presentation builder are editable, with generated Markdown companions.
+trial counts; five figures are available as PNG and SVG.
 
 Known scope limits include an unbalanced BST, fixed-capacity custom hashing,
 undirected/unweighted graph traversal, bounded UI inputs, and single-machine
@@ -439,7 +439,7 @@ Do not invent benchmark figures, charts, test counts, citations, screenshots, or
 | 5 | Interactive interface | `app.py`, manual UI walkthrough |
 | 6 | Comprehensive **5+ page** analysis report | `documentation/performance_analysis_report.pdf`, verified against actual CSV data |
 | 7 | Final presentation (**slides or video**) | `documentation/portfolio_presentation.pptx` or a clearly identified video artifact |
-| 8 | Complete documentation | This README, `documentation/architecture.md`, `data_structures.md`, `user_guide.md`, and design decisions |
+| 8 | Complete documentation | This README, `documentation/architecture.md`, `data_structures.md`, `guide.md`, and design decisions |
 
 The recommended report structure is: introduction; algorithm/data structure overview; measurement methodology; measured results; trade-offs and limitations; conclusion; references. Use formal analytical writing and **APA 7 if the course requires it**. If sources are quoted directly, include the appropriate location information; otherwise paraphrase with attribution. The presentation should show **authentic application screenshots and actual benchmark charts**, plus learning outcomes.
 
